@@ -1,0 +1,42 @@
+﻿{
+  "function": {
+    "name": "StringToInt",
+    "namespace": "TcHmi.Functions.MyNamespace",
+    "displayName": "StringToInt",
+    "description": "",
+    "waitMode": "Synchronous",
+    "category": "",
+    "returnValue": {
+      "type": "tchmi:general#/definitions/String"
+    },
+    "visible": true,
+    "injectContextObject": false,
+    "arguments": [
+      {
+        "name": "valueString",
+        "displayName": "String",
+        "type": "tchmi:general#/definitions/String",
+        "description": "",
+        "defaultValue": null,
+        "required": true,
+        "bindable": true,
+        "restParameter": false,
+        "asReference": false,
+        "allowControlAttributeBindingOptions": false
+      },
+      {
+        "name": "Increment",
+        "displayName": "Increment",
+        "type": "tchmi:general#/definitions/Number",
+        "description": "",
+        "defaultValue": null,
+        "required": true,
+        "bindable": true,
+        "restParameter": false,
+        "asReference": false,
+        "allowControlAttributeBindingOptions": false
+      }
+    ]
+  },
+  "$schema": "../.hmiframework/Schema/FunctionDescription.Schema.json"
+}

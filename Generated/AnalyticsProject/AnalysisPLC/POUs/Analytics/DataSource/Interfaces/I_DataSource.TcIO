@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" Productversion="">
+  <Itf Name="I_DataSource" Id="5731df2d-e237-423e-b0c2-7e323003ce67">
+    <Declaration><![CDATA[INTERFACE I_DataSource]]></Declaration>
+    <Method Name="Call" Id="681153a6-1fc8-4130-8dfc-b5dca248a96e">
+      <Declaration><![CDATA[METHOD Call : BOOL]]></Declaration>
+    </Method>
+    <Method Name="GetData" Id="75d4352d-ddbe-42d6-a606-dcfab603fe7c">
+      <Declaration><![CDATA[METHOD GetData : BOOL
+VAR_INPUT
+	nElement: UDINT;
+END_VAR]]></Declaration>
+    </Method>
+    <Method Name="HistoricalCtrl" Id="b9b03f21-462c-4537-a463-e7fcea413b3c">
+      <Declaration><![CDATA[METHOD HistoricalCtrl : BOOL
+VAR_INPUT
+	stCtrl: REFERENCE TO ST_HMI_DataSourceCtrl;
+	stHistStreamInfo: REFERENCE TO ST_HMI_DataSourceHist;
+	stRecordInfo: REFERENCE TO ST_HMI_DataSourceHistRecordInfo;
+END_VAR]]></Declaration>
+    </Method>
+    <Method Name="UpdateRecordList" Id="d5019b04-da63-4b13-b02c-054ea6d34cfe">
+      <Declaration><![CDATA[METHOD UpdateRecordList : BOOL
+VAR_INPUT
+	stCtrl: REFERENCE TO ST_HMI_DataSourceCtrl;
+	sStreamSystemID: GUID;
+	stHistStreamInfo: REFERENCE TO ST_HMI_DataSourceHist;
+END_VAR]]></Declaration>
+    </Method>
+    <Method Name="NewDataAvailable" Id="bb8b9e8f-7426-42c5-b967-b4fcb2e1ccfe">
+      <Declaration><![CDATA[METHOD NewDataAvailable : BOOL
+VAR_INPUT
+	nLastDataHandle: ULINT;
+END_VAR]]></Declaration>
+    </Method>
+    <Property Name="nDataHandle" Id="bcb14690-650c-4ccd-91a1-bd61abd77a54">
+      <Declaration><![CDATA[PROPERTY nDataHandle : ULINT]]></Declaration>
+      <Get Name="Get" Id="e4070158-09b5-40c6-9098-a01bdbee2773">
+        <Declaration><![CDATA[]]></Declaration>
+      </Get>
+    </Property>
+    <Property Name="nElements" Id="f8f7340c-ca41-4f9c-b710-d17cad606579">
+      <Declaration><![CDATA[PROPERTY nElements : UDINT]]></Declaration>
+      <Get Name="Get" Id="ff96fdbe-217d-45b4-8ef3-8ab2a224cf29">
+        <Declaration><![CDATA[]]></Declaration>
+      </Get>
+    </Property>
+    <Property Name="dtTimestamp" Id="670c7b46-bbc1-40c0-b758-42d0cdb415f0">
+      <Declaration><![CDATA[PROPERTY dtTimestamp : DCTIMESTRUCT]]></Declaration>
+      <Get Name="Get" Id="85e98876-2f50-40e4-8571-99f9acaaa438">
+        <Declaration><![CDATA[]]></Declaration>
+      </Get>
+    </Property>
+  </Itf>
+</TcPlcObject>

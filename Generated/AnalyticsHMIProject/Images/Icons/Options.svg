@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="80px"
+	 height="80px" viewBox="0 0 80 80" enable-background="new 0 0 80 80" xml:space="preserve">
+<g id="hintergrund" display="none">
+	<g display="inline">
+		<g>
+			<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="67.3203" y1="87.3203" x2="12.6793" y2="-7.3207">
+				<stop  offset="0.5" style="stop-color:#4994DA"/>
+				<stop  offset="0.9998" style="stop-color:#4162B0"/>
+			</linearGradient>
+			<rect fill="url(#SVGID_1_)" width="80" height="80"/>
+		</g>
+		<defs>
+			<filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="0" y="0" width="80" height="80">
+				
+					<feColorMatrix  type="matrix" values="-1 0 0 0 1  0 -1 0 0 1  0 0 -1 0 1  0 0 0 1 0" color-interpolation-filters="sRGB" result="source"/>
+			</filter>
+		</defs>
+		<mask maskUnits="userSpaceOnUse" x="0" y="0" width="80" height="80" id="SVGID_2_">
+			<g filter="url(#Adobe_OpacityMaskFilter)">
+				
+					<image overflow="visible" width="84" height="84" xlink:href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEASABIAAD/7AARRHVja3kAAQAEAAAAHgAA/+4AIUFkb2JlAGTAAAAAAQMA
+EAMCAwYAAAHvAAACiQAAA2v/2wCEABALCwsMCxAMDBAXDw0PFxsUEBAUGx8XFxcXFx8eFxoaGhoX
+Hh4jJSclIx4vLzMzLy9AQEBAQEBAQEBAQEBAQEABEQ8PERMRFRISFRQRFBEUGhQWFhQaJhoaHBoa
+JjAjHh4eHiMwKy4nJycuKzU1MDA1NUBAP0BAQEBAQEBAQEBAQP/CABEIAFQAVAMBIgACEQEDEQH/
+xACWAAEBAQACAwAAAAAAAAAAAAAABgMEBwECBQEBAAAAAAAAAAAAAAAAAAAAABAAAAIJAQgDAAAA
+AAAAAAAAAAMwEzMEBTUmRgcXUAECEhQVBhYRJCURAAECAQkFCAMBAAAAAAAAAAABAjIwEXGRsXKS
+osIhEhNDgzFBgaHBYgMUIkJjJBIBAAAAAAAAAAAAAAAAAAAAUP/aAAwDAQACEQMRAAAA+PRrUi1o
+ItaCLWgi8brM6Sc8V1pF2gAAAz0zOogVtpF2gAAAz0zOogVtpF2gAAAz0zOogVtpC2xozGjMaMxp
+myOp3oOFzw8gAAegfJB//9oACAECAAEFANif/9oACAEDAAEFANif/9oACAEBAAEFAPF/FyYyTuxv
+DhpvDhpvDhpvDhpvDhpvDhpvDhpvDg846ciyug4e7433fnIDmPxV2N5cgOZXfjeXIDmV343lyA5l
+d+N5cgOZXfjeXIDmV343lyA5ld+N5cgOZXfjp5KLclxIXFBcUFxQXFBcUFxQXFB5eSOAhZw+1OHd
++Xd7cKvFXirxV4q8VeKvBntXL9nqf//aAAgBAgIGPwAT/9oACAEDAgY/ABP/2gAIAQEBBj8AX5Pk
+VUmVU2LN2G1zsSkTsSkTsSkTsSkTsSkTsSkTsSkTsSjnsc5VRJ4lPofrv7nlOOX3OtkX0KTf39B1
+51si+hTr6R151si+hTr6R151si+hTr6R151si+hTr6R151si+hTr6R151si+hTr6R151si+hTr6R
+zHuRFVzu2kjSsjSsjSsjSsjSsjSsjSsjSseqvTsXvOJP+PGnn8D/AAb+77JvU2cfyOflOflOflOf
+lOflOflOflF4nG3e+eY7/sT+M5//2Q==" transform="matrix(1 0 0 1 -2 -2)">
+				</image>
+			</g>
+		</mask>
+		<g opacity="0.5" mask="url(#SVGID_2_)">
+			<rect width="80" height="80"/>
+		</g>
+	</g>
+</g>
+<g id="grid" display="none">
+</g>
+<g id="pfade">
+	<g>
+		<g>
+			<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+				M42.51,52.398l10.269,10.269c0,0,3.161,3.016,6.287-0.109c3.125-3.125,0.036-6.214,0.036-6.214L48.745,45.986"/>
+			<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+				M37.167,34.408l-2.376-2.376l-2.004-2.004c1.229-3.568,0.454-7.832-2.466-10.751l-3.27-3.271l-4.143,4.143l3.27,3.271
+				c1.723,1.723,1.701,4.536-0.021,6.258s-4.507,1.751-6.229,0.029l-3.307-3.271l-4.179,4.18l3.271,3.271
+				c2.877,2.877,7.091,3.64,10.699,2.414l1.729,1.729l2.781,2.781"/>
+			
+				<line fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="51.144" y1="61.031" x2="57.467" y2="54.708"/>
+		</g>
+		<g>
+			<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+				M46.849,42.354L26.571,62.632c0,0-3.089,3.089-6.214-0.036c-3.125-3.125-0.109-6.287-0.109-6.287l20.278-20.278L46.849,42.354z"
+				/>
+			
+				<line fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="21.883" y1="54.673" x2="28.206" y2="60.997"/>
+			
+				<line fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="35.729" y1="40.828" x2="42.052" y2="47.151"/>
+			
+				<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="43.687" y1="39.192" x2="56.7" y2="26.179"/>
+			
+				<rect x="57.786" y="18.001" transform="matrix(0.7071 0.7071 -0.7071 0.7071 33.5834 -36.1323)" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" width="5.242" height="8.942"/>
+		</g>
+	</g>
+</g>
+</svg>

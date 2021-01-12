@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.4">
+  <Itf Name="I_V1_Virtual_Input_Source_1" Id="{2f7a1d5d-964e-4793-8fea-2763a4ff0087}">
+    <Declaration><![CDATA[INTERFACE I_V1_Virtual_Input_Source_1 EXTENDS I_VirtualInputSource]]></Declaration>
+    <Property Name="bV1_Virtual_Input" Id="{834ccdf6-c5c1-4341-a63c-4e8253c9be66}">
+      <Declaration><![CDATA[PROPERTY bV1_Virtual_Input : BOOL]]></Declaration>
+      <Get Name="Get" Id="{346266d6-5d98-44ce-aaee-b355f0842b5b}">
+        <Declaration><![CDATA[]]></Declaration>
+      </Get>
+    </Property>
+    <Property Name="nV1_Virtual_Input_1" Id="{afc3d3cb-1523-45c3-92e7-4600c1a47ee9}">
+      <Declaration><![CDATA[PROPERTY nV1_Virtual_Input_1 : INT]]></Declaration>
+      <Get Name="Get" Id="{1e930e6e-a3b2-4e8c-87d2-c948502f9f94}">
+        <Declaration><![CDATA[]]></Declaration>
+      </Get>
+    </Property>
+  </Itf>
+</TcPlcObject>

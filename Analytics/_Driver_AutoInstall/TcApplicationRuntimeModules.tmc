@@ -1,0 +1,1416 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass">
+  <Vendor>
+    <Name>Beckhoff Automation GmbH</Name>
+  </Vendor>
+  <DataTypes>
+    <DataType>
+      <Name GUID="{9c48f6b2-e649-4246-ae0a-6b8554b8d2e6}">ITcAppRuntimeExternalSource</Name>
+      <BaseType GUID="{00000001-0000-0000-e000-000000000064}">ITcUnknown</BaseType>
+      <Method>
+        <Name>UpdateRequest</Name>
+        <ReturnType GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</ReturnType>
+        <Parameter>
+          <Name>timestamp_ns</Name>
+          <Type GUID="{18071995-0000-0000-0000-00000000000b}">ULINT</Type>
+        </Parameter>
+        <Parameter>
+          <Name>nAvailableBufferSamples</Name>
+          <Type GUID="{18071995-0000-0000-0000-000000000008}">UDINT</Type>
+        </Parameter>
+        <Parameter>
+          <Name>nMaxBufferSamples</Name>
+          <Type GUID="{18071995-0000-0000-0000-000000000008}">UDINT</Type>
+        </Parameter>
+      </Method>
+      <Hides>
+        <Hide GUID="{93e75bb0-a2b5-4ec0-a596-56d2597d21fe}" />
+        <Hide GUID="{359b773d-0e8b-4383-9773-799cf4d71c18}" />
+        <Hide GUID="{951dd786-105b-4076-ae03-d959fe179733}" />
+        <Hide GUID="{7a4a9fbc-d0e9-4677-a760-ef8f7876f04a}" />
+        <Hide GUID="{76326d2d-be87-490e-9aab-99c87f14c9e4}" />
+        <Hide GUID="{a4e756e4-7183-4bbf-9235-be78c0608398}" />
+        <Hide GUID="{f814de9d-6e84-48f8-beee-79e795d967ef}" />
+        <Hide GUID="{cc11c6e2-2477-4583-b126-34841e389869}" />
+        <Hide GUID="{7736446f-7354-413c-a137-181fcf3aedac}" />
+      </Hides>
+    </DataType>
+    <DataType>
+      <Name GUID="{8cd54f70-17c1-4c9e-bd4f-12d2e54a12b7}">ITcAppRuntimeExternalSink</Name>
+      <BaseType GUID="{00000001-0000-0000-e000-000000000064}">ITcUnknown</BaseType>
+      <Method>
+        <Name>UpdateRequest</Name>
+        <ReturnType GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</ReturnType>
+        <Parameter>
+          <Name>timestamp_ns</Name>
+          <Type GUID="{18071995-0000-0000-0000-00000000000b}">ULINT</Type>
+        </Parameter>
+        <Parameter>
+          <Name>nSamples</Name>
+          <Type GUID="{18071995-0000-0000-0000-000000000008}">UDINT</Type>
+        </Parameter>
+      </Method>
+      <Hides>
+        <Hide GUID="{5a310602-8a28-45f9-b6b9-b18f1d532369}" />
+        <Hide GUID="{14ff654c-413d-42b0-bddf-b39f448ac843}" />
+        <Hide GUID="{db363436-94f7-4668-bfb8-516a29df3883}" />
+        <Hide GUID="{e3ebece6-9a03-4a46-95cf-a6b23773f692}" />
+        <Hide GUID="{296878e3-06a4-4e10-9ad0-6a5a26026229}" />
+        <Hide GUID="{347455de-8f49-41a9-aae6-6fa76b13cf52}" />
+      </Hides>
+    </DataType>
+    <DataType>
+      <Name GUID="{13342fd7-bc89-464c-bdcb-b518d4a64dbe}">ITcAppRuntimeExternalSourceServer</Name>
+      <BaseType GUID="{00000001-0000-0000-e000-000000000064}">ITcUnknown</BaseType>
+      <Method>
+        <Name>AddExternalSource</Name>
+        <ReturnType GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</ReturnType>
+        <Parameter>
+          <Name>ipExtSrc</Name>
+          <Type GUID="{9c48f6b2-e649-4246-ae0a-6b8554b8d2e6}">ITcAppRuntimeExternalSource</Type>
+        </Parameter>
+      </Method>
+      <Method>
+        <Name>RemoveExternalSource</Name>
+        <ReturnType GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</ReturnType>
+        <Parameter>
+          <Name>ipExtSrc</Name>
+          <Type GUID="{9c48f6b2-e649-4246-ae0a-6b8554b8d2e6}">ITcAppRuntimeExternalSource</Type>
+        </Parameter>
+      </Method>
+      <Method>
+        <Name>WriteValue</Name>
+        <ReturnType GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</ReturnType>
+        <Parameter>
+          <Name>nData</Name>
+          <Type GUID="{18071995-0000-0000-0000-000000000008}">UDINT</Type>
+        </Parameter>
+        <Parameter>
+          <Name>pData</Name>
+          <Type GUID="{18071995-0000-0000-0000-000000000018}">PVOID</Type>
+        </Parameter>
+      </Method>
+      <Method>
+        <Name>ReadValue</Name>
+        <ReturnType GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</ReturnType>
+        <Parameter>
+          <Name>nData</Name>
+          <Type GUID="{18071995-0000-0000-0000-000000000008}">UDINT</Type>
+        </Parameter>
+        <Parameter>
+          <Name>pData</Name>
+          <Type GUID="{18071995-0000-0000-0000-000000000018}">PVOID</Type>
+        </Parameter>
+      </Method>
+      <Method>
+        <Name>GetSize</Name>
+        <ReturnType GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</ReturnType>
+        <Parameter>
+          <Name>nData</Name>
+          <Type GUID="{18071995-0000-0000-0000-000000000008}" PointerTo="1">UDINT</Type>
+        </Parameter>
+      </Method>
+      <Method>
+        <Name>WriteTimeTable</Name>
+        <ReturnType GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</ReturnType>
+        <Parameter>
+          <Name>pTimestamps</Name>
+          <Type GUID="{18071995-0000-0000-0000-00000000000c}" PointerTo="1">LINT</Type>
+        </Parameter>
+        <Parameter>
+          <Name>pValues</Name>
+          <Type GUID="{18071995-0000-0000-0000-000000000018}">PVOID</Type>
+        </Parameter>
+        <Parameter>
+          <Name>nSamples</Name>
+          <Type GUID="{18071995-0000-0000-0000-000000000008}" ReferenceTo="true">UDINT</Type>
+        </Parameter>
+        <Parameter>
+          <Name>nValueSize</Name>
+          <Type GUID="{18071995-0000-0000-0000-000000000008}">UDINT</Type>
+        </Parameter>
+        <Parameter>
+          <Name>writeMode</Name>
+          <Type GUID="{da08d267-a72f-42d2-88ee-74f0962f871c}" Optional="TimeTableWriteMode_Append">TimeTableWriteMode</Type>
+        </Parameter>
+      </Method>
+      <Method>
+        <Name>ReadTimeTable</Name>
+        <ReturnType GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</ReturnType>
+        <Parameter>
+          <Name>pTimestamps</Name>
+          <Type GUID="{18071995-0000-0000-0000-00000000000c}" PointerTo="1">LINT</Type>
+        </Parameter>
+        <Parameter>
+          <Name>pValues</Name>
+          <Type GUID="{18071995-0000-0000-0000-000000000018}">PVOID</Type>
+        </Parameter>
+        <Parameter>
+          <Name>nSamples</Name>
+          <Type GUID="{18071995-0000-0000-0000-000000000008}" ReferenceTo="true">UDINT</Type>
+        </Parameter>
+        <Parameter>
+          <Name>nValueSize</Name>
+          <Type GUID="{18071995-0000-0000-0000-000000000008}">UDINT</Type>
+        </Parameter>
+        <Parameter>
+          <Name>readMode</Name>
+          <Type GUID="{753a8f96-5c19-467c-a75f-8727394fd788}" Optional="TimeTableReadMode_Keep">TimeTableReadMode</Type>
+        </Parameter>
+      </Method>
+      <Hides>
+        <Hide GUID="{4adac335-3662-4f05-94fb-dbe2d86baf14}" />
+        <Hide GUID="{3a5e9777-e1b4-4e36-b3d6-c106c68125e1}" />
+        <Hide GUID="{bebaf6da-c5b5-4000-b81f-91abac3b0d22}" />
+        <Hide GUID="{68af2ac0-98c8-4f40-b4e2-35d1d016faf2}" />
+        <Hide GUID="{efde0a49-64c4-4b56-9c82-6bdc8720844d}" />
+        <Hide GUID="{d7e9b4ed-29ed-4d0c-acda-1ea0564d0b73}" />
+        <Hide GUID="{9d708c45-1211-4245-abdf-b48a20ab6d3b}" />
+        <Hide GUID="{c4a0b2f4-d524-4957-8f6d-d703a38c9911}" />
+        <Hide GUID="{a54d2e04-51d0-4162-86bd-92d29bcde86a}" />
+        <Hide GUID="{ce094f0e-75e3-428a-ad09-8d54ae6a472e}" />
+        <Hide GUID="{0c0ecf62-3f69-4622-ae72-b01f2a910a05}" />
+        <Hide GUID="{84999a0a-b3a7-49c9-ac8b-92ad7a8bd385}" />
+        <Hide GUID="{95fab6a7-63bf-4621-9ea8-8be1931f2e06}" />
+        <Hide GUID="{213ff069-e4e4-427c-a943-78f6a3cdf97b}" />
+        <Hide GUID="{a1ce1d4c-6447-44c4-bd51-df00e8cff137}" />
+        <Hide GUID="{d50f6c08-28cf-44fc-bf57-c54ee944b301}" />
+        <Hide GUID="{2a1d1e7f-48e5-47a6-9e3b-c9eb0848cd72}" />
+      </Hides>
+    </DataType>
+    <DataType>
+      <Name GUID="{b26c74e4-0adf-460d-9f81-9d506130293e}">ITcAppRuntimeExternalSinkServer</Name>
+      <BaseType GUID="{00000001-0000-0000-e000-000000000064}">ITcUnknown</BaseType>
+      <Method>
+        <Name>AddExternalSink</Name>
+        <ReturnType GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</ReturnType>
+        <Parameter>
+          <Name>ipExtSink</Name>
+          <Type GUID="{8cd54f70-17c1-4c9e-bd4f-12d2e54a12b7}">ITcAppRuntimeExternalSink</Type>
+        </Parameter>
+      </Method>
+      <Method>
+        <Name>RemoveExternalSink</Name>
+        <ReturnType GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</ReturnType>
+        <Parameter>
+          <Name>ipExtSink</Name>
+          <Type GUID="{8cd54f70-17c1-4c9e-bd4f-12d2e54a12b7}">ITcAppRuntimeExternalSink</Type>
+        </Parameter>
+      </Method>
+      <Method>
+        <Name>ReadValue</Name>
+        <ReturnType GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</ReturnType>
+        <Parameter>
+          <Name>nData</Name>
+          <Type GUID="{18071995-0000-0000-0000-000000000008}">UDINT</Type>
+        </Parameter>
+        <Parameter>
+          <Name>pData</Name>
+          <Type GUID="{18071995-0000-0000-0000-000000000018}">PVOID</Type>
+        </Parameter>
+      </Method>
+      <Method>
+        <Name>GetSize</Name>
+        <ReturnType GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</ReturnType>
+        <Parameter>
+          <Name>nData</Name>
+          <Type GUID="{18071995-0000-0000-0000-000000000008}" PointerTo="1">UDINT</Type>
+        </Parameter>
+      </Method>
+      <Method>
+        <Name>ReadTimeTable</Name>
+        <ReturnType GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</ReturnType>
+        <Parameter>
+          <Name>pTimestamps</Name>
+          <Type GUID="{18071995-0000-0000-0000-00000000000c}" PointerTo="1">LINT</Type>
+        </Parameter>
+        <Parameter>
+          <Name>pValues</Name>
+          <Type GUID="{18071995-0000-0000-0000-000000000018}">PVOID</Type>
+        </Parameter>
+        <Parameter>
+          <Name>nSamples</Name>
+          <Type GUID="{18071995-0000-0000-0000-000000000008}" ReferenceTo="true">UDINT</Type>
+        </Parameter>
+        <Parameter>
+          <Name>nValueSize</Name>
+          <Type GUID="{18071995-0000-0000-0000-000000000008}">UDINT</Type>
+        </Parameter>
+        <Parameter>
+          <Name>readMode</Name>
+          <Type GUID="{753a8f96-5c19-467c-a75f-8727394fd788}" Optional="TimeTableReadMode_Remove">TimeTableReadMode</Type>
+        </Parameter>
+      </Method>
+      <Hides>
+        <Hide GUID="{45500485-0029-45ec-bfbf-a75ba50d2e83}" />
+        <Hide GUID="{be245220-5e80-4ab9-803e-e1395d050725}" />
+        <Hide GUID="{63ddf46b-4a33-4dc5-bc87-26df0f43fddb}" />
+        <Hide GUID="{17b6362a-5569-4056-8008-5b3290a5e6b5}" />
+        <Hide GUID="{dda50200-16fc-44d4-bd9f-00a6f7833384}" />
+        <Hide GUID="{27ecc655-97ed-4a9d-b459-2edc020cde10}" />
+        <Hide GUID="{4c06ddd6-8721-41b3-bb8a-f67de58d4363}" />
+        <Hide GUID="{1ce11446-3c43-4695-961b-0b508f8175d3}" />
+        <Hide GUID="{4377c9cd-4ae9-4b43-b362-79d4d9a78c33}" />
+        <Hide GUID="{3b55e36c-317f-490b-99cf-565fe520da46}" />
+        <Hide GUID="{460d96d8-4463-4b36-911b-98396ce80527}" />
+        <Hide GUID="{7a497319-ffd6-4e95-a032-d5a4158a7f0f}" />
+      </Hides>
+    </DataType>
+    <DataType>
+      <Name GUID="{742980fd-9037-492b-8e61-f9e28f1d2e63}">MethodReference</Name>
+      <SubItem>
+        <Name>ObjectId</Name>
+        <Type GUID="{18071995-0000-0000-0000-00000000000f}">OTCID</Type>
+      </SubItem>
+      <SubItem>
+        <Name>InterfaceId</Name>
+        <Type GUID="{18071995-0000-0000-0000-000000000025}">IID</Type>
+      </SubItem>
+      <SubItem>
+        <Name>MethodName</Name>
+        <Type GUID="{18071995-0000-0000-0000-0001000000ff}">STRING(255)</Type>
+      </SubItem>
+    </DataType>
+    <DataType>
+      <Name GUID="{BD3BA8A6-FB59-4197-B6BA-A3B09FFC369C}" Namespace="IO" TcBaseType="true">TcIoDataAreaCfg</Name>
+      <BitSize>128</BitSize>
+      <SubItem>
+        <Name>pid</Name>
+        <Type GUID="{18071995-0000-0000-0000-000000000008}">UDINT</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>0</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>bitSize</Name>
+        <Type GUID="{18071995-0000-0000-0000-000000000008}">UDINT</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>32</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>bitOffs</Name>
+        <Type GUID="{18071995-0000-0000-0000-000000000008}">UDINT</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>64</BitOffs>
+      </SubItem>
+    </DataType>
+    <DataType>
+      <Name GUID="{C636B456-B483-42A5-BD8A-58753433F375}" Namespace="IO" TcBaseType="true">TcIoDataAreaSize</Name>
+      <BitSize>64</BitSize>
+      <SubItem>
+        <Name>area</Name>
+        <Type GUID="{18071995-0000-0000-0000-000000000008}">UDINT</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>0</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>size</Name>
+        <Type GUID="{18071995-0000-0000-0000-000000000008}">UDINT</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>32</BitOffs>
+      </SubItem>
+    </DataType>
+    <DataType>
+      <Name GUID="{b0e739aa-b4b2-4831-a4ae-8ad6bcfcf392}">TcJobHandle_</Name>
+      <BaseType GUID="{18071995-0000-0000-0000-000000000071}">UXINT</BaseType>
+    </DataType>
+    <DataType>
+      <Name GUID="{5f0413ce-7186-413d-88b3-e0ce177def05}">ITcJobCaller_</Name>
+      <BaseType GUID="{00000001-0000-0000-e000-000000000064}">ITcUnknown</BaseType>
+      <Method>
+        <Name>CreateJobHandle</Name>
+        <ReturnType GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</ReturnType>
+        <Parameter>
+          <Name>pHdl</Name>
+          <Type GUID="{b0e739aa-b4b2-4831-a4ae-8ad6bcfcf392}" PointerTo="1">TcJobHandle_</Type>
+        </Parameter>
+        <Parameter>
+          <Name>ipJob</Name>
+          <Type GUID="{68e083d0-b621-49f2-9be7-8bb2e0f3d95b}">ITcJob_</Type>
+        </Parameter>
+      </Method>
+      <Method>
+        <Name>DeleteJobHandle</Name>
+        <ReturnType GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</ReturnType>
+        <Parameter>
+          <Name>hdl</Name>
+          <Type GUID="{b0e739aa-b4b2-4831-a4ae-8ad6bcfcf392}">TcJobHandle_</Type>
+        </Parameter>
+      </Method>
+      <Method>
+        <Name>GetJob</Name>
+        <ReturnType GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</ReturnType>
+        <Parameter>
+          <Name>hdl</Name>
+          <Type GUID="{b0e739aa-b4b2-4831-a4ae-8ad6bcfcf392}">TcJobHandle_</Type>
+        </Parameter>
+        <Parameter>
+          <Name>pipJob</Name>
+          <Type GUID="{68e083d0-b621-49f2-9be7-8bb2e0f3d95b}" PointerTo="1">ITcJob_</Type>
+        </Parameter>
+      </Method>
+      <Method>
+        <Name>GetState</Name>
+        <ReturnType GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</ReturnType>
+        <Parameter>
+          <Name>hdl</Name>
+          <Type GUID="{b0e739aa-b4b2-4831-a4ae-8ad6bcfcf392}">TcJobHandle_</Type>
+        </Parameter>
+        <Parameter>
+          <Name>hrState</Name>
+          <Type GUID="{18071995-0000-0000-0000-000000000019}" ReferenceTo="true">HRESULT</Type>
+        </Parameter>
+      </Method>
+      <Method>
+        <Name>GetCpuAccount</Name>
+        <ReturnType GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</ReturnType>
+        <Parameter>
+          <Name>hdl</Name>
+          <Type GUID="{b0e739aa-b4b2-4831-a4ae-8ad6bcfcf392}">TcJobHandle_</Type>
+        </Parameter>
+        <Parameter>
+          <Name>p</Name>
+          <Type GUID="{18071995-0000-0000-0000-000000000008}" ReferenceTo="true">UDINT</Type>
+        </Parameter>
+      </Method>
+      <Method>
+        <Name>GetTotalTime</Name>
+        <ReturnType GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</ReturnType>
+        <Parameter>
+          <Name>hdl</Name>
+          <Type GUID="{b0e739aa-b4b2-4831-a4ae-8ad6bcfcf392}">TcJobHandle_</Type>
+        </Parameter>
+        <Parameter>
+          <Name>p</Name>
+          <Type GUID="{18071995-0000-0000-0000-00000000000c}" ReferenceTo="true">LINT</Type>
+        </Parameter>
+      </Method>
+      <Method>
+        <Name>SetTimeout</Name>
+        <ReturnType GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</ReturnType>
+        <Parameter>
+          <Name>hdl</Name>
+          <Type GUID="{b0e739aa-b4b2-4831-a4ae-8ad6bcfcf392}">TcJobHandle_</Type>
+        </Parameter>
+        <Parameter>
+          <Name>nTimeout</Name>
+          <Type GUID="{18071995-0000-0000-0000-000000000008}">UDINT</Type>
+        </Parameter>
+      </Method>
+      <Method>
+        <Name>GetTimeout</Name>
+        <ReturnType GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</ReturnType>
+        <Parameter>
+          <Name>hdl</Name>
+          <Type GUID="{b0e739aa-b4b2-4831-a4ae-8ad6bcfcf392}">TcJobHandle_</Type>
+        </Parameter>
+        <Parameter>
+          <Name>nTimeout</Name>
+          <Type GUID="{18071995-0000-0000-0000-000000000008}" ReferenceTo="true">UDINT</Type>
+        </Parameter>
+      </Method>
+      <Method>
+        <Name>SubmitJob</Name>
+        <ReturnType GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</ReturnType>
+        <Parameter>
+          <Name>hdl</Name>
+          <Type GUID="{b0e739aa-b4b2-4831-a4ae-8ad6bcfcf392}">TcJobHandle_</Type>
+        </Parameter>
+        <Parameter>
+          <Name>invokeId</Name>
+          <Type GUID="{18071995-0000-0000-0000-000000000008}">UDINT</Type>
+        </Parameter>
+        <Parameter>
+          <Name>nData</Name>
+          <Type GUID="{18071995-0000-0000-0000-000000000008}" Optional="0">UDINT</Type>
+        </Parameter>
+        <Parameter>
+          <Name>pData</Name>
+          <Type GUID="{18071995-0000-0000-0000-000000000018}" Optional="0">PVOID</Type>
+        </Parameter>
+        <Parameter>
+          <Name>nSortOrder</Name>
+          <Type GUID="{18071995-0000-0000-0000-000000000008}" Optional="100">UDINT</Type>
+        </Parameter>
+      </Method>
+      <Method>
+        <Name>AbortJob</Name>
+        <ReturnType GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</ReturnType>
+        <Parameter>
+          <Name>hdl</Name>
+          <Type GUID="{b0e739aa-b4b2-4831-a4ae-8ad6bcfcf392}">TcJobHandle_</Type>
+        </Parameter>
+      </Method>
+      <Method>
+        <Name>JoinJob</Name>
+        <ReturnType GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</ReturnType>
+        <Parameter>
+          <Name>hdl</Name>
+          <Type GUID="{b0e739aa-b4b2-4831-a4ae-8ad6bcfcf392}">TcJobHandle_</Type>
+        </Parameter>
+        <Parameter>
+          <Name>nTimeout</Name>
+          <Type GUID="{41d69dd8-2092-45aa-a7ce-06891d419720}" Optional="0">OSTICKS</Type>
+        </Parameter>
+      </Method>
+      <Hides>
+        <Hide GUID="{28fb7858-f45b-4347-bc51-d616407f2d35}" />
+        <Hide GUID="{eab0c5c2-a00a-4095-a366-304642c4985a}" />
+        <Hide GUID="{3196c95c-b4ed-4007-ada4-33356377fde9}" />
+        <Hide GUID="{b5a19b70-a81d-4c7f-8e6e-a1752b97e1df}" />
+        <Hide GUID="{95d2c732-a45f-4cf0-ac27-1a6dacb4a110}" />
+        <Hide GUID="{84f7bbff-d92e-4ce1-9dd4-f53774f77795}" />
+        <Hide GUID="{979f7f2a-3dbe-4635-af27-7d7a3ed5886f}" />
+      </Hides>
+    </DataType>
+    <DataType>
+      <Name GUID="{68e083d0-b621-49f2-9be7-8bb2e0f3d95b}">ITcJob_</Name>
+      <BaseType GUID="{00000001-0000-0000-e000-000000000064}">ITcUnknown</BaseType>
+      <Method>
+        <Name>ExecJob</Name>
+        <ReturnType GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</ReturnType>
+        <Parameter>
+          <Name>ipTask</Name>
+          <Type GUID="{02000002-0000-0000-e000-000000000064}">ITcTask</Type>
+        </Parameter>
+        <Parameter>
+          <Name>ipInfo</Name>
+          <Type GUID="{81d253e8-e9a3-42ce-aab1-70c98753c9d8}">ITcJobCalleeInfo_</Type>
+        </Parameter>
+        <Parameter>
+          <Name>invokeId</Name>
+          <Type GUID="{18071995-0000-0000-0000-000000000008}">UDINT</Type>
+        </Parameter>
+        <Parameter>
+          <Name>nData</Name>
+          <Type GUID="{18071995-0000-0000-0000-000000000008}" Optional="0">UDINT</Type>
+        </Parameter>
+        <Parameter>
+          <Name>pData</Name>
+          <Type GUID="{18071995-0000-0000-0000-000000000018}" Optional="0">PVOID</Type>
+        </Parameter>
+      </Method>
+      <Hides>
+        <Hide GUID="{06e662fd-831f-423e-8f26-2cba0d4f0ce8}" />
+        <Hide GUID="{71858263-6386-44da-84cf-75a0fae5a4df}" />
+        <Hide GUID="{acacd948-864a-4901-89da-46eb6d925b2b}" />
+        <Hide GUID="{2e4e1079-a691-4747-8578-46e9317d2e9b}" />
+      </Hides>
+    </DataType>
+    <DataType>
+      <Name GUID="{81d253e8-e9a3-42ce-aab1-70c98753c9d8}">ITcJobCalleeInfo_</Name>
+      <Method>
+        <Name>GetAbortRequest</Name>
+        <ReturnType GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</ReturnType>
+        <Parameter>
+          <Name>phrAbort</Name>
+          <Type GUID="{18071995-0000-0000-0000-000000000019}" PointerTo="1">HRESULT</Type>
+        </Parameter>
+      </Method>
+      <Method>
+        <Name>GetContext</Name>
+        <ReturnType GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</ReturnType>
+        <Parameter>
+          <Name>pInvokeId</Name>
+          <Type GUID="{18071995-0000-0000-0000-000000000008}" PointerTo="1">UDINT</Type>
+        </Parameter>
+        <Parameter>
+          <Name>pnData</Name>
+          <Type GUID="{18071995-0000-0000-0000-000000000008}" PointerTo="1" Optional="0">UDINT</Type>
+        </Parameter>
+        <Parameter>
+          <Name>ppData</Name>
+          <Type GUID="{18071995-0000-0000-0000-000000000018}" PointerTo="1" Optional="0">PVOID</Type>
+        </Parameter>
+      </Method>
+      <Method>
+        <Name>GetUserData</Name>
+        <ReturnType GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</ReturnType>
+        <Parameter>
+          <Name>data</Name>
+          <Type GUID="{18071995-0000-0000-0000-000000000018}" ReferenceTo="true">PVOID</Type>
+        </Parameter>
+      </Method>
+      <Method>
+        <Name>SetUserData</Name>
+        <ReturnType GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</ReturnType>
+        <Parameter>
+          <Name>data</Name>
+          <Type GUID="{18071995-0000-0000-0000-000000000018}">PVOID</Type>
+        </Parameter>
+      </Method>
+      <Hides>
+        <Hide GUID="{b05bc0b6-b991-45aa-bd18-048072227f6a}" />
+      </Hides>
+    </DataType>
+    <DataType>
+      <Name GUID="{41D69DD8-2092-45AA-A7CE-06891D419720}" TcBaseType="true">OSTICKS</Name>
+      <BitSize>32</BitSize>
+      <BaseType GUID="{18071995-0000-0000-0000-000000000007}">DWORD</BaseType>
+    </DataType>
+    <DataType>
+      <Name GUID="{ae0df88d-c37a-42d1-bb72-5545f3dbf9f0}" Namespace="TcAppRuntimeModules">NameStringValuePair</Name>
+      <SubItem>
+        <Name>Name</Name>
+        <Type GUID="{18071995-0000-0000-0000-0001000000ff}">STRING(255)</Type>
+      </SubItem>
+      <SubItem>
+        <Name>Value</Name>
+        <Type GUID="{18071995-0000-0000-0000-0001000003ff}">STRING(1023)</Type>
+      </SubItem>
+      <Hides>
+        <Hide GUID="{11023452-7c00-4ba9-ba43-6d92fc1e13c9}" />
+      </Hides>
+    </DataType>
+    <DataType>
+      <Name GUID="{b166b89b-07b5-409a-9d5b-f7726cafe627}" Namespace="TcAppRuntimeModules">NameLintValuePair</Name>
+      <SubItem>
+        <Name>Name</Name>
+        <Type GUID="{18071995-0000-0000-0000-0001000000ff}">STRING(255)</Type>
+      </SubItem>
+      <SubItem>
+        <Name>Value</Name>
+        <Type GUID="{18071995-0000-0000-0000-00000000000c}">LINT</Type>
+      </SubItem>
+      <Hides>
+        <Hide GUID="{23465852-4c16-4274-9287-6f29bbbaeb80}" />
+      </Hides>
+    </DataType>
+    <DataType>
+      <Name GUID="{8a2cf9d3-f71b-49ea-96aa-ca3ab12b337a}" Namespace="TcAppRuntimeModules">ExternalSignalAddress</Name>
+      <SubItem>
+        <Name>String</Name>
+        <Type GUID="{ae0df88d-c37a-42d1-bb72-5545f3dbf9f0}" Namespace="TcAppRuntimeModules">NameStringValuePair</Type>
+        <ArrayInfo>
+          <LBound>0</LBound>
+          <Elements>5</Elements>
+        </ArrayInfo>
+      </SubItem>
+      <SubItem>
+        <Name>Numeric</Name>
+        <Type GUID="{b166b89b-07b5-409a-9d5b-f7726cafe627}" Namespace="TcAppRuntimeModules">NameLintValuePair</Type>
+        <ArrayInfo>
+          <LBound>0</LBound>
+          <Elements>5</Elements>
+        </ArrayInfo>
+      </SubItem>
+      <Hides>
+        <Hide GUID="{a07d7098-442e-41f6-ae4a-fb58ad85224b}" />
+      </Hides>
+    </DataType>
+    <DataType>
+      <Name GUID="{24df4c47-a5fc-4534-a4aa-304ce11cae9a}">TcExternalSourceInterpolationMode</Name>
+      <BaseType GUID="{18071995-0000-0000-0000-000000000006}">INT</BaseType>
+      <EnumInfo>
+        <Text>InterpolationMode_Previous</Text>
+        <Enum>0</Enum>
+        <Comment><![CDATA[Take previous sample point]]></Comment>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>InterpolationMode_Next</Text>
+        <Enum>1</Enum>
+        <Comment><![CDATA[Take following sample point]]></Comment>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>InterpolationMode_Nearest</Text>
+        <Enum>2</Enum>
+        <Comment><![CDATA[Take nearest sample point]]></Comment>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>InterpolationMode_Callback</Text>
+        <Enum>3</Enum>
+        <Comment><![CDATA[Fire callback, if no exactly matching sample point is present]]></Comment>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>InterpolationMode_Linear</Text>
+        <Enum>4</Enum>
+        <Comment><![CDATA[Linear interpolation]]></Comment>
+      </EnumInfo>
+      <Hides>
+        <Hide GUID="{d1ce9774-5abf-42e5-8fe4-99f5dee76f36}" />
+        <Hide GUID="{430dda91-6797-4e3c-84c6-a1786f8b6ea7}" />
+      </Hides>
+    </DataType>
+    <DataType>
+      <Name GUID="{98b9a1f3-afb0-4ddd-856e-5cca2e73ce75}">TcExternalSourceContinuationMode</Name>
+      <BaseType GUID="{18071995-0000-0000-0000-000000000006}">INT</BaseType>
+      <EnumInfo>
+        <Text>ContinuationMode_Nearest</Text>
+        <Enum>0</Enum>
+        <Comment><![CDATA[Use nearest sample point, if timestamp is out of the specified range]]></Comment>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>ContinuationMode_Callback</Text>
+        <Enum>1</Enum>
+        <Comment><![CDATA[Fire callback, if timestamp is out of the specified range]]></Comment>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>ContinuationMode_LinearExtrapolation</Text>
+        <Enum>2</Enum>
+        <Comment><![CDATA[Extrapolate linearly, if timestamp is out of the specified range]]></Comment>
+      </EnumInfo>
+      <Hides>
+        <Hide GUID="{183ab6b0-9d13-4268-9013-6bc144af43f9}" />
+        <Hide GUID="{58686c98-6145-45bb-a1ce-6dfafc306db4}" />
+        <Hide GUID="{ee21be7c-9d24-4a92-825b-b15b1919983f}" />
+      </Hides>
+    </DataType>
+    <DataType>
+      <Name GUID="{da08d267-a72f-42d2-88ee-74f0962f871c}">TimeTableWriteMode</Name>
+      <BaseType GUID="{18071995-0000-0000-0000-000000000006}">INT</BaseType>
+      <EnumInfo>
+        <Text>TimeTableWriteMode_Append</Text>
+        <Enum>0</Enum>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>TimeTableWriteMode_Override</Text>
+        <Enum>1</Enum>
+      </EnumInfo>
+    </DataType>
+    <DataType>
+      <Name GUID="{753a8f96-5c19-467c-a75f-8727394fd788}">TimeTableReadMode</Name>
+      <BaseType GUID="{18071995-0000-0000-0000-000000000006}">INT</BaseType>
+      <EnumInfo>
+        <Text>TimeTableReadMode_Remove</Text>
+        <Enum>0</Enum>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>TimeTableReadMode_Keep</Text>
+        <Enum>1</Enum>
+      </EnumInfo>
+    </DataType>
+    <DataType>
+      <Name GUID="{e25619af-2032-4dd0-879a-9a147624bbd8}">ITcAppRuntimePortReadWrite</Name>
+      <BaseType GUID="{00000001-0000-0000-e000-000000000064}">ITcUnknown</BaseType>
+      <Method>
+        <Name>Write</Name>
+        <ReturnType GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</ReturnType>
+        <Parameter>
+          <Name>indexGroup</Name>
+          <Type GUID="{18071995-0000-0000-0000-000000000008}">UDINT</Type>
+        </Parameter>
+        <Parameter>
+          <Name>indexOffset</Name>
+          <Type GUID="{18071995-0000-0000-0000-000000000008}">UDINT</Type>
+        </Parameter>
+        <Parameter>
+          <Name>cbLen</Name>
+          <Type GUID="{18071995-0000-0000-0000-000000000008}">UDINT</Type>
+        </Parameter>
+        <Parameter>
+          <Name>pData</Name>
+          <Type GUID="{18071995-0000-0000-0000-000000000018}">PVOID</Type>
+        </Parameter>
+      </Method>
+      <Method>
+        <Name>Read</Name>
+        <ReturnType GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</ReturnType>
+        <Parameter>
+          <Name>indexGroup</Name>
+          <Type GUID="{18071995-0000-0000-0000-000000000008}">UDINT</Type>
+        </Parameter>
+        <Parameter>
+          <Name>indexOffset</Name>
+          <Type GUID="{18071995-0000-0000-0000-000000000008}">UDINT</Type>
+        </Parameter>
+        <Parameter>
+          <Name>cbLen</Name>
+          <Type GUID="{18071995-0000-0000-0000-000000000008}">UDINT</Type>
+        </Parameter>
+        <Parameter>
+          <Name>pData</Name>
+          <Type GUID="{18071995-0000-0000-0000-000000000018}">PVOID</Type>
+        </Parameter>
+      </Method>
+      <Method>
+        <Name>ReadDyn</Name>
+        <ReturnType GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</ReturnType>
+        <Parameter>
+          <Name>indexGroup</Name>
+          <Type GUID="{18071995-0000-0000-0000-000000000008}">UDINT</Type>
+        </Parameter>
+        <Parameter>
+          <Name>indexOffset</Name>
+          <Type GUID="{18071995-0000-0000-0000-000000000008}">UDINT</Type>
+        </Parameter>
+        <Parameter>
+          <Name>pcbLen</Name>
+          <Type GUID="{18071995-0000-0000-0000-000000000008}" PointerTo="1">UDINT</Type>
+        </Parameter>
+        <Parameter>
+          <Name>pData</Name>
+          <Type GUID="{18071995-0000-0000-0000-000000000018}">PVOID</Type>
+        </Parameter>
+      </Method>
+      <Hides>
+        <Hide GUID="{a7d73fad-7359-40b2-9ba9-8d7bdf2a0d84}" />
+        <Hide GUID="{14feb467-648b-4ac3-b40a-fb3d9287a769}" />
+        <Hide GUID="{5e2f8414-7f69-4144-b807-d8ec7608ac6e}" />
+      </Hides>
+    </DataType>
+  </DataTypes>
+  <Groups>
+    <Group SortOrder="701">
+      <Name>TcApplicationRuntime</Name>
+      <DisplayName>Application Runtime</DisplayName>
+    </Group>
+    <Group>
+      <Name>C++</Name>
+    </Group>
+  </Groups>
+  <Modules>
+    <Module GUID="{21678123-fbdf-4252-b8b2-40e51015fc7f}" Group="TcApplicationRuntime">
+      <Name>AppRuntimeSyncMapping</Name>
+      <CLSID ClassFactory="TcApplicationRuntimeModules">{21678123-fbdf-4252-b8b2-40e51015fc7f}</CLSID>
+      <Licenses>
+        <License>
+          <LicenseId>{304D006A-8299-4560-AB79-438534B50288}</LicenseId>
+          <Comment>TC3 C++</Comment>
+        </License>
+      </Licenses>
+      <InitSequence>SO</InitSequence>
+      <Contexts>
+        <Context>
+          <Id>1</Id>
+        </Context>
+      </Contexts>
+      <Interfaces>
+        <Interface DisableCodeGeneration="true">
+          <Type GUID="{00000012-0000-0000-E000-000000000064}">ITComObject</Type>
+        </Interface>
+        <Interface>
+          <Type GUID="{03000010-0000-0000-E000-000000000064}">ITcCyclic</Type>
+        </Interface>
+      </Interfaces>
+      <Parameters>
+        <Parameter HideParameter="true">
+          <Name>TraceLevelMax</Name>
+          <Comment>Controls the amount of log messages.</Comment>
+          <BaseType GUID="{8007ae3b-86bb-40f2-b385-ef87fcc239a4}">TcTraceLevel</BaseType>
+          <PTCID>#x03002103</PTCID>
+          <ContextId>1</ContextId>
+        </Parameter>
+        <Parameter>
+          <Name>SrcPid</Name>
+          <BaseType GUID="{18071995-0000-0000-0000-00000000001c}">PTCID</BaseType>
+          <PTCID>#x00000001</PTCID>
+          <ContextId>1</ContextId>
+        </Parameter>
+        <Parameter>
+          <Name>DstPid</Name>
+          <BaseType GUID="{18071995-0000-0000-0000-00000000001c}">PTCID</BaseType>
+          <PTCID>#x00000002</PTCID>
+          <ContextId>1</ContextId>
+        </Parameter>
+        <Parameter>
+          <Name>ByteSize</Name>
+          <BaseType GUID="{18071995-0000-0000-0000-000000000008}">UDINT</BaseType>
+          <PTCID>#x00000003</PTCID>
+        </Parameter>
+        <Parameter>
+          <Name>ContextId</Name>
+          <BaseType GUID="{18071995-0000-0000-0000-000000000008}">UDINT</BaseType>
+          <PTCID>#x00000004</PTCID>
+          <ContextId>1</ContextId>
+        </Parameter>
+      </Parameters>
+      <DataAreas />
+      <InterfacePointers>
+        <InterfacePointer>
+          <PTCID>#x03002060</PTCID>
+          <Name>CyclicCaller</Name>
+          <Type GUID="{0300001e-0000-0000-e000-000000000064}">ITcCyclicCaller</Type>
+        </InterfacePointer>
+        <InterfacePointer>
+          <PTCID>#x03002030</PTCID>
+          <Name>SrcADI</Name>
+          <Type GUID="{03000012-0000-0000-e000-000000000064}">ITcADI</Type>
+        </InterfacePointer>
+        <InterfacePointer>
+          <PTCID>#x03002031</PTCID>
+          <Name>DstADI</Name>
+          <Type GUID="{03000012-0000-0000-e000-000000000064}">ITcADI</Type>
+        </InterfacePointer>
+      </InterfacePointers>
+      <DataPointers />
+      <Deployment>
+        <FileEntry TargetPlatform="TwinCAT UM (x86)">
+          <SourceFile>%SOLUTIONMODULEINSTTPATH%TwinCAT UM (x86)\%CLASSFACTORYNAME%W32.dll</SourceFile>
+          <DestinationFile>%TC_SYSSRVEXEPATH%%CLASSFACTORYNAME%W32.dll</DestinationFile>
+        </FileEntry>
+        <FileEntry TargetPlatform="TwinCAT UM (x64)">
+          <SourceFile>%SOLUTIONMODULEINSTTPATH%TwinCAT UM (x64)\%CLASSFACTORYNAME%W32.dll</SourceFile>
+          <DestinationFile>%TC_SYSSRVEXEPATH%%CLASSFACTORYNAME%W32.dll</DestinationFile>
+        </FileEntry>
+      </Deployment>
+    </Module>
+    <Module GUID="{e3de9140-8259-45b8-8653-5e5f552bed31}" Group="TcApplicationRuntime">
+      <Name>AppRuntimeExternalCaller</Name>
+      <CLSID ClassFactory="TcApplicationRuntimeModules">{e3de9140-8259-45b8-8653-5e5f552bed31}</CLSID>
+      <Licenses>
+        <License>
+          <LicenseId>{304D006A-8299-4560-AB79-438534B50288}</LicenseId>
+          <Comment>TC3 C++</Comment>
+        </License>
+      </Licenses>
+      <InitSequence>SO</InitSequence>
+      <Contexts />
+      <Interfaces>
+        <Interface DisableCodeGeneration="true">
+          <Type GUID="{00000012-0000-0000-E000-000000000064}">ITComObject</Type>
+        </Interface>
+        <Interface>
+          <Type GUID="{0300001e-0000-0000-e000-000000000064}">ITcCyclicCaller</Type>
+        </Interface>
+        <Interface>
+          <Type GUID="{03000026-0000-0000-e000-000000000064}">ITcPostCyclicCaller</Type>
+        </Interface>
+        <Interface>
+          <Type GUID="{0300001f-0000-0000-e000-000000000064}">ITcIoCyclicCaller</Type>
+        </Interface>
+        <Interface>
+          <Type GUID="{02000003-0000-0000-e000-000000000064}">ITcRTimeTask</Type>
+        </Interface>
+        <Interface>
+          <Type GUID="{e25619af-2032-4dd0-879a-9a147624bbd8}">ITcAppRuntimePortReadWrite</Type>
+        </Interface>
+      </Interfaces>
+      <Parameters>
+        <Parameter HideParameter="true">
+          <Name>TraceLevelMax</Name>
+          <Comment>Controls the amount of log messages.</Comment>
+          <BaseType GUID="{8007ae3b-86bb-40f2-b385-ef87fcc239a4}">TcTraceLevel</BaseType>
+          <PTCID>#x03002103</PTCID>
+          <ContextId>1</ContextId>
+        </Parameter>
+        <Parameter CreateSymbol="true" OnlineParameter="true">
+          <Name>CycleTime</Name>
+          <Comment>CycleTime in Nanoseconds</Comment>
+          <BaseType GUID="{18071995-0000-0000-0000-000000000008}">UDINT</BaseType>
+          <PTCID>#x02001001</PTCID>
+        </Parameter>
+        <Parameter>
+          <Name>Priority</Name>
+          <BaseType GUID="{18071995-0000-0000-0000-000000000008}">UDINT</BaseType>
+          <PTCID>#x02001002</PTCID>
+        </Parameter>
+        <Parameter CreateSymbol="true" OnlineParameter="true">
+          <Name>AmsPort</Name>
+          <Comment>ADS port number actually used by the module instance.</Comment>
+          <BaseType GUID="{18071995-0000-0000-0000-000000000004}">WORD</BaseType>
+          <PTCID>#x02001008</PTCID>
+        </Parameter>
+        <Parameter CreateSymbol="true" OnlineParameter="true">
+          <Name>Counter</Name>
+          <Comment>Incremented continuously if module instance is in started mode.</Comment>
+          <BaseType GUID="{18071995-0000-0000-0000-000000000008}">UDINT</BaseType>
+          <PTCID>#x00000010</PTCID>
+        </Parameter>
+      </Parameters>
+      <DataAreas>
+      </DataAreas>
+      <InterfacePointers>
+      </InterfacePointers>
+      <DataPointers />
+      <Deployment>
+        <FileEntry TargetPlatform="TwinCAT UM (x86)">
+          <SourceFile>%SOLUTIONMODULEINSTTPATH%TwinCAT UM (x86)\%CLASSFACTORYNAME%W32.dll</SourceFile>
+          <DestinationFile>%TC_SYSSRVEXEPATH%%CLASSFACTORYNAME%W32.dll</DestinationFile>
+        </FileEntry>
+        <FileEntry TargetPlatform="TwinCAT UM (x64)">
+          <SourceFile>%SOLUTIONMODULEINSTTPATH%TwinCAT UM (x64)\%CLASSFACTORYNAME%W32.dll</SourceFile>
+          <DestinationFile>%TC_SYSSRVEXEPATH%%CLASSFACTORYNAME%W32.dll</DestinationFile>
+        </FileEntry>
+      </Deployment>
+      <Properties>
+        <Property>
+          <Name>AdapterExtensionProgId</Name>
+          <Value>TwinCAT.ExternalCallerAdapter</Value>
+        </Property>
+      </Properties>
+    </Module>
+    <Module GUID="{3282adf5-0d4e-48bf-83da-8a9b1ffb0bcc}" Group="TcApplicationRuntime">
+      <Name>AppRuntimeAsyncMapping</Name>
+      <CLSID ClassFactory="TcApplicationRuntimeModules">{3282adf5-0d4e-48bf-83da-8a9b1ffb0bcc}</CLSID>
+      <Licenses>
+        <License>
+          <LicenseId>{304D006A-8299-4560-AB79-438534B50288}</LicenseId>
+          <Comment>TC3 C++</Comment>
+        </License>
+      </Licenses>
+      <InitSequence>SO</InitSequence>
+      <Contexts>
+        <Context>
+          <Id>1</Id>
+        </Context>
+      </Contexts>
+      <Interfaces>
+        <Interface DisableCodeGeneration="true">
+          <Type GUID="{00000012-0000-0000-E000-000000000064}">ITComObject</Type>
+        </Interface>
+        <Interface>
+          <Type GUID="{03000011-0000-0000-e000-000000000064}">ITcIoCyclic</Type>
+        </Interface>
+      </Interfaces>
+      <Parameters>
+        <Parameter HideParameter="true">
+          <Name>TraceLevelMax</Name>
+          <Comment>Controls the amount of log messages.</Comment>
+          <BaseType GUID="{8007ae3b-86bb-40f2-b385-ef87fcc239a4}">TcTraceLevel</BaseType>
+          <PTCID>#x03002103</PTCID>
+          <ContextId>1</ContextId>
+        </Parameter>
+        <Parameter>
+          <Name>SrcPid</Name>
+          <BaseType GUID="{18071995-0000-0000-0000-00000000001c}">PTCID</BaseType>
+          <PTCID>#x00000001</PTCID>
+          <ContextId>1</ContextId>
+        </Parameter>
+        <Parameter>
+          <Name>SrcContextId</Name>
+          <BaseType GUID="{18071995-0000-0000-0000-000000000008}">UDINT</BaseType>
+          <PTCID>#x00000002</PTCID>
+          <ContextId>1</ContextId>
+        </Parameter>
+        <Parameter>
+          <Name>DstPid</Name>
+          <BaseType GUID="{18071995-0000-0000-0000-00000000001c}">PTCID</BaseType>
+          <PTCID>#x00000004</PTCID>
+          <ContextId>1</ContextId>
+        </Parameter>
+        <Parameter>
+          <Name>DstContextId</Name>
+          <BaseType GUID="{18071995-0000-0000-0000-000000000008}">UDINT</BaseType>
+          <PTCID>#x00000005</PTCID>
+          <ContextId>1</ContextId>
+        </Parameter>
+        <Parameter>
+          <Name>ByteSize</Name>
+          <BaseType GUID="{18071995-0000-0000-0000-000000000008}">UDINT</BaseType>
+          <PTCID>#x00000007</PTCID>
+          <ContextId>1</ContextId>
+        </Parameter>
+      </Parameters>
+      <DataAreas>
+      </DataAreas>
+      <InterfacePointers>
+        <InterfacePointer>
+          <PTCID>#x03002020</PTCID>
+          <Name>SrcIoCyclicCaller</Name>
+          <Type GUID="{0300001f-0000-0000-e000-000000000064}">ITcIoCyclicCaller</Type>
+        </InterfacePointer>
+        <InterfacePointer>
+          <PTCID>#x03002021</PTCID>
+          <Name>DstIoCyclicCaller</Name>
+          <Type GUID="{0300001f-0000-0000-e000-000000000064}">ITcIoCyclicCaller</Type>
+        </InterfacePointer>
+        <InterfacePointer>
+          <PTCID>#x03002030</PTCID>
+          <Name>SrcADI</Name>
+          <Type GUID="{03000012-0000-0000-e000-000000000064}">ITcADI</Type>
+        </InterfacePointer>
+        <InterfacePointer>
+          <PTCID>#x03002031</PTCID>
+          <Name>DstADI</Name>
+          <Type GUID="{03000012-0000-0000-e000-000000000064}">ITcADI</Type>
+        </InterfacePointer>
+      </InterfacePointers>
+      <DataPointers />
+      <Deployment>
+        <FileEntry TargetPlatform="TwinCAT UM (x86)">
+          <SourceFile>%SOLUTIONMODULEINSTTPATH%TwinCAT UM (x86)\%CLASSFACTORYNAME%W32.dll</SourceFile>
+          <DestinationFile>%TC_SYSSRVEXEPATH%%CLASSFACTORYNAME%W32.dll</DestinationFile>
+        </FileEntry>
+        <FileEntry TargetPlatform="TwinCAT UM (x64)">
+          <SourceFile>%SOLUTIONMODULEINSTTPATH%TwinCAT UM (x64)\%CLASSFACTORYNAME%W32.dll</SourceFile>
+          <DestinationFile>%TC_SYSSRVEXEPATH%%CLASSFACTORYNAME%W32.dll</DestinationFile>
+        </FileEntry>
+      </Deployment>
+    </Module>
+    <Module GUID="{62b6fdc4-c25d-47e3-8221-b33e7491936e}" Group="TcApplicationRuntime">
+      <Name>AppRuntimeExternalSink</Name>
+      <CLSID ClassFactory="TcApplicationRuntimeModules">{62b6fdc4-c25d-47e3-8221-b33e7491936e}</CLSID>
+      <Licenses>
+        <License>
+          <LicenseId>{304D006A-8299-4560-AB79-438534B50288}</LicenseId>
+          <Comment>TC3 C++</Comment>
+        </License>
+      </Licenses>
+      <InitSequence>SO</InitSequence>
+      <Contexts>
+        <Context>
+          <Id>1</Id>
+        </Context>
+      </Contexts>
+      <Interfaces>
+        <Interface DisableCodeGeneration="true">
+          <Type GUID="{00000012-0000-0000-E000-000000000064}">ITComObject</Type>
+        </Interface>
+        <Interface>
+          <Type GUID="{03000011-0000-0000-e000-000000000064}">ITcIoCyclic</Type>
+        </Interface>
+        <Interface>
+          <Type GUID="{b26c74e4-0adf-460d-9f81-9d506130293e}">ITcAppRuntimeExternalSinkServer</Type>
+        </Interface>
+      </Interfaces>
+      <Parameters>
+        <Parameter HideParameter="true">
+          <Name>TraceLevelMax</Name>
+          <Comment>Controls the amount of log messages.</Comment>
+          <BaseType GUID="{8007ae3b-86bb-40f2-b385-ef87fcc239a4}">TcTraceLevel</BaseType>
+          <PTCID>#x03002103</PTCID>
+        </Parameter>
+        <Parameter CreateSymbol="true">
+          <Name>SrcPid</Name>
+          <BaseType GUID="{18071995-0000-0000-0000-00000000001c}">PTCID</BaseType>
+          <PTCID>#x00000002</PTCID>
+        </Parameter>
+        <Parameter CreateSymbol="true">
+          <Name>ByteSize</Name>
+          <BaseType GUID="{18071995-0000-0000-0000-000000000008}">UDINT</BaseType>
+          <PTCID>#x00000003</PTCID>
+        </Parameter>
+        <Parameter CreateSymbol="true">
+          <Name>ContextId</Name>
+          <BaseType GUID="{18071995-0000-0000-0000-000000000008}">UDINT</BaseType>
+          <PTCID>#x00000004</PTCID>
+        </Parameter>
+        <Parameter CreateSymbol="true">
+          <Name>ExternalAddress</Name>
+          <BaseType GUID="{8a2cf9d3-f71b-49ea-96aa-ca3ab12b337a}" Namespace="TcAppRuntimeModules">ExternalSignalAddress</BaseType>
+          <PTCID>#x00000010</PTCID>
+        </Parameter>
+        <Parameter CreateSymbol="true">
+          <Name>BufferSize</Name>
+          <BaseType GUID="{18071995-0000-0000-0000-000000000008}">UDINT</BaseType>
+          <Unit>Bytes</Unit>
+          <Default>
+            <Value>0</Value>
+          </Default>
+          <PTCID>#x00000001</PTCID>
+          <ContextId>1</ContextId>
+        </Parameter>
+        <Parameter CreateSymbol="true">
+          <Name>DownSampling</Name>
+          <BaseType GUID="{18071995-0000-0000-0000-000000000008}">UDINT</BaseType>
+          <Default>
+            <Value>1</Value>
+          </Default>
+          <PTCID>#x00000005</PTCID>
+          <ContextId>1</ContextId>
+        </Parameter>
+      </Parameters>
+      <DataAreas>
+      </DataAreas>
+      <InterfacePointers>
+        <InterfacePointer>
+          <PTCID>#x03002020</PTCID>
+          <Name>IoCyclicCaller</Name>
+          <Type GUID="{0300001f-0000-0000-e000-000000000064}">ITcIoCyclicCaller</Type>
+        </InterfacePointer>
+        <InterfacePointer>
+          <PTCID>#x03002030</PTCID>
+          <Name>ADI</Name>
+          <Type GUID="{03000012-0000-0000-e000-000000000064}">ITcADI</Type>
+        </InterfacePointer>
+      </InterfacePointers>
+      <DataPointers />
+      <Deployment>
+        <FileEntry TargetPlatform="TwinCAT UM (x86)">
+          <SourceFile>%SOLUTIONMODULEINSTTPATH%TwinCAT UM (x86)\%CLASSFACTORYNAME%W32.dll</SourceFile>
+          <DestinationFile>%TC_SYSSRVEXEPATH%%CLASSFACTORYNAME%W32.dll</DestinationFile>
+        </FileEntry>
+        <FileEntry TargetPlatform="TwinCAT UM (x64)">
+          <SourceFile>%SOLUTIONMODULEINSTTPATH%TwinCAT UM (x64)\%CLASSFACTORYNAME%W32.dll</SourceFile>
+          <DestinationFile>%TC_SYSSRVEXEPATH%%CLASSFACTORYNAME%W32.dll</DestinationFile>
+        </FileEntry>
+      </Deployment>
+      <Properties>
+        <Property>
+          <Name>AdapterExtensionProgId</Name>
+          <Value>TwinCAT.ExternalSinkAdapter</Value>
+        </Property>
+      </Properties>
+    </Module>
+    <Module GUID="{b08a088b-8421-4422-9208-a4c55670e939}" Group="TcApplicationRuntime">
+      <Name>AppRuntimeExternalSource</Name>
+      <CLSID ClassFactory="TcApplicationRuntimeModules">{b08a088b-8421-4422-9208-a4c55670e939}</CLSID>
+      <Licenses>
+        <License>
+          <LicenseId>{304D006A-8299-4560-AB79-438534B50288}</LicenseId>
+          <Comment>TC3 C++</Comment>
+        </License>
+      </Licenses>
+      <InitSequence>SO</InitSequence>
+      <Contexts>
+        <Context>
+          <Id>1</Id>
+        </Context>
+      </Contexts>
+      <Interfaces>
+        <Interface DisableCodeGeneration="true">
+          <Type GUID="{00000012-0000-0000-E000-000000000064}">ITComObject</Type>
+        </Interface>
+        <Interface>
+          <Type GUID="{03000011-0000-0000-e000-000000000064}">ITcIoCyclic</Type>
+        </Interface>
+        <Interface>
+          <Type GUID="{13342fd7-bc89-464c-bdcb-b518d4a64dbe}">ITcAppRuntimeExternalSourceServer</Type>
+        </Interface>
+      </Interfaces>
+      <Parameters>
+        <Parameter HideParameter="true">
+          <Name>TraceLevelMax</Name>
+          <Comment>Controls the amount of log messages.</Comment>
+          <BaseType GUID="{8007ae3b-86bb-40f2-b385-ef87fcc239a4}">TcTraceLevel</BaseType>
+          <PTCID>#x03002103</PTCID>
+        </Parameter>
+        <Parameter CreateSymbol="true">
+          <Name>DstPid</Name>
+          <BaseType GUID="{18071995-0000-0000-0000-00000000001c}">PTCID</BaseType>
+          <PTCID>#x00000002</PTCID>
+        </Parameter>
+        <Parameter CreateSymbol="true">
+          <Name>ByteSize</Name>
+          <BaseType GUID="{18071995-0000-0000-0000-000000000008}">UDINT</BaseType>
+          <PTCID>#x00000003</PTCID>
+        </Parameter>
+        <Parameter CreateSymbol="true">
+          <Name>ContextId</Name>
+          <BaseType GUID="{18071995-0000-0000-0000-000000000008}">UDINT</BaseType>
+          <PTCID>#x00000004</PTCID>
+        </Parameter>
+        <Parameter CreateSymbol="true">
+          <Name>ExternalAddress</Name>
+          <BaseType GUID="{8a2cf9d3-f71b-49ea-96aa-ca3ab12b337a}" Namespace="TcAppRuntimeModules">ExternalSignalAddress</BaseType>
+          <PTCID>#x00000010</PTCID>
+        </Parameter>
+        <Parameter CreateSymbol="true">
+          <Name>InitialBufferSize</Name>
+          <BaseType GUID="{18071995-0000-0000-0000-000000000008}">UDINT</BaseType>
+          <Unit>Bytes</Unit>
+          <Default>
+            <Value>2048</Value>
+          </Default>
+          <PTCID>#x00000020</PTCID>
+          <ContextId>1</ContextId>
+        </Parameter>
+        <Parameter CreateSymbol="true">
+          <Name>MaxBufferSize</Name>
+          <BaseType GUID="{18071995-0000-0000-0000-000000000006}">INT</BaseType>
+          <Unit>Bytes</Unit>
+          <Default>
+            <Value>32767</Value>
+          </Default>
+          <PTCID>#x00000021</PTCID>
+          <ContextId>1</ContextId>
+        </Parameter>
+        <Parameter CreateSymbol="true">
+          <Name>InterpolationMode</Name>
+          <BaseType GUID="{24df4c47-a5fc-4534-a4aa-304ce11cae9a}">TcExternalSourceInterpolationMode</BaseType>
+          <Default>
+            <EnumText>InterpolationMode_Previous</EnumText>
+          </Default>
+          <PTCID>#x00000022</PTCID>
+          <ContextId>1</ContextId>
+        </Parameter>
+        <Parameter CreateSymbol="true">
+          <Name>ContinuationMode</Name>
+          <BaseType GUID="{98b9a1f3-afb0-4ddd-856e-5cca2e73ce75}">TcExternalSourceContinuationMode</BaseType>
+          <Default>
+            <EnumText>ContinuationMode_Callback</EnumText>
+          </Default>
+          <PTCID>#x00000023</PTCID>
+          <ContextId>1</ContextId>
+        </Parameter>
+        <Parameter CreateSymbol="true">
+          <Name>RepeatPeriodically</Name>
+          <BaseType GUID="{18071995-0000-0000-0000-000000000030}">BOOL</BaseType>
+          <Default>
+            <EnumText>FALSE</EnumText>
+          </Default>
+          <PTCID>#x00000024</PTCID>
+          <ContextId>1</ContextId>
+        </Parameter>
+        <Parameter OnlineParameter="true" CreateSymbol="true">
+          <Name>ActualBufferSize</Name>
+          <BaseType GUID="{18071995-0000-0000-0000-000000000008}">UDINT</BaseType>
+          <PTCID>#x00000041</PTCID>
+          <ContextId>1</ContextId>
+        </Parameter>
+      </Parameters>
+      <DataAreas>
+      </DataAreas>
+      <InterfacePointers>
+        <InterfacePointer>
+          <PTCID>#x03002020</PTCID>
+          <Name>IoCyclicCaller</Name>
+          <Type GUID="{0300001f-0000-0000-e000-000000000064}">ITcIoCyclicCaller</Type>
+        </InterfacePointer>
+        <InterfacePointer>
+          <PTCID>#x03002030</PTCID>
+          <Name>ADI</Name>
+          <Type GUID="{03000012-0000-0000-e000-000000000064}">ITcADI</Type>
+        </InterfacePointer>
+      </InterfacePointers>
+      <DataPointers />
+      <Deployment>
+        <FileEntry TargetPlatform="TwinCAT UM (x86)">
+          <SourceFile>%SOLUTIONMODULEINSTTPATH%TwinCAT UM (x86)\%CLASSFACTORYNAME%W32.dll</SourceFile>
+          <DestinationFile>%TC_SYSSRVEXEPATH%%CLASSFACTORYNAME%W32.dll</DestinationFile>
+        </FileEntry>
+        <FileEntry TargetPlatform="TwinCAT UM (x64)">
+          <SourceFile>%SOLUTIONMODULEINSTTPATH%TwinCAT UM (x64)\%CLASSFACTORYNAME%W32.dll</SourceFile>
+          <DestinationFile>%TC_SYSSRVEXEPATH%%CLASSFACTORYNAME%W32.dll</DestinationFile>
+        </FileEntry>
+      </Deployment>
+      <Properties>
+        <Property>
+          <Name>AdapterExtensionProgId</Name>
+          <Value>TwinCAT.ExternalSourceAdapter</Value>
+        </Property>
+      </Properties>
+    </Module>
+    <Module GUID="{7ec5d733-faec-427c-8ce0-43f3bf959fd7}" Group="TcApplicationRuntime">
+      <Name>AppRuntimeMethodInvoker</Name>
+      <CLSID ClassFactory="TcApplicationRuntimeModules">{7ec5d733-faec-427c-8ce0-43f3bf959fd7}</CLSID>
+      <Licenses>
+        <License>
+          <LicenseId>{304D006A-8299-4560-AB79-438534B50288}</LicenseId>
+          <Comment>TC3 C++</Comment>
+        </License>
+      </Licenses>
+      <InitSequence>SO</InitSequence>
+      <Contexts>
+        <Context>
+          <Id>1</Id>
+        </Context>
+      </Contexts>
+      <Interfaces>
+        <Interface DisableCodeGeneration="true">
+          <Type GUID="{00000012-0000-0000-E000-000000000064}">ITComObject</Type>
+        </Interface>
+        <Interface>
+          <Type GUID="{03000010-0000-0000-E000-000000000064}">ITcCyclic</Type>
+        </Interface>
+        <Interface DisableCodeGeneration="true">
+          <Type GUID="{03000012-0000-0000-E000-000000000064}">ITcADI</Type>
+        </Interface>
+        <Interface DisableCodeGeneration="true">
+          <Type GUID="{03000018-0000-0000-E000-000000000064}">ITcWatchSource</Type>
+        </Interface>
+      </Interfaces>
+      <Parameters>
+        <Parameter HideParameter="true">
+          <Name>TraceLevelMax</Name>
+          <Comment>Controls the amount of log messages.</Comment>
+          <BaseType GUID="{8007ae3b-86bb-40f2-b385-ef87fcc239a4}">TcTraceLevel</BaseType>
+          <PTCID>#x03002103</PTCID>
+          <ContextId>1</ContextId>
+        </Parameter>
+        <Parameter CreateSymbol="true">
+          <Name>Method</Name>
+          <BaseType GUID="{742980fd-9037-492b-8e61-f9e28f1d2e63}">MethodReference</BaseType>
+          <PTCID>#x00000001</PTCID>
+          <ContextId>1</ContextId>
+        </Parameter>
+        <Parameter CreateSymbol="true">
+          <Name>InputDataAreaConfig</Name>
+          <BaseType GUID="{bd3ba8a6-fb59-4197-b6ba-a3b09ffc369c}" Namespace="IO">TcIoDataAreaCfg</BaseType>
+          <ArrayInfo>
+            <LBound>0</LBound>
+            <Elements MaxUnbounded="true" Min="0">0</Elements>
+          </ArrayInfo>
+          <PTCID>#x03007000</PTCID>
+          <ContextId>1</ContextId>
+        </Parameter>
+        <Parameter CreateSymbol="true">
+          <Name>OutputDataAreaConfig</Name>
+          <BaseType GUID="{bd3ba8a6-fb59-4197-b6ba-a3b09ffc369c}" Namespace="IO">TcIoDataAreaCfg</BaseType>
+          <ArrayInfo>
+            <LBound>0</LBound>
+            <Elements Min="0" MaxUnbounded="true">0</Elements>
+          </ArrayInfo>
+          <PTCID>#x03007001</PTCID>
+          <ContextId>1</ContextId>
+        </Parameter>
+        <Parameter CreateSymbol="true">
+          <Name>DataAreaSizes</Name>
+          <BaseType GUID="{c636b456-b483-42a5-bd8a-58753433f375}" Namespace="IO">TcIoDataAreaSize</BaseType>
+          <ArrayInfo>
+            <LBound>0</LBound>
+            <Elements Min="0" MaxUnbounded="true">2</Elements>
+          </ArrayInfo>
+          <PTCID>#x03000029</PTCID>
+          <ContextId>1</ContextId>
+        </Parameter>
+      </Parameters>
+      <DataAreas>
+        <DataArea>
+          <AreaNo AreaType="InputDst" CreateSymbols="true" DynamicArea="true">0</AreaNo>
+          <Name>Input</Name>
+          <ContextId>1</ContextId>
+        </DataArea>
+        <DataArea>
+          <AreaNo AreaType="OutputSrc" CreateSymbols="true" DynamicArea="true">1</AreaNo>
+          <Name>Output</Name>
+          <ContextId>1</ContextId>
+        </DataArea>
+      </DataAreas>
+      <InterfacePointers>
+        <InterfacePointer>
+          <PTCID>#x03002060</PTCID>
+          <Name>CyclicCaller</Name>
+          <Type GUID="{0300001e-0000-0000-e000-000000000064}">ITcCyclicCaller</Type>
+        </InterfacePointer>
+      </InterfacePointers>
+      <DataPointers />
+      <Deployment>
+        <FileEntry TargetPlatform="TwinCAT UM (x86)">
+          <SourceFile>%SOLUTIONMODULEINSTTPATH%TwinCAT UM (x86)\%CLASSFACTORYNAME%W32.dll</SourceFile>
+          <DestinationFile>%TC_SYSSRVEXEPATH%%CLASSFACTORYNAME%W32.dll</DestinationFile>
+        </FileEntry>
+        <FileEntry TargetPlatform="TwinCAT UM (x64)">
+          <SourceFile>%SOLUTIONMODULEINSTTPATH%TwinCAT UM (x64)\%CLASSFACTORYNAME%W32.dll</SourceFile>
+          <DestinationFile>%TC_SYSSRVEXEPATH%%CLASSFACTORYNAME%W32.dll</DestinationFile>
+        </FileEntry>
+      </Deployment>
+    </Module>
+    <Module GUID="{a7c03f4f-29e8-4fe6-beaf-0feb05316dba}" Group="TcApplicationRuntime">
+      <Name>AppRuntimeExternalJobCaller</Name>
+      <CLSID ClassFactory="TcApplicationRuntimeModules">{a7c03f4f-29e8-4fe6-beaf-0feb05316dba}</CLSID>
+      <Licenses>
+        <License>
+          <LicenseId>{304D006A-8299-4560-AB79-438534B50288}</LicenseId>
+          <Comment>TC3 C++</Comment>
+        </License>
+      </Licenses>
+      <InitSequence>SO</InitSequence>
+      <Contexts />
+      <Interfaces>
+        <Interface DisableCodeGeneration="true">
+          <Type GUID="{00000012-0000-0000-E000-000000000064}">ITComObject</Type>
+        </Interface>
+        <Interface DisableCodeGeneration="true">
+          <Type GUID="{03000018-0000-0000-E000-000000000064}">ITcWatchSource</Type>
+        </Interface>
+        <Interface>
+          <Type GUID="{5f0413ce-7186-413d-88b3-e0ce177def05}">ITcJobCaller_</Type>
+        </Interface>
+      </Interfaces>
+      <Parameters />
+      <DataAreas />
+      <InterfacePointers />
+      <DataPointers />
+      <Deployment>
+        <FileEntry TargetPlatform="TwinCAT UM (x86)">
+          <SourceFile>%SOLUTIONMODULEINSTTPATH%TwinCAT UM (x86)\%CLASSFACTORYNAME%W32.dll</SourceFile>
+          <DestinationFile>%TC_SYSSRVEXEPATH%%CLASSFACTORYNAME%W32.dll</DestinationFile>
+        </FileEntry>
+        <FileEntry TargetPlatform="TwinCAT UM (x64)">
+          <SourceFile>%SOLUTIONMODULEINSTTPATH%TwinCAT UM (x64)\%CLASSFACTORYNAME%W32.dll</SourceFile>
+          <DestinationFile>%TC_SYSSRVEXEPATH%%CLASSFACTORYNAME%W32.dll</DestinationFile>
+        </FileEntry>
+      </Deployment>
+    </Module>
+  </Modules>
+</TcModuleClass>

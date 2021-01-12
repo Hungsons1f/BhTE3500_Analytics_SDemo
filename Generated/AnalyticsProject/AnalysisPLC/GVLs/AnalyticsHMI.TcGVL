@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" Productversion="">
+  <GVL Name="AnalyticsHMI" Id="63358307-b74a-4d70-be07-fd762136bb29">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL
+	//Switch between historical and live data
+	stHMI_DataSourceCtrl: ST_HMI_DataSourceCtrl;
+	stHMI_DataSourceConfig: ARRAY [0..0] OF ST_HMI_DataSourceConfig := [
+											(nID:= 1, sName:= 'fbT1_DataSource', sDisplayName:= 'b375d0e8-9412-9d91-04c5-b1a76c1b6bbd', nStreamCount:= 1,
+												aStreams:=[(sSource:= 'TwinCAT Analytics Logger', sStreamSystemID:= STRING_TO_GUID('b375d0e8-9412-9d91-04c5-b1a76c1b6bbd'), sTopic:= 'DefaultMainTopic/PlcStream1',
+													stLive:= (sDisplayName:= 'DataSource T1')
+														)])
+											];
+	
+	//Reset
+	
+	//HMI Structs
+	stHMI_N1_Network: ST_HMI_N1_Network;
+	
+	//HMI Map Items
+	aMapItems: ARRAY [0..0] OF ST_HMI_MapItem := [(sName:='b375d0e8-9412-9d91-04c5-b1a76c1b6bbd', sDescription:='', sPosition:='', nStatus:= 0)];
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

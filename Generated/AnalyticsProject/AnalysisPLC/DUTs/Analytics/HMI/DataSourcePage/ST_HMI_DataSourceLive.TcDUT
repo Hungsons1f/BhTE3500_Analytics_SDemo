@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" Productversion="">
+  <DUT Name="ST_HMI_DataSourceLive" Id="f3ccf498-71a1-40f1-a334-cf2e6b609e13">
+    <Declaration><![CDATA[TYPE ST_HMI_DataSourceLive : 
+STRUCT
+	dtLiveTimestamp: DCTIMESTRUCT;
+	sDisplayName: STRING(80);
+END_STRUCT
+END_TYPE]]></Declaration>
+  </DUT>
+</TcPlcObject>

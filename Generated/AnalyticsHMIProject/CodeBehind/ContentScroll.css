@@ -1,0 +1,5 @@
+﻿/* Contents scrollable without setting height > 100% (for contents with a percentage as the width/height unit)*/
+.tchmi-content > .tchmi-partial-template {
+    overflow-y: auto;
+    overflow-x: hidden;
+}

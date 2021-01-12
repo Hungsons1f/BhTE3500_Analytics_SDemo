@@ -1,0 +1,19 @@
+﻿{
+  "function": {
+    "version": null,
+    "dependencies": [],
+    "name": "ExitFullscreen",
+    "displayName": "ExitFullscreen",
+    "visible": true,
+    "category": "",
+    "context": "",
+    "description": "",
+    "targetType": null,
+    "returnValue": {
+      "type": "tchmi:general#/definitions/String",
+      "description": ""
+    },
+    "arguments": []
+  },
+  "$schema": "../.hmiframework/Schema/FunctionDescription.Schema.json"
+}

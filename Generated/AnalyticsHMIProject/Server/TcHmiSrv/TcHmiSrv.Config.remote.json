@@ -1,0 +1,14 @@
+{
+    "CERTIFICATEEXPIRATION": "P14000D",
+    "REQUIREAUTH": 2,
+    "VIRTUALDIRECTORIES": {
+        "/": "C:\\Users\\Hungs\\OneDrive\\Máy tính\\AnalyticsSolution1\\AnalyticsHMIProject",
+        "/Beckhoff.TwinCAT.HMI.Analytics.Controls": "C:\\Users\\Hungs\\OneDrive\\Máy tính\\AnalyticsSolution1\\Packages\\Beckhoff.TwinCAT.HMI.Analytics.Controls.1.1.29\\runtimes\\native1.12-tchmi",
+        "/Beckhoff.TwinCAT.HMI.Controls": "C:\\Users\\Hungs\\OneDrive\\Máy tính\\AnalyticsSolution1\\Packages\\Beckhoff.TwinCAT.HMI.Controls.12.742.1\\runtimes\\native1.12-tchmi",
+        "/Beckhoff.TwinCAT.HMI.Functions": "C:\\Users\\Hungs\\OneDrive\\Máy tính\\AnalyticsSolution1\\Packages\\Beckhoff.TwinCAT.HMI.Functions.12.742.1\\runtimes\\native1.12-tchmi",
+        "/Beckhoff.TwinCAT.HMI.ResponsiveNavigation": "C:\\Users\\Hungs\\OneDrive\\Máy tính\\AnalyticsSolution1\\Packages\\Beckhoff.TwinCAT.HMI.ResponsiveNavigation.12.742.1\\runtimes\\native1.12-tchmi",
+        "/bin": "C:\\Users\\Hungs\\OneDrive\\Máy tính\\AnalyticsSolution1\\AnalyticsHMIProject\\bin\\",
+        "/bin/framework": "C:\\Users\\Hungs\\OneDrive\\Máy tính\\AnalyticsSolution1\\AnalyticsHMIProject\\bin\\framework",
+        "/framework": "C:\\Users\\Hungs\\OneDrive\\Máy tính\\AnalyticsSolution1\\Packages\\Beckhoff.TwinCAT.HMI.Framework.12.742.1\\runtimes\\native1.12-tchmi"
+    }
+}

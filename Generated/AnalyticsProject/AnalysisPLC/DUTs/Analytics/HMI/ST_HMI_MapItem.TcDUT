@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" Productversion="">
+  <DUT Name="ST_HMI_MapItem" Id="ca4ab833-726a-4dc3-9007-31756a5bb95b">
+    <Declaration><![CDATA[TYPE ST_HMI_MapItem : 
+STRUCT
+	sName: T_MaxString;
+	sDescription: T_MaxString;
+	sPosition: T_MaxString;
+	nStatus: INT;
+END_STRUCT
+END_TYPE]]></Declaration>
+  </DUT>
+</TcPlcObject>

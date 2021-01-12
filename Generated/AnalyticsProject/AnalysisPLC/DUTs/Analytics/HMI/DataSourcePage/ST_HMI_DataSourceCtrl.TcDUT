@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" Productversion="">
+  <DUT Name="ST_HMI_DataSourceCtrl" Id="fc9b0aba-b381-4171-b1bd-65342c8e5373">
+    <Declaration><![CDATA[TYPE ST_HMI_DataSourceCtrl : 
+STRUCT
+	nActiveMachineIdx: INT;
+	nActiveStreamIdx: INT;
+	
+	bHistorical: BOOL;
+	
+	//IF Historical
+	nActiveRecordIdx: INT;
+	
+	dtSelectedRangeStart: DCTIMESTRUCT;
+	dtSelectedRangeEnd: DCTIMESTRUCT;
+	
+	bStart: BOOL;
+	bCancel: BOOL;
+	bPause: BOOL;
+	
+	bUpdateRecordList: BOOL;
+END_STRUCT
+END_TYPE]]></Declaration>
+  </DUT>
+</TcPlcObject>

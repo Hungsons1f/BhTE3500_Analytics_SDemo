@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" Productversion="">
+  <DUT Name="ST_AnalysisReset" Id="3fdd74f2-6e05-4484-8e5c-a8c59f6e895e">
+    <Declaration><![CDATA[TYPE ST_AnalysisReset : 
+STRUCT
+	eResetComponent: E_AnalysisComponents := E_AnalysisComponents.All;
+	bResetExecute: BOOL;
+END_STRUCT
+END_TYPE]]></Declaration>
+  </DUT>
+</TcPlcObject>

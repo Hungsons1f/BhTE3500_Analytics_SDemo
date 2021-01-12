@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.4">
+  <POU Name="FB_N1_Network" Id="{f5a84d8f-2afa-407c-ac13-a4757975c207}" SpecialFunc="None">
+    <Declaration><![CDATA[//Analytics Network "Network" with ID: 1
+{attribute 'no_assign'}
+FUNCTION_BLOCK FB_N1_Network
+VAR_INPUT
+	fbM1_LifetimeAnalysis1Ch: FB_N1_M1_LifetimeAnalysis1Ch;
+	fbM2_ThresholdStringClassifier1Ch: FB_N1_M2_ThresholdStringClassifier1Ch;
+	fbM3_TrendLine: FB_N1_M3_TrendLine;
+END_VAR
+VAR_OUTPUT
+	bError: BOOL;
+	ipTcResult: I_TcMessage;
+END_VAR
+VAR
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="Call" Id="{d68777a1-e177-4636-9de3-b926a1d5bdc3}">
+      <Declaration><![CDATA[METHOD Call : BOOL
+VAR_INPUT
+	ipVirtual_Input_Source_1: I_V1_Virtual_Input_Source_1;
+END_VAR
+VAR
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[
+ValueMapping(ipVirtual_Input_Source_1);
+
+//The Lifetime Analysis 1Ch calculates the elapsed and the estimated remaining lifetime of a device. The input channel should provide boolean values so that every switching procedure represents a cycle which can be converted into the elapsed lifetime. Optional a boolean signal for Enable Execution can be selected, so that the algorithm is just active if the value of the selected signal is TRUE.
+fbM1_LifetimeAnalysis1Ch.Call(SEL(ipVirtual_Input_Source_1 <> 0, FALSE, ipVirtual_Input_Source_1.bNewData));
+
+//The Threshold String Classifier 1Ch classifies the input values into three different classes according to the configured thresholds. The class names (output strings) can be configured individually as String 1, String 2 and String 3. Optional a boolean signal for Enable Execution can be selected, so that the algorithm is just active if the value of the selected signal is TRUE.
+fbM2_ThresholdStringClassifier1Ch.Call(SEL(ipVirtual_Input_Source_1 <> 0, FALSE, ipVirtual_Input_Source_1.bNewData));
+
+//This Module is used for the One-click Dashboard to generate a special analytics trend chart.
+fbM3_TrendLine.Call(SEL(ipVirtual_Input_Source_1 <> 0, FALSE, ipVirtual_Input_Source_1.bNewData));
+
+//Error Handling
+IF fbM1_LifetimeAnalysis1Ch.bError THEN
+	bError:= TRUE;
+	ipTcResult:= fbM1_LifetimeAnalysis1Ch.ipTcResult;
+ELSIF fbM2_ThresholdStringClassifier1Ch.bError THEN
+	bError:= TRUE;
+	ipTcResult:= fbM2_ThresholdStringClassifier1Ch.ipTcResult;
+ELSIF fbM3_TrendLine.bError THEN
+	bError:= TRUE;
+	ipTcResult:= fbM3_TrendLine.ipTcResult;
+ELSE
+	bError:= FALSE;
+END_IF]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="Reset" Id="{d09e4331-80cf-4a67-a3aa-4417aab81164}">
+      <Declaration><![CDATA[METHOD Reset : BOOL
+VAR
+	bResult: BOOL := TRUE;
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[
+bResult:= bResult AND fbM1_LifetimeAnalysis1Ch.Reset();
+bResult:= bResult AND fbM2_ThresholdStringClassifier1Ch.Reset();
+bResult:= bResult AND fbM3_TrendLine.Reset();
+Reset:= bResult;]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="SetHMIValues" Id="{ab95eb5b-456b-418a-af86-f3aebfc51c38}">
+      <Declaration><![CDATA[METHOD SetHMIValues : BOOL
+VAR_INPUT
+	pHMI_N1_Network: POINTER TO ST_HMI_N1_Network;
+END_VAR
+VAR
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[
+//Modules
+fbM1_LifetimeAnalysis1Ch.SetHMI(pHMI_N1_Network);
+fbM2_ThresholdStringClassifier1Ch.SetHMI(pHMI_N1_Network);
+fbM3_TrendLine.SetHMI(pHMI_N1_Network);
+
+SetHMIValues:= TRUE;]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="ValueMapping" Id="{c9ce8a2e-87d9-410d-b78f-7f2a71ec823d}">
+      <Declaration><![CDATA[METHOD PRIVATE ValueMapping : BOOL
+VAR_INPUT
+	ipVirtual_Input_Source_1: I_V1_Virtual_Input_Source_1;
+END_VAR
+VAR
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[//Module fbM1_LifetimeAnalysis1Ch
+fbM1_LifetimeAnalysis1Ch.tTimestamp:= ipVirtual_Input_Source_1.tTimestamp;
+fbM1_LifetimeAnalysis1Ch.bDataIn:= ipVirtual_Input_Source_1.bV1_Virtual_Input;
+
+//Module fbM2_ThresholdStringClassifier1Ch
+fbM2_ThresholdStringClassifier1Ch.tTimestamp:= ipVirtual_Input_Source_1.tTimestamp;
+fbM2_ThresholdStringClassifier1Ch.nDataIn:= ipVirtual_Input_Source_1.nV1_Virtual_Input_1;
+
+//Module fbM3_TrendLine
+fbM3_TrendLine.tTimestamp:= ipVirtual_Input_Source_1.tTimestamp;
+fbM3_TrendLine.nDataInCh1:= ipVirtual_Input_Source_1.nV1_Virtual_Input_1;]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="FB_N1_Network">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_N1_Network.Call">
+      <LineId Id="3" Count="23" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_N1_Network.Reset">
+      <LineId Id="3" Count="3" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_N1_Network.SetHMIValues">
+      <LineId Id="3" Count="5" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_N1_Network.ValueMapping">
+      <LineId Id="3" Count="9" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

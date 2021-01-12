@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" Productversion="">
+  <POU Name="F_AlyTimestampToFileTime" Id="7deadba4-4a91-49d3-8a17-6fa505aba570" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION F_AlyTimestampToFileTime : ULINT
+VAR_INPUT
+	tTimestamp: ULINT;
+END_VAR
+VAR
+	tFileTime: T_FILETIME;
+	
+	fbToUTC: FB_TzSpecificLocalTimeToFileTime;
+	//(UTC+07:00) Bangkok, Hanoi, Jakarta
+	tzInfo: ST_TimeZoneInformation;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[tFileTime:= DCTIME64_TO_Filetime(tTimestamp);
+
+fbToUTC(in:= tFileTime, tzInfo:= tzInfo);
+F_AlyTimestampToFileTime:= ULARGE_TO_ULINT(ULARGE_INTEGER(fbToUTC.out.dwHighDateTime, fbToUTC.out.dwLowDateTime));]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

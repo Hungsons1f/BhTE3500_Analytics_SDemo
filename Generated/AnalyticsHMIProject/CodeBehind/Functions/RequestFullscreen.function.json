@@ -1,0 +1,19 @@
+﻿{
+  "function": {
+    "version": null,
+    "dependencies": [],
+    "name": "RequestFullscreen",
+    "displayName": "RequestFullscreen",
+    "visible": true,
+    "category": null,
+    "context": null,
+    "description": "",
+    "targetType": null,
+    "returnValue": {
+      "type": "tchmi:general#/definitions/String",
+      "description": null
+    },
+    "arguments": []
+  },
+  "$schema": "../.hmiframework/Schema/FunctionDescription.Schema.json"
+}

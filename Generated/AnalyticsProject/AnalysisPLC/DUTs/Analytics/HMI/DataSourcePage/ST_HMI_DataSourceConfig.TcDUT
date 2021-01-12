@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" Productversion="">
+  <DUT Name="ST_HMI_DataSourceConfig" Id="591b8b7c-35ab-429f-b607-fcd1511245d4">
+    <Declaration><![CDATA[TYPE ST_HMI_DataSourceConfig : 
+STRUCT
+	nID: DINT;
+	sName: STRING(80);
+	sDisplayName: STRING(80);
+	nStreamCount: INT;
+	aStreams: ARRAY [0..9] OF ST_HMI_DataSourceStream;
+END_STRUCT
+END_TYPE]]></Declaration>
+  </DUT>
+</TcPlcObject>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" Productversion="">
+  <GVL Name="Analytics" Id="5a6a2652-ce75-47f6-84e5-d3748ee42d32">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL
+	//DataSources
+	fbT1_DataSource: FB_T1_DataSource;
+	
+	bLock_T1: BOOL;
+	
+	stReset: ST_AnalysisReset;
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

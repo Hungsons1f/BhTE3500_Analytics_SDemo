@@ -1,0 +1,29 @@
+﻿{
+  "function": {
+    "name": "ResetNetwork",
+    "displayName": "ResetNetwork",
+    "visible": true,
+    "category": "",
+    "waitMode": "Synchronous",
+    "injectContextObject": false,
+    "description": "",
+    "returnValue": {
+      "type": "tchmi:general#/definitions/String"
+    },
+    "arguments": [
+      {
+        "name": "variablePath",
+        "displayName": "variablePath",
+        "type": "tchmi:general#/definitions/String",
+        "description": "Path to SPS reset variable as a string.",
+        "defaultValue": null,
+        "required": true,
+        "bindable": true,
+        "restParameter": false,
+        "asReference": false,
+        "allowControlAttributeBindingOptions": false
+      }
+    ]
+  },
+  "$schema": "../.hmiframework/Schema/FunctionDescription.Schema.json"
+}

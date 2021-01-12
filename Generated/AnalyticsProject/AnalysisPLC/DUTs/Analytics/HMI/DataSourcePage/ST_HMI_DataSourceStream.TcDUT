@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" Productversion="">
+  <DUT Name="ST_HMI_DataSourceStream" Id="b61e20af-eb52-48ee-acf1-2e4d92b40947">
+    <Declaration><![CDATA[TYPE ST_HMI_DataSourceStream : 
+STRUCT
+	sSource: STRING(80);
+	sStreamSystemID: GUID;
+	sTopic: STRING(255);
+	stLive: ST_HMI_DataSourceLive;
+	stHist: ST_HMI_DataSourceHist;
+END_STRUCT
+END_TYPE]]></Declaration>
+  </DUT>
+</TcPlcObject>

@@ -1,0 +1,447 @@
+﻿{
+  "$schema": "../../Packages/Beckhoff.TwinCAT.HMI.Framework.12.742.1/runtimes/native1.12-tchmi/Schema/TchmiConfig.Schema.json",
+  "basePath": "./framework",
+  "scaleMode": "None",
+  "startupView": "Desktop.view",
+  "loginPage": "",
+  "tcHmiServer": {
+    "websocketIntervalTime": 500,
+    "websocketTimeout": 20000,
+    "websocketSystemTimeout": 60000,
+    "websocketSubscriptionMode": "Change"
+  },
+  "activeTheme": "ShinyRound",
+  "themes": {
+    "Base": {
+      "resources": [
+        {
+          "name": "Themes/Base/Base.theme",
+          "description": "",
+          "type": "ThemedValues"
+        },
+        {
+          "name": "Themes/Base/BaseStyle.css",
+          "description": "",
+          "type": "Stylesheet"
+        }
+      ],
+      "replacesThemeForControls": []
+    },
+    "DarkFlat": {
+      "resources": [
+        {
+          "name": "Themes/DarkFlat/DarkFlat.theme",
+          "description": "",
+          "type": "ThemedValues"
+        },
+        {
+          "name": "Themes/DarkFlat/DarkFlatStyle.css",
+          "description": "",
+          "type": "Stylesheet"
+        }
+      ],
+      "replacesThemeForControls": []
+    },
+    "DarkRound": {
+      "resources": [
+        {
+          "name": "Themes/DarkRound/DarkRound.theme",
+          "description": "",
+          "type": "ThemedValues"
+        },
+        {
+          "name": "Themes/DarkRound/DarkRoundStyle.css",
+          "description": "",
+          "type": "Stylesheet"
+        }
+      ],
+      "replacesThemeForControls": []
+    },
+    "LightFlat": {
+      "resources": [
+        {
+          "name": "Themes/LightFlat/LightFlat.theme",
+          "description": "",
+          "type": "ThemedValues"
+        },
+        {
+          "name": "Themes/LightFlat/LightFlatStyle.css",
+          "description": "",
+          "type": "Stylesheet"
+        }
+      ],
+      "replacesThemeForControls": []
+    },
+    "LightRound": {
+      "resources": [
+        {
+          "name": "Themes/LightRound/LightRound.theme",
+          "description": "",
+          "type": "ThemedValues"
+        },
+        {
+          "name": "Themes/LightRound/LightRoundStyle.css",
+          "description": "",
+          "type": "Stylesheet"
+        }
+      ],
+      "replacesThemeForControls": []
+    },
+    "ShinyFlat": {
+      "resources": [
+        {
+          "name": "Themes/ShinyFlat/ShinyFlat.theme",
+          "description": "",
+          "type": "ThemedValues"
+        },
+        {
+          "name": "Themes/ShinyFlat/ShinyFlatStyle.css",
+          "description": "",
+          "type": "Stylesheet"
+        }
+      ],
+      "replacesThemeForControls": []
+    },
+    "ShinyRound": {
+      "resources": [
+        {
+          "name": "Themes/ShinyRound/ShinyRound.theme",
+          "description": "",
+          "type": "ThemedValues"
+        },
+        {
+          "name": "Themes/ShinyRound/ShinyRoundStyle.css",
+          "description": "",
+          "type": "Stylesheet"
+        }
+      ],
+      "replacesThemeForControls": []
+    }
+  },
+  "dependencyFiles": [
+    {
+      "name": "Fonts/Fonts.css",
+      "description": "",
+      "type": "Stylesheet"
+    },
+    {
+      "name": "CodeBehind/Functions/ExitFullscreen.js",
+      "description": "",
+      "type": "JavaScript"
+    },
+    {
+      "name": "CodeBehind/Functions/RequestFullscreen.js",
+      "description": "",
+      "type": "JavaScript"
+    },
+    {
+      "name": "CodeBehind/Functions/UpdateLanguageIcon.js",
+      "description": "",
+      "type": "JavaScript"
+    },
+    {
+      "name": "CodeBehind/ContentScroll.css",
+      "description": "",
+      "type": "Stylesheet"
+    },
+    {
+      "name": "CodeBehind/ScrollBarStyle.css",
+      "description": "",
+      "type": "Stylesheet"
+    },
+    {
+      "name": "CodeBehind/FurtherStyles.css",
+      "description": "",
+      "type": "Stylesheet"
+    },
+    {
+      "name": "CodeBehind/Functions/ResetNetwork.js",
+      "description": "",
+      "type": "JavaScript"
+    },
+    {
+      "name": "CodeBehind/Functions/UpdateTime.js",
+      "description": "",
+      "type": "JavaScript"
+    },
+    {
+      "name": "CodeBehind/Functions/ImageSliderResize.js",
+      "description": "",
+      "type": "JavaScript"
+    },
+    {
+      "name": "CodeBehind/Functions/StringToInt.js",
+      "description": "",
+      "type": "JavaScript"
+    }
+  ],
+  "userControls": [],
+  "content": [
+    {
+      "url": "Content/AdditionalInformation.content",
+      "preload": false,
+      "keepAlive": false
+    },
+    {
+      "url": "Content/Options.content",
+      "preload": false,
+      "keepAlive": false
+    },
+    {
+      "url": "Content/StartPage.content",
+      "preload": false,
+      "keepAlive": false
+    },
+    {
+      "url": "Content/Network.content",
+      "preload": false,
+      "keepAlive": false
+    }
+  ],
+  "views": [
+    {
+      "url": "Desktop.view",
+      "preload": false,
+      "keepAlive": false
+    }
+  ],
+  "userFunctions": [
+    {
+      "url": "CodeBehind/Functions/ExitFullScreen.js"
+    },
+    {
+      "url": "CodeBehind/Functions/RequestFullscreen.js"
+    },
+    {
+      "url": "CodeBehind/Functions/UpdateLanguageIcon.js"
+    },
+    {
+      "url": "CodeBehind/Functions/ResetNetwork.js"
+    },
+    {
+      "url": "CodeBehind/Functions/UpdateTime.js"
+    },
+    {
+      "url": "CodeBehind/Functions/ImageSliderResize.js"
+    },
+    {
+      "url": "CodeBehind/Functions/StringToInt.js"
+    }
+  ],
+  "symbols": {
+    "internal": {
+      "imgOptions": {
+        "type": "tchmi:framework#/definitions/Path",
+        "persist": false,
+        "readonly": false
+      },
+      "imgAdditionalInformation": {
+        "type": "tchmi:framework#/definitions/Path",
+        "persist": false,
+        "readonly": false
+      },
+      "imgReset": {
+        "type": "tchmi:framework#/definitions/Path",
+        "persist": false,
+        "readonly": false
+      },
+      "resetNtwsEnable": {
+        "value": false,
+        "type": "tchmi:general#/definitions/BOOL",
+        "persist": false,
+        "readonly": false
+      },
+      "resetCtrlsEnable": {
+        "value": false,
+        "type": "tchmi:general#/definitions/BOOL",
+        "persist": false,
+        "readonly": false
+      },
+      "currentResetVariable": {
+        "type": "tchmi:general#/definitions/String",
+        "persist": false,
+        "readonly": false
+      },
+      "resetVariables": {
+        "value": [
+          "PLC1.GVL_AnalyticsHMI.bN1_Network1_Reset"
+        ],
+        "type": "tchmi:general#/definitions/Array",
+        "persist": false,
+        "readonly": false
+      },
+      "showTitleEnable": {
+        "value": true,
+        "type": "tchmi:general#/definitions/BOOL",
+        "persist": false,
+        "readonly": false
+      },
+      "mapCtrlPopupText": {
+        "value": {},
+        "type": "tchmi:general#/definitions/Object",
+        "persist": false,
+        "readonly": false
+      },
+      "langBarHover": {
+        "value": false,
+        "type": "tchmi:general#/definitions/BOOL",
+        "persist": false,
+        "readonly": false
+      },
+      "navBarHover": {
+        "value": false,
+        "type": "tchmi:general#/definitions/BOOL",
+        "persist": false,
+        "readonly": false
+      },
+      "DashboardThemeName": {
+        "type": "tchmi:general#/definitions/String",
+        "persist": false,
+        "readonly": false
+      },
+      "ControlStyleName": {
+        "type": "tchmi:general#/definitions/String",
+        "persist": false,
+        "readonly": false
+      },
+      "themeSelectionIsAttached": {
+        "value": false,
+        "type": "tchmi:general#/definitions/BOOL",
+        "persist": false,
+        "readonly": false
+      },
+      "styleSelectionIsAttached": {
+        "value": false,
+        "type": "tchmi:general#/definitions/BOOL",
+        "persist": false,
+        "readonly": false
+      },
+      "imgData": {
+        "type": "tchmi:framework#/definitions/Path",
+        "persist": false,
+        "readonly": false
+      },
+      "backgroundSymbol": {
+        "value": true,
+        "type": "tchmi:general#/definitions/BOOL",
+        "persist": false,
+        "readonly": false
+      },
+      "langContentHover": {
+        "value": false,
+        "type": "tchmi:general#/definitions/BOOL",
+        "persist": false,
+        "readonly": false
+      },
+      "navContentHover": {
+        "value": false,
+        "type": "tchmi:general#/definitions/BOOL",
+        "persist": false,
+        "readonly": false
+      },
+      "navBarHovering": {
+        "value": false,
+        "type": "tchmi:general#/definitions/BOOL",
+        "persist": false,
+        "readonly": false
+      },
+      "langContentOpened": {
+        "type": "tchmi:general#/definitions/String",
+        "persist": false,
+        "readonly": false
+      },
+      "ColorGradientControls": {
+        "value": 0,
+        "type": "tchmi:general#/definitions/INT",
+        "persist": false,
+        "readonly": false
+      },
+      "multistateColor": {
+        "value": [
+          {
+            "state": 1.0,
+            "stateColor": {
+              "color": "rgba(8, 138, 8, 1)"
+            }
+          },
+          {
+            "state": 2.0,
+            "stateColor": {
+              "color": "rgba(255, 244, 0, 1)"
+            }
+          },
+          {
+            "state": 3.0,
+            "stateColor": {
+              "color": "rgba(239, 0, 0, 1)"
+            }
+          }
+        ],
+        "type": "tchmi:framework#/definitions/PopupMultiState",
+        "persist": false,
+        "readonly": false
+      },
+      "dockExpanded": {
+        "value": true,
+        "type": "tchmi:general#/definitions/Boolean",
+        "persist": false,
+        "readonly": false
+      },
+      "hideButtonImage": {
+        "value": "Imports/Images/icons_next_active.svg",
+        "type": "tchmi:framework#/definitions/Path",
+        "persist": false,
+        "readonly": false
+      }
+    }
+  },
+  "trigger": [],
+  "actionTemplates": [],
+  "languages": {
+    "de-DE": "Localization\\de-DE.localization",
+    "en-US": "Localization\\en-US.localization",
+    "fi-FI": "Localization\\fi-FI.localization",
+    "it": "Localization\\it.localization",
+    "nl": "Localization\\nl.localization",
+    "pt-BR": "Localization\\pt-BR.localization",
+    "sv-SE": "Localization\\sv-SE.localization",
+    "zh-CN": "Localization\\zh-CN.localization"
+  },
+  "disableLoadingOptimization": false,
+  "creatorSettings": {
+    "viewport": {
+      "defaultWidth": 800,
+      "defaultHeight": 600
+    }
+  },
+  "packages": [
+    {
+      "name": "Beckhoff.TwinCAT.HMI.Analytics.Controls",
+      "basePath": "/Beckhoff.TwinCAT.HMI.Analytics.Controls"
+    },
+    {
+      "name": "Beckhoff.TwinCAT.HMI.Controls",
+      "basePath": "/Beckhoff.TwinCAT.HMI.Controls"
+    },
+    {
+      "name": "Beckhoff.TwinCAT.HMI.Framework",
+      "basePath": "/framework"
+    },
+    {
+      "name": "Beckhoff.TwinCAT.HMI.Functions",
+      "basePath": "/Beckhoff.TwinCAT.HMI.Functions"
+    },
+    {
+      "name": "Beckhoff.TwinCAT.HMI.ResponsiveNavigation",
+      "basePath": "/Beckhoff.TwinCAT.HMI.ResponsiveNavigation"
+    }
+  ],
+  "keyboardLayouts": [
+    {
+      "url": "KeyboardLayouts/German - compact.keyboard.json"
+    },
+    {
+      "url": "KeyboardLayouts/US - compact.keyboard.json"
+    }
+  ]
+}

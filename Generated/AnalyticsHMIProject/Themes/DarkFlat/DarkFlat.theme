@@ -1,0 +1,226 @@
+﻿{
+  "controlTypeValues": {
+    "TcHmi.Controls.Analytics.DataTable": {
+      "attributes": {
+        "ControlColorDarkTable": {
+          "color": "rgba(60, 60, 60, 1)"
+        },
+        "ControlColorMiddleTable": {
+          "color": "rgba(80, 80, 80, 1)"
+        },
+        "ItemColor": {
+          "color": "rgba(100, 100, 100, 1)"
+        }
+      },
+      "themedResources": {}
+    },
+	 "TcHmi.Controls.Analytics.MapControl": {
+      "attributes": {
+        "FontColor": {
+          "color": "rgba(255, 255, 255, 1)"
+        }
+      },
+      "themedResources": {}
+    },
+    "TcHmi.Controls.Beckhoff.TcHmiButton": {
+      "attributes": {
+        "TextColor": {
+          "color": "rgba(235, 235, 255, 1)"
+        },
+        "BorderColor": {
+          "color": "rgba(235, 235, 255, 1)"
+        },
+        "BackgroundColor": {
+          "color": "rgba(150, 150, 150, 1)"
+        },
+        "BoxShadow": [
+          {
+            "color": {
+              "color": "rgba(255, 255, 255, 0.5882352)"
+            },
+            "offsetX": 0.0,
+            "offsetXUnit": "px",
+            "offsetY": 0.0,
+            "offsetYUnit": "px",
+            "inset": false,
+            "blur": 5.0,
+            "blurUnit": "px",
+            "spread": 0.0,
+            "spreadUnit": "px"
+          }
+        ]
+      },
+      "themedResources": {}
+    },
+    "TcHmi.Controls.Beckhoff.TcHmiCheckbox": {
+      "attributes": {
+        "BackgroundColor": {
+          "color": "rgba(150, 150, 150, 1)"
+        }
+      },
+      "themedResources": {}
+    },
+    "TcHmi.Controls.Beckhoff.TcHmiCombobox": {
+      "attributes": {
+        "BackgroundColor": {
+          "color": "rgba(150, 150, 150, 1)"
+        },
+        "TextColor": {
+          "color": "rgba(235, 235, 235, 1)"
+        }
+      },
+      "themedResources": {}
+    },
+    "TcHmi.Controls.Beckhoff.TcHmiLineChart": {
+      "attributes": {
+        "XAxisColor": {
+          "color": "rgba(235, 235, 235, 1)"
+        },
+        "GridBackgroundColor": {
+          "color": "None"
+        },
+        "GridLineColor": {
+          "color": "rgba(235, 235, 235, 1)"
+        },
+        "BackgroundColor": {
+          "color": "rgba(80, 80, 80, 1)"
+        }
+      },
+      "themedResources": {}
+    },
+    "TcHmi.Controls.Beckhoff.TcHmiTextblock": {
+      "attributes": {
+        "TextColor": {
+          "color": "rgba(235, 235, 235, 1)"
+        }
+      },
+      "themedResources": {}
+    },
+    "TcHmi.Controls.System.TcHmiContainer": {
+      "attributes": {
+        "BorderColor": {
+          "color": "None"
+        },
+        "BackgroundColor": {
+          "angle": 180.0,
+          "stopPoints": [
+            {
+              "color": "rgba(255, 255, 255, 0.3921568)",
+              "stop": "0%"
+            },
+            {
+              "color": "rgba(80, 80, 80, 0.3921568)",
+              "stop": "100%"
+            }
+          ]
+        }
+      },
+      "themedResources": {}
+    },
+    "TcHmi.Controls.System.TcHmiView": {
+      "attributes": {
+        "BackgroundColor": {
+          "color": "rgba(28, 28, 28, 1)"
+        }
+      },
+      "themedResources": {}
+    },
+    "TcHmi.Controls.ResponsiveNavigation.TcHmiNavigationBar": {
+      "attributes": {
+        "HighLightColor": {
+          "color": "rgba(255, 255, 255, 1)"
+        },
+        "FontColor": {
+          "color": "rgba(255, 255, 255, 1)"
+        },
+        "TriangleColor": {
+          "color": "rgba(100, 100, 100, 1)"
+        },
+        "BackgroundColor": {
+          "color": "rgba(60, 60, 60, 1)"
+        }
+      },
+      "themedResources": {}
+    },
+    "TcHmi.Controls.ResponsiveNavigation.TcHmiNavigationContent": {
+      "attributes": {
+        "FontColor": {
+          "color": "rgba(255, 255, 255, 1)"
+        },
+        "MenuBackgroundColor": {
+          "color": "rgba(100, 100, 100, 1)"
+        }
+      },
+      "themedResources": {}
+    },
+    "TcHmi.Controls.ResponsiveNavigation.TcHmiBreadcrumb": {
+      "attributes": {
+        "FontColor": {
+          "color": "rgba(255, 255, 255, 1)"
+        }
+      },
+      "themedResources": {}
+    }
+  },
+  "controlClassValues": {
+    "Default": {
+      "attributes": {
+        "BorderColor": {
+          "color": "rgba(235, 235, 235, 1)"
+        },
+        "BorderWidth": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0,
+          "leftUnit": "px",
+          "rightUnit": "px",
+          "topUnit": "px",
+          "bottomUnit": "px"
+        },
+        "BorderStyle": {
+          "left": "Solid",
+          "right": "Solid",
+          "top": "Solid",
+          "bottom": "Solid"
+        },
+        "BorderRadius": {
+          "topLeft": 0.0,
+          "topRight": 0.0,
+          "bottomLeft": 0.0,
+          "bottomRight": 0.0,
+          "topLeftUnit": "px",
+          "topRightUnit": "px",
+          "bottomLeftUnit": "px",
+          "bottomRightUnit": "px"
+        },
+        "BackgroundColor": {
+          "color": "rgba(50, 50, 50, 1)"
+        },
+        "FontColor": {
+          "color": "rgba(235, 235, 235, 1)"
+        },
+        "ControlColorMiddle": {
+          "color": "rgba(190, 190, 190, 1)"
+        },
+        "ControlColorDark": {
+          "color": "rgba(180, 180, 180, 1)"
+        },
+        "ControlColorLight": {
+          "color": "rgba(215, 215, 215, 1)"
+        },
+        "OffColor": {
+          "color": "rgba(150, 150, 150, 1)"
+        },
+        "TextColor": {
+          "color": "rgba(235, 235, 235, 1)"
+        },
+        "ControlColorLightPlus": {
+          "color": "rgba(150, 150, 150, 1)"
+        }
+      },
+      "themedResources": {}
+    }
+  },
+  "$schema": "../.hmiframework/Schema/ThemeDescription.Schema.json"
+}

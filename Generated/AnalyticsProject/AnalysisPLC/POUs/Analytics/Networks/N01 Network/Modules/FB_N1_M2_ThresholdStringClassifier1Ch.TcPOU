@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" Productversion="">
+  <POU Name="FB_N1_M2_ThresholdStringClassifier1Ch" Id="a9ad9ce7-f639-45d2-bdad-10ee800afdb2" SpecialFunc="None">
+    <Declaration><![CDATA[//The Threshold String Classifier 1Ch classifies the input values into three different classes according to the configured thresholds. The class names (output strings) can be configured individually as String 1, String 2 and String 3. Optional a boolean signal for Enable Execution can be selected, so that the algorithm is just active if the value of the selected signal is TRUE.
+FUNCTION_BLOCK FB_N1_M2_ThresholdStringClassifier1Ch
+VAR_INPUT
+	nDataIn: INT;
+	tTimestamp: ULINT;
+	bEnableExecution: BOOL := TRUE;
+	bReset: BOOL;
+	bReconfigure: BOOL := TRUE;
+	fThresholdLevel12: LREAL;
+	fThresholdLevel23: LREAL;
+	sStringLevel1: STRING(255);
+	sStringLevel2: STRING(255);
+	sStringLevel3: STRING(255);
+END_VAR
+VAR_OUTPUT
+	bError: BOOL;
+	ipTcResult: I_TcMessage;
+	bNewResult: BOOL;
+	sResult: STRING(255);
+	fbTimeLastEvent: FB_ALY_DateTime;
+END_VAR
+VAR
+	
+	bConfigured: BOOL;
+	R_TRIG_Reconfigure: R_TRIG;
+	
+	fbALY_ThresholdStringClassificator_1Ch: FB_ALY_ThresholdStringClassificator_1Ch;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="Call" Id="331e2b04-3523-40c5-9958-ebcf7fed6dae">
+      <Declaration><![CDATA[METHOD Call : BOOL
+VAR_INPUT
+	bNewData: BOOL;
+END_VAR
+VAR
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF NOT bConfigured THEN
+	bConfigured:= TRUE;
+
+	fThresholdLevel12:= 20000;
+	fThresholdLevel23:= 28000;
+	sStringLevel1:= 'Normal';
+	sStringLevel2:= 'High';
+	sStringLevel3:= 'High High';
+
+END_IF
+
+R_TRIG_Reconfigure(CLK:= bReconfigure);
+IF R_TRIG_Reconfigure.Q THEN
+	fbALY_ThresholdStringClassificator_1Ch.Configure(
+		fThresholdLevel12:= fThresholdLevel12,
+		fThresholdLevel23:= fThresholdLevel23,
+		sStringLevel1:= sStringLevel1,
+		sStringLevel2:= sStringLevel2,
+		sStringLevel3:= sStringLevel3);
+
+	bReconfigure:= FALSE;
+END_IF
+
+IF bReset THEN
+	Reset();
+END_IF
+
+IF bEnableExecution THEN
+	IF bNewData THEN
+		fbALY_ThresholdStringClassificator_1Ch.SetChannelValue(Input:=nDataIn);
+
+		fbALY_ThresholdStringClassificator_1Ch.Call(tTimestamp:=tTimestamp);
+
+		bNewResult:= fbALY_ThresholdStringClassificator_1Ch.bNewResult;
+		sResult:= fbALY_ThresholdStringClassificator_1Ch.sResult;
+		fbTimeLastEvent:= fbALY_ThresholdStringClassificator_1Ch.fbTimeLastEvent;
+
+		bError:= fbALY_ThresholdStringClassificator_1Ch.bError;
+		ipTcResult:= fbALY_ThresholdStringClassificator_1Ch.ipResultMessage;
+	END_IF
+END_IF]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="Reset" Id="1d5a9d1c-ecc4-4034-b022-7319e6e10673">
+      <Declaration><![CDATA[METHOD Reset : BOOL
+VAR
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[Reset:= fbALY_ThresholdStringClassificator_1Ch.Reset();
+
+bNewResult:= fbALY_ThresholdStringClassificator_1Ch.bNewResult;
+sResult:= fbALY_ThresholdStringClassificator_1Ch.sResult;
+fbTimeLastEvent:= fbALY_ThresholdStringClassificator_1Ch.fbTimeLastEvent;
+
+bError:= NOT Reset;
+ipTcResult:= fbALY_ThresholdStringClassificator_1Ch.ipResultMessage;]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="SetHMI" Id="44a3436c-780a-4ead-9765-0186357ac9bd">
+      <Declaration><![CDATA[METHOD SetHMI : BOOL
+VAR_INPUT
+	pHMI_N1_Network: POINTER TO ST_HMI_N1_Network;
+END_VAR
+VAR
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[
+pHMI_N1_Network^.sM2_sStringLevel1:= sStringLevel1;
+pHMI_N1_Network^.sM2_sStringLevel2:= sStringLevel2;
+pHMI_N1_Network^.sM2_sStringLevel3:= sStringLevel3;
+pHMI_N1_Network^.sM2_sResult:= sResult;
+pHMI_N1_Network^.fM2_nDataIn:= TO_LREAL(nDataIn);]]></ST>
+      </Implementation>
+    </Method>
+  </POU>
+</TcPlcObject>

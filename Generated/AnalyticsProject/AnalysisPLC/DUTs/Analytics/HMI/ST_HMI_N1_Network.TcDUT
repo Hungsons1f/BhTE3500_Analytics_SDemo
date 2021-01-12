@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" Productversion="">
+  <DUT Name="ST_HMI_N1_Network" Id="aee68e7c-a200-4c01-959a-892c87c7654a">
+    <Declaration><![CDATA[TYPE ST_HMI_N1_Network : 
+STRUCT
+	//Lifetime Analysis 1Ch
+	tM1_fbLifetimeElapsed: ST_ALY_TimeSpan; //Elapsed (Times)
+	tM1_fbLifetimeRemaining: ST_ALY_TimeSpan; //Remaining (Times)
+	
+	//Threshold String Classifier 1Ch
+	sM2_sStringLevel1: STRING(255); //ConfigLevel1
+	sM2_sStringLevel2: STRING(255); //ConfigLevel2
+	sM2_sStringLevel3: STRING(255); //ConfigLevel3
+	sM2_sResult: STRING(255); //String Classification
+	fM2_nDataIn: LREAL; //Value
+	
+	//Trend Line
+	aM3_aTrendData: ARRAY [1..1] OF ARRAY [1..10080] OF LREAL; //RawData
+	dtM3_fbLastValue: DCTIMESTRUCT; //LastValueTimestamp
+	nM3_nCountValues: DINT; //CountedValues
+	aM3_aChannelNames: ARRAY [0..0] OF STRING(255); //DisplayNames
+END_STRUCT
+END_TYPE]]></Declaration>
+  </DUT>
+</TcPlcObject>

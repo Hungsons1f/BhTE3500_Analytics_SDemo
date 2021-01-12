@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" Productversion="">
+  <POU Name="MAIN_Analytics_V1_C1" Id="42cb4655-0faf-4a07-87d0-147995ab5740" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN_Analytics_V1_C1
+VAR_OUTPUT
+	bError: BOOL;
+	ipTcResult: I_TcMessage;
+	nLastDataHandle: ULINT;
+END_VAR
+VAR
+	fbAnalysis: FB_Analysis;
+	
+	nElement: UDINT;
+	nSample: UDINT;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF TestAndSet(Analytics.bLock_T1) THEN
+	IF Analytics.fbT1_DataSource.NewDataAvailable(nLastDataHandle) THEN
+		FOR nElement:= 1 TO Analytics.fbT1_DataSource.nElements BY 1 DO
+			IF Analytics.fbT1_DataSource.GetData(nElement) THEN
+
+				fbAnalysis.Call(Analytics.fbT1_DataSource);
+				IF fbAnalysis.bError THEN
+					EXIT;
+				END_IF
+			END_IF
+		END_FOR
+		nLastDataHandle:= Analytics.fbT1_DataSource.nDataHandle;
+	ELSE
+		fbAnalysis.Call(0);
+	END_IF
+	Analytics.bLock_T1:= FALSE;
+END_IF
+
+//Error Handling
+bError:= fbAnalysis.bError;
+ipTcResult:= fbAnalysis.ipTcResult;]]></ST>
+    </Implementation>
+    <Action Name="A_MapToHMI" Id="3703b34d-0db5-42fb-86c4-96c7dd083e10">
+      <Implementation>
+        <ST><![CDATA[
+//Map HMI Current Timestamp
+AnalyticsHMI.stHMI_DataSourceConfig[0].aStreams[0].stLive.dtLiveTimestamp:= Analytics.fbT1_DataSource.dtTimestamp;
+
+//Map In-/Outputs of the Analysis to HMI Structs
+fbAnalysis.fbN1_Network.SetHMIValues(ADR(AnalyticsHMI.stHMI_N1_Network));]]></ST>
+      </Implementation>
+    </Action>
+  </POU>
+</TcPlcObject>

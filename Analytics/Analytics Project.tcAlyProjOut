@@ -1,0 +1,53 @@
+﻿<AnalyticsProjectResult StartTime="11/12/2020 15:58:52,731:000" StartTimeValue="132521507327310000" EndTime="11/12/2020 16:02:42,221:000" EndTimeValue="132521509622210000">
+  <Functions>
+    <Function Title="Lifetime Analysis 1Ch" Name="CTcAlyLifetimeAnalysis_1Ch">
+      <InputLinks>
+        <InputLink InputTitle="Input">Term 1 (EK1200).Term 3 (EL2014).DIG Outputs.Channel 1.Output @ 192.168.1.10: DefaultMainTopic/DeviceStream2 [10,00ms]</InputLink>
+      </InputLinks>
+      <Parameters>
+        <Parameter Title="Operator Level">GreaterThan</Parameter>
+        <Parameter Title="Threshold Level">0</Parameter>
+        <Parameter Title="Estimated Lifetime">3600000000000</Parameter>
+        <Parameter Title="Negate Input">FALSE</Parameter>
+        <Parameter Title="Negate Enable Execution">FALSE</Parameter>
+        <Parameter Title="Negate Reset">FALSE</Parameter>
+      </Parameters>
+      <Outputs>
+        <Output Title="New Result">0</Output>
+        <Output Title="bLifetimeElapsed">0</Output>
+        <Output Title="Time Elapsed">00:00:06:500</Output>
+        <Output Title="Time Remaining">00:59:53:500</Output>
+      </Outputs>
+    </Function>
+    <Function Title="Threshold String Classifier 1Ch" Name="CTcAlyThresholdStringClassificator_1Ch">
+      <InputLinks>
+        <InputLink InputTitle="Input">Term 1 (EK1200).Term 6 (EL3102).AI Standard Channel 1.Value @ 192.168.1.10: DefaultMainTopic/DeviceStream2 [10,00ms]</InputLink>
+      </InputLinks>
+      <Parameters>
+        <Parameter Title="Level 1 / 2">20000</Parameter>
+        <Parameter Title="Level 2 / 3">28000</Parameter>
+        <Parameter Title="String Level 1">Normal</Parameter>
+        <Parameter Title="String Level 2">High</Parameter>
+        <Parameter Title="String Level 3">High High</Parameter>
+        <Parameter Title="Negate Input">FALSE</Parameter>
+        <Parameter Title="Negate Enable Execution">FALSE</Parameter>
+        <Parameter Title="Negate Reset">FALSE</Parameter>
+      </Parameters>
+      <Outputs>
+        <Output Title="New Result">0</Output>
+        <Output Title="Output String">High</Output>
+        <Output Title="Last Event">11/12/2020 16:02:10.151</Output>
+      </Outputs>
+    </Function>
+  </Functions>
+  <InputSources>
+    <InputSource Title="192.168.1.10: DefaultMainTopic/DeviceStream2 [10,00ms]" Target="&lt;TargetInfo TargetId=&quot;0&quot;&gt;&#xA;  &lt;MQTTAddress&gt;&#xA;    &lt;ConnectionSettings&gt;&#xA;      &lt;Broker&gt;192.168.1.10&lt;/Broker&gt;&#xA;      &lt;BrokerPort&gt;1883&lt;/BrokerPort&gt;&#xA;      &lt;UserID&gt;&lt;/UserID&gt;&#xA;      &lt;PasswordCrypted&gt;&lt;/PasswordCrypted&gt;&#xA;      &lt;WithCertificates&gt;false&lt;/WithCertificates&gt;&#xA;      &lt;CA_Certificate&gt;&lt;/CA_Certificate&gt;&#xA;      &lt;Cert_Certificate&gt;&lt;/Cert_Certificate&gt;&#xA;      &lt;Key_Certificate&gt;&lt;/Key_Certificate&gt;&#xA;      &lt;Key_PwdCrypted&gt;&lt;/Key_PwdCrypted&gt;&#xA;    &lt;/ConnectionSettings&gt;&#xA;    &lt;Topic&gt;DefaultMainTopic/DeviceStream2&lt;/Topic&gt;&#xA;    &lt;CycleTime&gt;100000&lt;/CycleTime&gt;&#xA;    &lt;SystemID&gt;8660e913-055f-7445-2b5e-910076613843&lt;/SystemID&gt;&#xA;  &lt;/MQTTAddress&gt;&#xA;&lt;/TargetInfo&gt;">
+      <Inputs>
+        <Input Title="TimeLine" VariableInfo="&lt;Symbol&gt;&lt;Name&gt;TimeLine&lt;/Name&gt;&lt;BitSize&gt;64&lt;/BitSize&gt;&lt;BaseType&gt;ULINT&lt;/BaseType&gt;&lt;BitOffset&gt;-1&lt;/BitOffset&gt;&lt;/Symbol&gt;" />
+        <Input Title="Term 1 (EK1200).Term 3 (EL2014).DIG Outputs.Channel 1.Output" VariableInfo="&lt;Symbol TargetId=&quot;0&quot;&gt;&#xA;  &lt;Name&gt;Term 1 (EK1200).Term 3 (EL2014).DIG Outputs.Channel 1.Output&lt;/Name&gt;&#xA;  &lt;BaseType&gt;BOOL&lt;/BaseType&gt;&#xA;  &lt;BitSize&gt;1&lt;/BitSize&gt;&#xA;  &lt;Comment /&gt;&#xA;  &lt;Properties /&gt;&#xA;  &lt;BitOffset&gt;32&lt;/BitOffset&gt;&#xA;&lt;/Symbol&gt;" />
+        <Input Title="Term 1 (EK1200).Term 6 (EL3102).AI Standard Channel 1.Value" VariableInfo="&lt;Symbol TargetId=&quot;0&quot;&gt;&#xA;  &lt;Name&gt;Term 1 (EK1200).Term 6 (EL3102).AI Standard Channel 1.Value&lt;/Name&gt;&#xA;  &lt;BaseType&gt;INT&lt;/BaseType&gt;&#xA;  &lt;BitSize&gt;16&lt;/BitSize&gt;&#xA;  &lt;Comment /&gt;&#xA;  &lt;Properties /&gt;&#xA;  &lt;BitOffset&gt;0&lt;/BitOffset&gt;&#xA;&lt;/Symbol&gt;" />
+        <Input Title="Term 1 (EK1200).Term 6 (EL3102).AI Standard Channel 2.Value" VariableInfo="&lt;Symbol TargetId=&quot;0&quot;&gt;&#xA;  &lt;Name&gt;Term 1 (EK1200).Term 6 (EL3102).AI Standard Channel 2.Value&lt;/Name&gt;&#xA;  &lt;BaseType&gt;INT&lt;/BaseType&gt;&#xA;  &lt;BitSize&gt;16&lt;/BitSize&gt;&#xA;  &lt;Comment /&gt;&#xA;  &lt;Properties /&gt;&#xA;  &lt;BitOffset&gt;16&lt;/BitOffset&gt;&#xA;&lt;/Symbol&gt;" />
+      </Inputs>
+    </InputSource>
+  </InputSources>
+</AnalyticsProjectResult>

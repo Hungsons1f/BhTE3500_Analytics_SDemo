@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.4">
+  <POU Name="FB_T1_DataSource" Id="{5bc0c52f-4191-4e99-a720-931412f63f26}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_T1_DataSource IMPLEMENTS I_DataSource, I_V1_Virtual_Input_Source_1
+VAR_OUTPUT
+	eDataState: E_DataSourceState;
+END_VAR
+VAR
+	_bV1_Virtual_Input: BOOL;
+	_nV1_Virtual_Input_1: INT;
+	_tTimestamp: ULINT;
+	
+	_nElements: UDINT;
+	_nCurrentElement: UDINT;
+	
+	_nDataHandle: ULINT;
+	
+	fbIotSymbol_MAIN_bDinx: FB_ALY_IotSymbol_BOOL := (stConfig:= (sSymbolName:= 'MAIN.bDinx'));
+	fbIotSymbol_MAIN_nAinx: FB_ALY_IotSymbol_INT := (stConfig:= (sSymbolName:= 'MAIN.nAinx'));
+	
+	//Target T1 = Broker:"192.168.1.10" Topic:"DefaultMainTopic/PlcStream1"
+	fbStreamHelper: FB_ALY_StreamHelper;
+	bConfigured: BOOL := FALSE;
+	
+	fbALY_GetSystemTime: FB_ALY_GetSystemTime;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Property Name="bNewData" Id="{3fc89be7-97e2-41de-8139-98bd6fe92b28}">
+      <Declaration><![CDATA[PROPERTY bNewData : BOOL]]></Declaration>
+      <Get Name="Get" Id="{5c7dd1c0-d6e1-4dec-9973-695118e14be0}">
+        <Declaration><![CDATA[VAR
+END_VAR]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[bNewData:= _nElements > 0;]]></ST>
+        </Implementation>
+      </Get>
+    </Property>
+    <Property Name="bV1_Virtual_Input" Id="{c17c9d2d-7d79-4b75-bd70-6ed39e0b31c8}">
+      <Declaration><![CDATA[PROPERTY bV1_Virtual_Input : BOOL]]></Declaration>
+      <Get Name="Get" Id="{ae1eaa8c-d6de-42f6-b17b-a7289613259f}">
+        <Declaration><![CDATA[VAR
+END_VAR]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[bV1_Virtual_Input:= _bV1_Virtual_Input;]]></ST>
+        </Implementation>
+      </Get>
+    </Property>
+    <Method Name="Call" Id="{f23b20d7-9dd6-4602-8812-48a155a318b9}">
+      <Declaration><![CDATA[METHOD Call : BOOL
+VAR
+	stConfig: ST_ALY_StreamHelper_Config;
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF NOT fbStreamHelper.bConfigured THEN
+	stConfig.nObjectID:= 16#01010010;
+	stConfig.nNumInputBuffer:= 20;
+	fbStreamHelper.Configure(stConfig);
+END_IF
+
+IF NOT bConfigured THEN
+	//MAIN.bDinx
+	fbStreamHelper.AddIotSymbol(fbIotSymbol_MAIN_bDinx);
+	//MAIN.nAinx
+	fbStreamHelper.AddIotSymbol(fbIotSymbol_MAIN_nAinx);
+
+	bConfigured:= TRUE;
+END_IF
+
+fbStreamHelper.Call();
+IF fbStreamHelper.bError THEN
+	eDataState:= E_DataSourceState.eError;
+ELSIF NOT fbStreamHelper.bConnected THEN
+	eDataState:= E_DataSourceState.eNotConnected;
+ELSE
+	IF eDataState <> E_DataSourceState.eReceiveData_Cancel AND eDataState <> E_DataSourceState.eReceiveData_Pause THEN
+		eDataState:= E_DataSourceState.eReceiveData;
+		_nElements:= fbStreamHelper.nNumElements;
+	ELSE
+		_nElements:= 0;
+	END_IF
+END_IF
+
+fbALY_GetSystemTime.Call();
+
+
+IF _nElements > 0 THEN
+	_nDataHandle:= _nDataHandle + 1;
+END_IF
+
+_nCurrentElement:= 0;]]></ST>
+      </Implementation>
+    </Method>
+    <Property Name="dtTimestamp" Id="{8719ce5e-c77c-4928-9cc6-732849c82853}">
+      <Declaration><![CDATA[PROPERTY dtTimestamp : DCTIMESTRUCT]]></Declaration>
+      <Get Name="Get" Id="{2e6d13de-cc56-4cbe-9c0d-bd7c3554b7ec}">
+        <Declaration><![CDATA[VAR
+END_VAR]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[
+dtTimestamp:= F_AlyTimestampToDCTimestruct(_tTimestamp);]]></ST>
+        </Implementation>
+      </Get>
+    </Property>
+    <Method Name="GetData" Id="{f381fa0a-f49a-4666-9869-28ccacd93091}">
+      <Declaration><![CDATA[METHOD GetData : BOOL
+VAR_INPUT
+	nElement: UDINT;
+END_VAR
+VAR
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF nElements > 0 THEN
+	IF nElement <= nElements THEN
+
+		IF _nCurrentElement <> nElement THEN
+			//Set local raw inputs
+			_bV1_Virtual_Input:= fbIotSymbol_MAIN_bDinx.GetValue(nElement);
+			_nV1_Virtual_Input_1:= fbIotSymbol_MAIN_nAinx.GetValue(nElement);
+
+			//Set tTimestamp
+			_tTimestamp:= fbStreamHelper.GetTimestampElement(nElement);
+
+
+			_nCurrentElement:= nElement;
+		END_IF
+	END_IF
+	GetData:= TRUE;
+ELSE
+	GetData:= FALSE;
+END_IF]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="HistoricalCtrl" Id="{6166c508-6aa1-489e-a523-69b2fe447fb0}">
+      <Declaration><![CDATA[METHOD HistoricalCtrl : BOOL
+VAR_INPUT
+	stCtrl: REFERENCE TO ST_HMI_DataSourceCtrl;
+	stHistStreamInfo: REFERENCE TO ST_HMI_DataSourceHist;
+	stRecordInfo: REFERENCE TO ST_HMI_DataSourceHistRecordInfo;
+END_VAR
+VAR
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[//Not implemented]]></ST>
+      </Implementation>
+    </Method>
+    <Property Name="nDataHandle" Id="{f97f09ad-b157-4b76-a02c-7f8c8172177f}">
+      <Declaration><![CDATA[PROPERTY nDataHandle : ULINT]]></Declaration>
+      <Get Name="Get" Id="{d40d3f8d-b013-4ae7-bc73-f56fd026f188}">
+        <Declaration><![CDATA[VAR
+END_VAR]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[nDataHandle:= _nDataHandle;]]></ST>
+        </Implementation>
+      </Get>
+    </Property>
+    <Property Name="nElements" Id="{efbdc9e3-2881-48da-a1f5-9d0a62ac3193}">
+      <Declaration><![CDATA[PROPERTY nElements : UDINT]]></Declaration>
+      <Get Name="Get" Id="{b882c6a2-49d9-4172-9d41-e4600839da3c}">
+        <Declaration><![CDATA[VAR
+END_VAR]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[nElements:= _nElements;]]></ST>
+        </Implementation>
+      </Get>
+    </Property>
+    <Method Name="NewDataAvailable" Id="{11f195fa-94d4-45aa-8be9-1f0c099ab709}">
+      <Declaration><![CDATA[METHOD NewDataAvailable : BOOL
+VAR_INPUT
+	nLastDataHandle: ULINT;
+END_VAR
+VAR
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[NewDataAvailable:= _nElements > 0 AND _nDataHandle <> nLastDataHandle;]]></ST>
+      </Implementation>
+    </Method>
+    <Property Name="nV1_Virtual_Input_1" Id="{a1164c13-bdf8-44d1-89b3-c161729bcb24}">
+      <Declaration><![CDATA[PROPERTY nV1_Virtual_Input_1 : INT]]></Declaration>
+      <Get Name="Get" Id="{e48310d6-d488-442b-ada2-239c1420a364}">
+        <Declaration><![CDATA[VAR
+END_VAR]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[nV1_Virtual_Input_1:= _nV1_Virtual_Input_1;]]></ST>
+        </Implementation>
+      </Get>
+    </Property>
+    <Property Name="tTimestamp" Id="{2d75c692-cfeb-43ac-8b34-7560403e08cc}">
+      <Declaration><![CDATA[PROPERTY tTimestamp : ULINT]]></Declaration>
+      <Get Name="Get" Id="{9596e2b4-8fa2-4fcf-bb7c-1b33603385bb}">
+        <Declaration><![CDATA[VAR
+END_VAR]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[tTimestamp:= _tTimestamp;]]></ST>
+        </Implementation>
+      </Get>
+    </Property>
+    <Method Name="UpdateRecordList" Id="{2c980400-9403-4f57-8635-a598f5a2f1d5}">
+      <Declaration><![CDATA[METHOD UpdateRecordList : BOOL
+VAR_INPUT
+	stCtrl: REFERENCE TO ST_HMI_DataSourceCtrl;
+	sStreamSystemID: GUID;
+	stHistStreamInfo: REFERENCE TO ST_HMI_DataSourceHist;
+END_VAR
+VAR
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[//Not implemented]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="FB_T1_DataSource">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_T1_DataSource.bNewData.Get">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_T1_DataSource.bV1_Virtual_Input.Get">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_T1_DataSource.Call">
+      <LineId Id="3" Count="35" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_T1_DataSource.dtTimestamp.Get">
+      <LineId Id="3" Count="0" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_T1_DataSource.GetData">
+      <LineId Id="3" Count="17" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_T1_DataSource.HistoricalCtrl">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_T1_DataSource.nDataHandle.Get">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_T1_DataSource.nElements.Get">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_T1_DataSource.NewDataAvailable">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_T1_DataSource.nV1_Virtual_Input_1.Get">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_T1_DataSource.tTimestamp.Get">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_T1_DataSource.UpdateRecordList">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

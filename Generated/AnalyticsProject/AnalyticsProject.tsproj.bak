@@ -1,0 +1,312 @@
+<?xml version="1.0"?>
+<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.10">
+	<ImageDatas>
+		<ImageData Id="1000">424de6000000000000007600000028000000100000000e00000001000400000000000000000000000000000000000000000000000000ff00ff00bcbcbc008d8d8d000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001222222222210001222222222222101222222222222221222222222222222222222222222222221222222222222221022222222222222000222222222222000012210222222100000110001222100000000000011100000000000000000000</ImageData>
+	</ImageDatas>
+	<Project ProjectGUID="{76E31251-AB55-48B2-8CE0-8D0BD84FC192}" TargetNetId="5.48.67.250.1.1" Target64Bit="true" ShowHideConfigurations="#x106">
+		<System>
+			<Settings MaxCpus="2"/>
+			<Tasks>
+				<Task Id="3" Priority="20" CycleTime="100000" AmsPort="350" AdtTasks="true">
+					<Name>PlcTask</Name>
+				</Task>
+				<Task Id="4" Priority="21" CycleTime="100000" AmsPort="351" AdtTasks="true">
+					<Name>AnalyticsTask</Name>
+				</Task>
+				<Task Id="5" Priority="1" CycleTime="100000" AmsPort="352" Affinity="#x00000001" AdtTasks="true">
+					<Name>AnalyticsTask_V1_C1</Name>
+				</Task>
+			</Tasks>
+			<Modules>
+				<Module Id="#x01010010" KeepUnrestoredLinks="2">
+					<Name>192.168.1.10_Obj1 (StreamHelper)</Name>
+					<ImageId>1000</ImageId>
+					<TmcDesc GUID="{66B6E2FE-1F4E-46BB-91BE-0C4173FFB44E}">
+						<Name>StreamHelper</Name>
+						<CLSID ClassFactory="TcAnalytics">{66B6E2FE-1F4E-46BB-91BE-0C4173FFB44E}</CLSID>
+						<Licenses>
+							<License>
+								<LicenseId>{EE499E71-9522-4C05-86B4-8AD0F904E0C4}</LicenseId>
+							</License>
+							<License>
+								<LicenseId>{0ABFD2B0-EAE1-4DC7-AABE-03093B0786B7}</LicenseId>
+							</License>
+						</Licenses>
+						<InitSequence>SO</InitSequence>
+						<Contexts>
+							<Context>
+								<Id>1</Id>
+							</Context>
+						</Contexts>
+						<Interfaces>
+							<Interface DisableCodeGeneration="true">
+								<Type GUID="{00000012-0000-0000-E000-000000000064}">ITComObject</Type>
+							</Interface>
+							<Interface DisableCodeGeneration="true">
+								<Type GUID="{9A71A723-3928-4C02-AC02-EFD30999A041}">ITcIotMqttOwner</Type>
+							</Interface>
+							<Interface DisableCodeGeneration="true">
+								<Type GUID="{493BC32D-8F33-4336-B722-BCBCA9618723}">ITcIotSymbolAccess</Type>
+							</Interface>
+						</Interfaces>
+						<Parameters>
+							<Group><![CDATA[MQTT]]></Group>
+							<Group><![CDATA[Tls]]></Group>
+							<Parameter Group="MQTT">
+								<Name>Host Name</Name>
+								<BitSize>648</BitSize>
+								<BaseType GUID="{18071995-0000-0000-0000-000100000050}">STRING(80)</BaseType>
+								<Default>
+									<String><![CDATA[127.0.0.1]]></String>
+								</Default>
+								<PTCID>#x02020113</PTCID>
+								<ContextId>1</ContextId>
+							</Parameter>
+							<Parameter Group="MQTT">
+								<Name>TcpPort</Name>
+								<BitSize>16</BitSize>
+								<BaseType GUID="{18071995-0000-0000-0000-000000000005}">UINT</BaseType>
+								<Default>
+									<Value>1883</Value>
+								</Default>
+								<PTCID>#x02020103</PTCID>
+								<ContextId>1</ContextId>
+							</Parameter>
+							<Parameter Group="MQTT">
+								<Name>Topic Prefix</Name>
+								<BitSize>2048</BitSize>
+								<BaseType GUID="{18071995-0000-0000-0000-0001000000FF}">STRING(255)</BaseType>
+								<PTCID>#x02030008</PTCID>
+								<ContextId>1</ContextId>
+							</Parameter>
+							<Parameter Group="MQTT">
+								<Name>Client ID</Name>
+								<BitSize>648</BitSize>
+								<BaseType GUID="{18071995-0000-0000-0000-000100000050}">STRING(80)</BaseType>
+								<PTCID>#x02020101</PTCID>
+								<ContextId>1</ContextId>
+							</Parameter>
+							<Parameter Group="MQTT">
+								<Name>Username</Name>
+								<BitSize>648</BitSize>
+								<BaseType GUID="{18071995-0000-0000-0000-000100000050}">STRING(80)</BaseType>
+								<PTCID>#x02020106</PTCID>
+								<ContextId>1</ContextId>
+							</Parameter>
+							<Parameter Group="MQTT">
+								<Name>Password</Name>
+								<BitSize>648</BitSize>
+								<BaseType GUID="{18071995-0000-0000-0000-000100000050}">STRING(80)</BaseType>
+								<PTCID>#x02020107</PTCID>
+								<ContextId>1</ContextId>
+							</Parameter>
+							<Parameter Group="MQTT">
+								<Name>Max Handles</Name>
+								<BitSize>32</BitSize>
+								<BaseType GUID="{18071995-0000-0000-0000-000000000008}">UDINT</BaseType>
+								<Default>
+									<Value>100</Value>
+								</Default>
+								<PTCID>#x02030020</PTCID>
+								<ContextId>1</ContextId>
+							</Parameter>
+							<Parameter Group="MQTT">
+								<Name>Fifo Exponent</Name>
+								<BitSize>32</BitSize>
+								<BaseType GUID="{18071995-0000-0000-0000-000000000008}">UDINT</BaseType>
+								<Default>
+									<Value>6</Value>
+								</Default>
+								<PTCID>#x02030021</PTCID>
+								<ContextId>1</ContextId>
+							</Parameter>
+							<Parameter Group="MQTT">
+								<Name>Sender System Id</Name>
+								<BitSize>648</BitSize>
+								<BaseType GUID="{18071995-0000-0000-0000-000100000050}">STRING(80)</BaseType>
+								<PTCID>#x02030026</PTCID>
+								<ContextId>1</ContextId>
+							</Parameter>
+							<Parameter Group="Tls">
+								<Name>CaFile</Name>
+								<BitSize>2048</BitSize>
+								<BaseType GUID="{18071995-0000-0000-0000-0001000000FF}">STRING(255)</BaseType>
+								<PTCID>#x02020116</PTCID>
+								<ContextId>1</ContextId>
+							</Parameter>
+							<Parameter Group="Tls">
+								<Name>CertFile</Name>
+								<BitSize>2048</BitSize>
+								<BaseType GUID="{18071995-0000-0000-0000-0001000000FF}">STRING(255)</BaseType>
+								<PTCID>#x02020118</PTCID>
+								<ContextId>1</ContextId>
+							</Parameter>
+							<Parameter Group="Tls">
+								<Name>KeyFile</Name>
+								<BitSize>2048</BitSize>
+								<BaseType GUID="{18071995-0000-0000-0000-0001000000FF}">STRING(255)</BaseType>
+								<PTCID>#x02020119</PTCID>
+								<ContextId>1</ContextId>
+							</Parameter>
+							<Parameter Group="Tls">
+								<Name>KeyPw</Name>
+								<BitSize>2048</BitSize>
+								<BaseType GUID="{18071995-0000-0000-0000-0001000000FF}">STRING(255)</BaseType>
+								<PTCID>#x02020124</PTCID>
+								<ContextId>1</ContextId>
+							</Parameter>
+							<Parameter Group="Tls">
+								<Name>CrlFile</Name>
+								<BitSize>2048</BitSize>
+								<BaseType GUID="{18071995-0000-0000-0000-0001000000FF}">STRING(255)</BaseType>
+								<PTCID>#x02020125</PTCID>
+								<ContextId>1</ContextId>
+							</Parameter>
+							<Parameter Group="Tls">
+								<Name>PskId</Name>
+								<BitSize>2048</BitSize>
+								<BaseType GUID="{18071995-0000-0000-0000-0001000000FF}">STRING(255)</BaseType>
+								<PTCID>#x02020127</PTCID>
+								<ContextId>1</ContextId>
+							</Parameter>
+							<Parameter Group="Tls">
+								<Name>PskPwd</Name>
+								<BitSize>2048</BitSize>
+								<BaseType GUID="{18071995-0000-0000-0000-0001000000FF}">STRING(255)</BaseType>
+								<PTCID>#x02020129</PTCID>
+								<ContextId>1</ContextId>
+							</Parameter>
+							<Parameter Group="Tls">
+								<Name>Insecure</Name>
+								<BitSize>8</BitSize>
+								<BaseType GUID="{18071995-0000-0000-0000-000000000030}">BOOL</BaseType>
+								<PTCID>#x0202011a</PTCID>
+								<ContextId>1</ContextId>
+							</Parameter>
+							<Parameter Group="Tls">
+								<Name>Version</Name>
+								<BitSize>2048</BitSize>
+								<BaseType GUID="{18071995-0000-0000-0000-0001000000FF}">STRING(255)</BaseType>
+								<PTCID>#x0202011b</PTCID>
+								<ContextId>1</ContextId>
+							</Parameter>
+							<Parameter OnlineParameter="true">
+								<Name>Is Connected</Name>
+								<BitSize>8</BitSize>
+								<BaseType GUID="{18071995-0000-0000-0000-000000000030}">BOOL</BaseType>
+								<Default>
+									<Value>0</Value>
+								</Default>
+								<PTCID>#x02020112</PTCID>
+								<ContextId>1</ContextId>
+							</Parameter>
+						</Parameters>
+						<Deployment>
+							<DependsOn>
+								<CLSID ClassFactory="TcIotDrivers">{978857F8-4A76-4AC4-A0C3-F303E3E39C57}</CLSID>
+							</DependsOn>
+						</Deployment>
+						<Properties>
+							<Property>
+								<Name>Category</Name>
+								<Value>Analytics Object</Value>
+							</Property>
+						</Properties>
+						<ParameterValues>
+							<Value>
+								<Name>Host Name</Name>
+								<String>192.168.1.10</String>
+							</Value>
+							<Value>
+								<Name>TcpPort</Name>
+								<Value>1883</Value>
+							</Value>
+							<Value>
+								<Name>Topic Prefix</Name>
+								<String>DefaultMainTopic/PlcStream1</String>
+							</Value>
+							<Value>
+								<Name>Client ID</Name>
+								<String></String>
+							</Value>
+							<Value>
+								<Name>Username</Name>
+								<String></String>
+							</Value>
+							<Value>
+								<Name>Password</Name>
+								<String></String>
+							</Value>
+							<Value>
+								<Name>Max Handles</Name>
+								<Value>100</Value>
+							</Value>
+							<Value>
+								<Name>Fifo Exponent</Name>
+								<Value>8</Value>
+							</Value>
+							<Value>
+								<Name>Sender System Id</Name>
+								<String>B375D0E8-9412-9D91-04C5-B1A76C1B6BBD</String>
+							</Value>
+							<Value>
+								<Name>CaFile</Name>
+								<String></String>
+							</Value>
+							<Value>
+								<Name>CertFile</Name>
+								<String></String>
+							</Value>
+							<Value>
+								<Name>KeyFile</Name>
+								<String></String>
+							</Value>
+							<Value>
+								<Name>KeyPw</Name>
+								<String></String>
+							</Value>
+							<Value>
+								<Name>CrlFile</Name>
+								<String></String>
+							</Value>
+							<Value>
+								<Name>PskId</Name>
+								<String></String>
+							</Value>
+							<Value>
+								<Name>PskPwd</Name>
+								<String></String>
+							</Value>
+							<Value>
+								<Name>Insecure</Name>
+								<EnumText>FALSE</EnumText>
+							</Value>
+							<Value>
+								<Name>Version</Name>
+								<String></String>
+							</Value>
+							<Value>
+								<Name>Is Connected</Name>
+								<EnumText>FALSE</EnumText>
+							</Value>
+						</ParameterValues>
+					</TmcDesc>
+				</Module>
+			</Modules>
+		</System>
+		<Plc>
+			<Project GUID="{0F78A1B5-6F60-40CB-B06B-D1DBDAEC1B82}" Name="AnalysisPLC" PrjFilePath="AnalysisPLC\AnalysisPLC.plcproj" TmcFilePath="AnalysisPLC\AnalysisPLC.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2">
+					<Name>AnalysisPLC Instance</Name>
+					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
+					<Contexts>
+						<Context>
+							<Id>1</Id>
+							<Name>Default</Name>
+						</Context>
+					</Contexts>
+				</Instance>
+			</Project>
+		</Plc>
+	</Project>
+</TcSmProject>

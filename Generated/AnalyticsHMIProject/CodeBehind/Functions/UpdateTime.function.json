@@ -1,0 +1,29 @@
+﻿{
+  "function": {
+    "name": "UpdateTime",
+    "displayName": "UpdateTime",
+    "visible": true,
+    "category": "",
+    "waitMode": "Synchronous",
+    "injectContextObject": false,
+    "description": "",
+    "returnValue": {
+      "type": "tchmi:general#/definitions/String"
+    },
+    "arguments": [
+      {
+        "name": "TimerControl",
+        "displayName": "TimerControl",
+        "type": "tchmi:framework#/definitions/Control",
+        "description": "",
+        "defaultValue": null,
+        "required": true,
+        "bindable": true,
+        "restParameter": false,
+        "asReference": false,
+        "allowControlAttributeBindingOptions": false
+      }
+    ]
+  },
+  "$schema": "../.hmiframework/Schema/FunctionDescription.Schema.json"
+}

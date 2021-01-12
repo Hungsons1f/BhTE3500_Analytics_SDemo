@@ -1,0 +1,66 @@
+﻿{
+  "function": {
+    "name": "ImageSliderResize",
+    "namespace": "TcHmi.Functions.MyNamespace",
+    "displayName": "ImageSliderResize",
+    "description": "",
+    "waitMode": "Synchronous",
+    "category": "",
+    "returnValue": {
+      "type": "tchmi:general#/definitions/String"
+    },
+    "visible": true,
+    "injectContextObject": false,
+    "arguments": [
+      {
+        "name": "Control",
+        "displayName": "Control",
+        "type": "tchmi:framework#/definitions/Control",
+        "description": "",
+        "defaultValue": "",
+        "required": true,
+        "bindable": true,
+        "restParameter": false,
+        "asReference": false,
+        "allowControlAttributeBindingOptions": false
+      },
+      {
+        "name": "mobile",
+        "displayName": "mobile",
+        "type": "tchmi:general#/definitions/Boolean",
+        "description": "",
+        "defaultValue": "",
+        "required": true,
+        "bindable": true,
+        "restParameter": false,
+        "asReference": false,
+        "allowControlAttributeBindingOptions": false
+      },
+      {
+        "name": "width",
+        "displayName": "width",
+        "type": "tchmi:general#/definitions/INT",
+        "description": "",
+        "defaultValue": "",
+        "required": true,
+        "bindable": true,
+        "restParameter": false,
+        "asReference": false,
+        "allowControlAttributeBindingOptions": false
+      },
+      {
+        "name": "HMIControl",
+        "displayName": "HMIControl",
+        "type": "tchmi:framework#/definitions/Control",
+        "description": "",
+        "defaultValue": null,
+        "required": false,
+        "bindable": true,
+        "restParameter": false,
+        "asReference": false,
+        "allowControlAttributeBindingOptions": false
+      }
+    ]
+  },
+  "$schema": "../.hmiframework/Schema/FunctionDescription.Schema.json"
+}

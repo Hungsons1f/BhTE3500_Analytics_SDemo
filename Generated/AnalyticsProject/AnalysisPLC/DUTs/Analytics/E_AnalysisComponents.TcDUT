@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" Productversion="">
+  <DUT Name="E_AnalysisComponents" Id="c0aa2ed7-588f-4842-9617-a10ea88e4508">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+{attribute 'strict'}
+TYPE E_AnalysisComponents : 
+(
+	All := -1,
+	N1_Network := 0,
+	N1_M1_LifetimeAnalysis1Ch := 1,
+	N1_M2_ThresholdStringClassifier1Ch := 2,
+	N1_M3_TrendLine := 3
+) ;
+END_TYPE]]></Declaration>
+  </DUT>
+</TcPlcObject>

@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" Productversion="">
+  <POU Name="FB_N1_M3_TrendLine" Id="dadc1408-9d27-4eb0-ac0f-e0d479e5456e" SpecialFunc="None">
+    <Declaration><![CDATA[//This Module is used for the One-click Dashboard to generate a special analytics trend chart.
+FUNCTION_BLOCK FB_N1_M3_TrendLine
+VAR_INPUT
+	nDataInCh1: INT;
+	tTimestamp: ULINT;
+	bEnableExecution: BOOL := TRUE;
+	bReset: BOOL;
+	bReconfigure: BOOL := TRUE;
+	aChannelNames: ARRAY [0..0] OF STRING(255);
+END_VAR
+VAR_OUTPUT
+	bError: BOOL;
+	ipTcResult: I_TcMessage;
+	bNewResult: BOOL;
+	aTrendData: ARRAY [1..1] OF ARRAY [1..10080] OF LREAL;
+	fbLastValue: FB_ALY_DateTime;
+	nCountValues: UDINT;
+END_VAR
+VAR
+	nNumChannels: INT := 1;
+	
+	bConfigured: BOOL;
+	R_TRIG_Reconfigure: R_TRIG;
+	
+	fbALY_TrendLine: FB_ALY_TrendLine(nNumChannels:=nNumChannels);
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="Call" Id="4b2199e9-c099-49f4-9c48-747571ec01d5">
+      <Declaration><![CDATA[METHOD Call : BOOL
+VAR_INPUT
+	bNewData: BOOL;
+END_VAR
+VAR
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF NOT bConfigured THEN
+	bConfigured:= TRUE;
+
+	aChannelNames[0]:= 'Resistor';
+
+END_IF
+
+R_TRIG_Reconfigure(CLK:= bReconfigure);
+IF R_TRIG_Reconfigure.Q THEN
+
+	bReconfigure:= FALSE;
+END_IF
+
+IF bReset THEN
+	Reset();
+END_IF
+
+IF bEnableExecution THEN
+	IF bNewData THEN
+		fbALY_TrendLine.SetChannelValue(nChannel:=1, Input:=nDataInCh1);
+
+		fbALY_TrendLine.Call(tTimestamp:=tTimestamp);
+
+		bNewResult:= fbALY_TrendLine.bNewResult;
+		fbLastValue:= fbALY_TrendLine.fbLastValue;
+		nCountValues:= fbALY_TrendLine.nCountValues;
+
+		fbALY_TrendLine.GetChannelOutputArray(nChannel:=1, pArrayOut:=ADR(aTrendData[1]), nArrayOutSize:=SIZEOF(aTrendData[1]));
+
+		bError:= fbALY_TrendLine.bError;
+		ipTcResult:= fbALY_TrendLine.ipResultMessage;
+	END_IF
+END_IF]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="Reset" Id="ad8a34d6-ff75-4cfd-bdcf-b9baf68c4811">
+      <Declaration><![CDATA[METHOD Reset : BOOL
+VAR
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[Reset:= fbALY_TrendLine.Reset();
+
+bNewResult:= fbALY_TrendLine.bNewResult;
+fbLastValue:= fbALY_TrendLine.fbLastValue;
+nCountValues:= fbALY_TrendLine.nCountValues;
+
+fbALY_TrendLine.GetChannelOutputArray(nChannel:=1, pArrayOut:=ADR(aTrendData[1]), nArrayOutSize:=SIZEOF(aTrendData[1]));
+
+bError:= NOT Reset;
+ipTcResult:= fbALY_TrendLine.ipResultMessage;]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="SetHMI" Id="432d4203-4396-4f0a-bbff-c918b7dc4364">
+      <Declaration><![CDATA[METHOD SetHMI : BOOL
+VAR_INPUT
+	pHMI_N1_Network: POINTER TO ST_HMI_N1_Network;
+END_VAR
+VAR
+	i: INT;
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[
+FOR i:=1 TO 1 DO
+	pHMI_N1_Network^.aM3_aTrendData[i]:= aTrendData[i];
+END_FOR
+fbLastValue.nUtcTimeBias:= -420; //UTC Offset [(UTC+07:00) Bangkok, Hanoi, Jakarta]
+pHMI_N1_Network^.dtM3_fbLastValue:= fbLastValue.stStructured;
+pHMI_N1_Network^.nM3_nCountValues:= TO_DINT(nCountValues);
+FOR i:=0 TO 0 DO
+	pHMI_N1_Network^.aM3_aChannelNames[i]:= aChannelNames[i];
+END_FOR]]></ST>
+      </Implementation>
+    </Method>
+  </POU>
+</TcPlcObject>

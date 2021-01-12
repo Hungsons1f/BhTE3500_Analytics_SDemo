@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" Productversion="">
+  <POU Name="FB_N1_M1_LifetimeAnalysis1Ch" Id="03198ba9-c9b1-4744-a6ec-51cb87772ea2" SpecialFunc="None">
+    <Declaration><![CDATA[//The Lifetime Analysis 1Ch calculates the elapsed and the estimated remaining lifetime of a device. The input channel should provide boolean values so that every switching procedure represents a cycle which can be converted into the elapsed lifetime. Optional a boolean signal for Enable Execution can be selected, so that the algorithm is just active if the value of the selected signal is TRUE.
+FUNCTION_BLOCK FB_N1_M1_LifetimeAnalysis1Ch
+VAR_INPUT
+	bDataIn: BOOL;
+	tTimestamp: ULINT;
+	bEnableExecution: BOOL := TRUE;
+	bReset: BOOL;
+	bReconfigure: BOOL := TRUE;
+	stThresholdLevel: ST_ALY_Threshold;
+	tLifetimeEstimated: LTIME;
+END_VAR
+VAR_OUTPUT
+	bError: BOOL;
+	ipTcResult: I_TcMessage;
+	bNewResult: BOOL;
+	fbLifetimeElapsed: FB_ALY_TimeSpan;
+	fbLifetimeRemaining: FB_ALY_TimeSpan;
+END_VAR
+VAR
+	
+	bConfigured: BOOL;
+	R_TRIG_Reconfigure: R_TRIG;
+	
+	fbALY_LifeTimeAnalysis_1Ch: FB_ALY_LifeTimeAnalysis_1Ch;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="Call" Id="06cf07f2-5403-470b-96fc-53dd0a2178fc">
+      <Declaration><![CDATA[METHOD Call : BOOL
+VAR_INPUT
+	bNewData: BOOL;
+END_VAR
+VAR
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF NOT bConfigured THEN
+	bConfigured:= TRUE;
+
+	tLifetimeEstimated:= LTIME#1h;
+
+	//stThresholdLevel
+	stThresholdLevel.eComparisonOperator:= E_ALY_ComparisonOperator.NotEqualTo;
+	stThresholdLevel.fThreshold:= 0;
+
+END_IF
+
+R_TRIG_Reconfigure(CLK:= bReconfigure);
+IF R_TRIG_Reconfigure.Q THEN
+	fbALY_LifeTimeAnalysis_1Ch.ConfigureChannel(stThresholdLevel:=stThresholdLevel);
+
+	fbALY_LifeTimeAnalysis_1Ch.Configure(tLifetimeEstimated:=tLifetimeEstimated);
+
+	bReconfigure:= FALSE;
+END_IF
+
+IF bReset THEN
+	Reset();
+END_IF
+
+IF bEnableExecution THEN
+	IF bNewData THEN
+		fbALY_LifeTimeAnalysis_1Ch.SetChannelValue(Input:=bDataIn);
+
+		fbALY_LifeTimeAnalysis_1Ch.Call(tTimestamp:=tTimestamp);
+
+		bNewResult:= fbALY_LifeTimeAnalysis_1Ch.bNewResult;
+		fbLifetimeElapsed:= fbALY_LifeTimeAnalysis_1Ch.fbLifetimeElapsed;
+		fbLifetimeRemaining:= fbALY_LifeTimeAnalysis_1Ch.fbLifetimeRemaining;
+
+		bError:= fbALY_LifeTimeAnalysis_1Ch.bError;
+		ipTcResult:= fbALY_LifeTimeAnalysis_1Ch.ipResultMessage;
+	END_IF
+END_IF]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="Reset" Id="e7d98010-4404-4e0f-807e-c6db6e445096">
+      <Declaration><![CDATA[METHOD Reset : BOOL
+VAR
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[Reset:= fbALY_LifeTimeAnalysis_1Ch.Reset();
+
+bNewResult:= fbALY_LifeTimeAnalysis_1Ch.bNewResult;
+fbLifetimeElapsed:= fbALY_LifeTimeAnalysis_1Ch.fbLifetimeElapsed;
+fbLifetimeRemaining:= fbALY_LifeTimeAnalysis_1Ch.fbLifetimeRemaining;
+
+bError:= NOT Reset;
+ipTcResult:= fbALY_LifeTimeAnalysis_1Ch.ipResultMessage;]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="SetHMI" Id="5e0996bc-bf0d-457b-9bd7-9ab9115b5c3a">
+      <Declaration><![CDATA[METHOD SetHMI : BOOL
+VAR_INPUT
+	pHMI_N1_Network: POINTER TO ST_HMI_N1_Network;
+END_VAR
+VAR
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[
+pHMI_N1_Network^.tM1_fbLifetimeElapsed:= fbLifetimeElapsed.stStructured;
+pHMI_N1_Network^.tM1_fbLifetimeRemaining:= fbLifetimeRemaining.stStructured;]]></ST>
+      </Implementation>
+    </Method>
+  </POU>
+</TcPlcObject>

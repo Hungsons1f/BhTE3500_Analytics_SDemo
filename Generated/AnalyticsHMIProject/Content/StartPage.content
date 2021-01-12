@@ -1,0 +1,20 @@
+﻿<div id="StartPage" data-tchmi-type="TcHmi.Controls.System.TcHmiContent" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-height="100" data-tchmi-width-unit="%" data-tchmi-height-unit="%">
+
+<div id="AlyLeafletMapCtrl" data-tchmi-type="TcHmi.Controls.Analytics.MapControl" data-tchmi-show-title="False" data-tchmi-name-alias="Map Control" data-tchmi-color-gradient="0" data-tchmi-show-reset="False" data-tchmi-use-struct-input="True" data-tchmi-icon-image-path="" data-tchmi-left="5" data-tchmi-top="5" data-tchmi-right="5" data-tchmi-bottom="20" data-tchmi-map-input="%s%PLC1.AnalyticsHMI.aMapItems%/s%">
+
+<script data-tchmi-target-attribute="data-tchmi-position" type="application/json">
+[
+  "Beckhoff Automation, Verl"
+]
+</script>
+<script data-tchmi-target-attribute="data-tchmi-traffic-light-status" type="application/json">
+[
+  0
+]
+</script>
+<script data-tchmi-target-attribute="data-tchmi-popup-text" type="application/json">
+[]
+</script>
+<script data-tchmi-target-attribute="data-tchmi-popup-marker" type="application/json">
+[]
+</script><script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">["Default"]</script></div></div>

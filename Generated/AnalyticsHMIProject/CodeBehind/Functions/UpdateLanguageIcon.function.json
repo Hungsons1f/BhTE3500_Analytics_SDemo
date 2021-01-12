@@ -1,0 +1,44 @@
+﻿{
+  "function": {
+    "version": null,
+    "dependencies": [],
+    "name": "UpdateLanguageIcon",
+    "displayName": "UpdateLanguageIcon",
+    "visible": true,
+    "category": "",
+    "context": "",
+    "description": "",
+    "targetType": null,
+    "returnValue": {
+      "type": "tchmi:general#/definitions/String",
+      "description": ""
+    },
+    "arguments": [
+      {
+        "name": "NavBar",
+        "displayName": "NavBar",
+        "type": "tchmi:framework#/definitions/Control",
+        "category": "",
+        "description": "",
+        "defaultValue": "",
+        "required": true,
+        "bindable": true,
+        "restParameter": false,
+        "asReference": false
+      },
+      {
+        "name": "Locale",
+        "displayName": "Locale",
+        "type": "tchmi:general#/definitions/String",
+        "category": "",
+        "description": "",
+        "defaultValue": "",
+        "required": true,
+        "bindable": true,
+        "restParameter": false,
+        "asReference": false
+      }
+    ]
+  },
+  "$schema": "../.hmiframework/Schema/FunctionDescription.Schema.json"
+}

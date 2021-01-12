@@ -1,0 +1,1070 @@
+﻿<AnalyticsProjectAdditionalElements>
+  <HMIInfo AssemblyName="TwinCAT.Analytics.CodeGenerator.HMI">
+    <Comment />
+    <DisplayColor>Black</DisplayColor>
+    <Guid>56b6e1b5-1cd7-4b5e-af98-16becd45c9cc</Guid>
+    <IsFileBased>false</IsFileBased>
+    <Name>HMIInfo_4</Name>
+    <SortPriority>100</SortPriority>
+    <Suffix></Suffix>
+    <Title>Project_1</Title>
+  </HMIInfo>
+  <HMICtrlInfo AssemblyName="TwinCAT.Analytics.CodeGenerator.HMI">
+    <CodeGenModuleGuid>35cfd307-6b82-4936-91e9-100000000005</CodeGenModuleGuid>
+    <Comment />
+    <ControlMappings />
+    <DisplayColor>Black</DisplayColor>
+    <DisplayText>Lifetime Analysis 1Ch</DisplayText>
+    <DocOnDesktop>false</DocOnDesktop>
+    <GenerateGVL>true</GenerateGVL>
+    <GlobalVariableType>ControlSpecific</GlobalVariableType>
+    <Guid>7b9d3e52-a205-4c74-9cc5-c04ec1c35350</Guid>
+    <IsFileBased>false</IsFileBased>
+    <Name>HMICtrlInfo_29</Name>
+    <ReferencedModule>CTcAlyLifetimeAnalysis_1Ch</ReferencedModule>
+    <SelectedMapping>
+      <AlgorithmID>2</AlgorithmID>
+      <CtrlAlgMapID>6</CtrlAlgMapID>
+    </SelectedMapping>
+    <SortPriority>100</SortPriority>
+    <Suffix></Suffix>
+    <Title>HMICtrlInfo_29</Title>
+  </HMICtrlInfo>
+  <HMICtrlInfo AssemblyName="TwinCAT.Analytics.CodeGenerator.HMI">
+    <CodeGenModuleGuid>35cfd307-6b82-4936-91e9-200000000002</CodeGenModuleGuid>
+    <Comment />
+    <ControlMappings />
+    <DisplayColor>Black</DisplayColor>
+    <DisplayText>Threshold String Classifier 1Ch</DisplayText>
+    <DocOnDesktop>false</DocOnDesktop>
+    <GenerateGVL>true</GenerateGVL>
+    <GlobalVariableType>ControlSpecific</GlobalVariableType>
+    <Guid>d7ea07b5-bfaf-412a-9ed6-5cac6341637c</Guid>
+    <IsFileBased>false</IsFileBased>
+    <Name>HMICtrlInfo_83</Name>
+    <ReferencedModule>CTcAlyThresholdStringClassificator_1Ch</ReferencedModule>
+    <SelectedMapping>
+      <AlgorithmID>2</AlgorithmID>
+      <CtrlAlgMapID>7</CtrlAlgMapID>
+    </SelectedMapping>
+    <SortPriority>100</SortPriority>
+    <Suffix></Suffix>
+    <Title>HMICtrlInfo_83</Title>
+  </HMICtrlInfo>
+  <HMICtrlInfo AssemblyName="TwinCAT.Analytics.CodeGenerator.HMI">
+    <CodeGenModuleGuid>35cfd307-6b82-4936-91e9-a00000000002</CodeGenModuleGuid>
+    <Comment />
+    <ControlMappings />
+    <DisplayColor>Black</DisplayColor>
+    <DisplayText>Trend Line</DisplayText>
+    <DocOnDesktop>false</DocOnDesktop>
+    <GenerateGVL>true</GenerateGVL>
+    <GlobalVariableType>ControlSpecific</GlobalVariableType>
+    <Guid>d74ba349-23c4-4097-8f02-16e759ba16ff</Guid>
+    <IsFileBased>false</IsFileBased>
+    <Name>HMICtrlInfo_832</Name>
+    <ReferencedModule>CTcAlyTrendLine</ReferencedModule>
+    <SelectedMapping>
+      <AlgorithmID>1</AlgorithmID>
+      <CtrlAlgMapID>203</CtrlAlgMapID>
+    </SelectedMapping>
+    <SortPriority>100</SortPriority>
+    <Suffix></Suffix>
+    <Title>HMICtrlInfo_832</Title>
+  </HMICtrlInfo>
+  <FunctionAppearance AssemblyName="TwinCAT.Analytics.Workbench">
+    <Comment />
+    <DisplayColor>Black</DisplayColor>
+    <Guid>3e272123-a467-4be5-9e5d-ae9d0542b1bf</Guid>
+    <IncludeInReferencedScope>true</IncludeInReferencedScope>
+    <IsFileBased>false</IsFileBased>
+    <Name>FunctionAppearance_30</Name>
+    <ReferencedModule>CTcAlyLifetimeAnalysis_1Ch</ReferencedModule>
+    <ShowOptionalInputs>false</ShowOptionalInputs>
+    <SortPriority>164</SortPriority>
+    <Suffix></Suffix>
+    <Title>FunctionAppearance_30</Title>
+  </FunctionAppearance>
+  <FunctionAppearance AssemblyName="TwinCAT.Analytics.Workbench">
+    <Comment />
+    <DisplayColor>Black</DisplayColor>
+    <Guid>00581667-6214-484f-addf-667eb4abadaa</Guid>
+    <IncludeInReferencedScope>true</IncludeInReferencedScope>
+    <IsFileBased>false</IsFileBased>
+    <Name>FunctionAppearance_84</Name>
+    <ReferencedModule>CTcAlyThresholdStringClassificator_1Ch</ReferencedModule>
+    <ShowOptionalInputs>false</ShowOptionalInputs>
+    <SortPriority>228</SortPriority>
+    <Suffix></Suffix>
+    <Title>FunctionAppearance_84</Title>
+  </FunctionAppearance>
+  <FunctionAppearance AssemblyName="TwinCAT.Analytics.Workbench">
+    <Comment />
+    <DisplayColor>Black</DisplayColor>
+    <Guid>8fbd8971-6549-4f82-9088-c2ecaaaed952</Guid>
+    <IncludeInReferencedScope>true</IncludeInReferencedScope>
+    <IsFileBased>false</IsFileBased>
+    <Name>FunctionAppearance_833</Name>
+    <ReferencedModule>CTcAlyTrendLine</ReferencedModule>
+    <ShowOptionalInputs>false</ShowOptionalInputs>
+    <SortPriority>356</SortPriority>
+    <Suffix></Suffix>
+    <Title>FunctionAppearance_833</Title>
+  </FunctionAppearance>
+  <FunctionResultInfo AssemblyName="TwinCAT.Analytics.Workbench">
+    <Comment />
+    <CreateResult>false</CreateResult>
+    <DisplayColor>Black</DisplayColor>
+    <Guid>b24f971c-18f4-45b0-bf0b-4330195b1e53</Guid>
+    <IsFileBased>false</IsFileBased>
+    <Name>FunctionResultInfo_31</Name>
+    <ReferencedModule>CTcAlyLifetimeAnalysis_1Ch</ReferencedModule>
+    <SortPriority>100</SortPriority>
+    <Suffix></Suffix>
+    <Title>FunctionResultInfo_31</Title>
+  </FunctionResultInfo>
+  <FunctionResultInfo AssemblyName="TwinCAT.Analytics.Workbench">
+    <Comment />
+    <CreateResult>false</CreateResult>
+    <DisplayColor>Black</DisplayColor>
+    <Guid>7fac21f7-7605-4fff-8ef9-fe109fdb8723</Guid>
+    <IsFileBased>false</IsFileBased>
+    <Name>FunctionResultInfo_85</Name>
+    <ReferencedModule>CTcAlyThresholdStringClassificator_1Ch</ReferencedModule>
+    <SortPriority>100</SortPriority>
+    <Suffix></Suffix>
+    <Title>FunctionResultInfo_85</Title>
+  </FunctionResultInfo>
+  <FunctionResultInfo AssemblyName="TwinCAT.Analytics.Workbench">
+    <Comment />
+    <CreateResult>false</CreateResult>
+    <DisplayColor>Black</DisplayColor>
+    <Guid>2226f012-08a7-41c8-bab4-38889dc94783</Guid>
+    <IsFileBased>false</IsFileBased>
+    <Name>FunctionResultInfo_834</Name>
+    <ReferencedModule>CTcAlyTrendLine</ReferencedModule>
+    <SortPriority>100</SortPriority>
+    <Suffix></Suffix>
+    <Title>FunctionResultInfo_834</Title>
+  </FunctionResultInfo>
+  <InputSourceInfo AssemblyName="TwinCAT.Analytics.Workbench">
+    <Comment />
+    <CycleTime>10000000</CycleTime>
+    <ChartGuid>6a92b576-e9c5-4284-97f5-25865b495706</ChartGuid>
+    <DisplayColor>Black</DisplayColor>
+    <Guid>b42e3353-09a2-41e8-993e-90275e6f4939</Guid>
+    <IsFileBased>false</IsFileBased>
+    <Name>InputSourceInfo_503</Name>
+    <ReferencedModule>1f438417-d9f3-4ca8-9c43-9a7032a8fe3b</ReferencedModule>
+    <ReferencedTitle>MQTT:Live</ReferencedTitle>
+    <SortPriority>100</SortPriority>
+    <SourceInfo>&lt;TargetInfo TargetId="0"&gt;
+  &lt;MQTTAddress&gt;
+    &lt;ConnectionSettings&gt;
+      &lt;Broker&gt;192.168.1.10&lt;/Broker&gt;
+      &lt;BrokerPort&gt;1883&lt;/BrokerPort&gt;
+      &lt;UserID&gt;&lt;/UserID&gt;
+      &lt;PasswordCrypted&gt;&lt;/PasswordCrypted&gt;
+      &lt;WithCertificates&gt;false&lt;/WithCertificates&gt;
+      &lt;CA_Certificate&gt;&lt;/CA_Certificate&gt;
+      &lt;Cert_Certificate&gt;&lt;/Cert_Certificate&gt;
+      &lt;Key_Certificate&gt;&lt;/Key_Certificate&gt;
+      &lt;Key_PwdCrypted&gt;&lt;/Key_PwdCrypted&gt;
+    &lt;/ConnectionSettings&gt;
+    &lt;Topic&gt;DefaultMainTopic/DeviceStream2&lt;/Topic&gt;
+    &lt;CycleTime&gt;100000&lt;/CycleTime&gt;
+    &lt;SystemID&gt;8660e913-055f-7445-2b5e-910076613843&lt;/SystemID&gt;
+  &lt;/MQTTAddress&gt;
+&lt;/TargetInfo&gt;</SourceInfo>
+    <Suffix></Suffix>
+    <TimeOffset>0</TimeOffset>
+    <Title>InputSourceInfo_503</Title>
+  </InputSourceInfo>
+  <Network AssemblyName="TwinCAT.Analytics.Workbench">
+    <Closed>false</Closed>
+    <Comment />
+    <DisplayColor>Black</DisplayColor>
+    <Guid>836883a8-7b99-4188-aedb-ae29479b75b7</Guid>
+    <ID>1</ID>
+    <ImageDataString />
+    <ImagePath />
+    <IncludeInReferencedScope>true</IncludeInReferencedScope>
+    <IsFileBased>false</IsFileBased>
+    <Name>Network</Name>
+    <NetworkChartGuid>f89346be-e884-4da4-85cd-d95de55da175</NetworkChartGuid>
+    <ShowOptional>false</ShowOptional>
+    <SortPriority>100</SortPriority>
+    <SubMember />
+    <Suffix>.alytemplate</Suffix>
+    <Title>Network 1</Title>
+    <VisibleNetworkChartGuid>00000000-0000-0000-0000-000000000000</VisibleNetworkChartGuid>
+  </Network>
+  <ProjectInfo AssemblyName="TwinCAT.Analytics.Workbench">
+    <AxisGenerationStyle>AxisPerDataType</AxisGenerationStyle>
+    <Comment />
+    <DisplayColor>Black</DisplayColor>
+    <Guid>2c732077-a34b-4d3e-97c3-f88dfa3d6567</Guid>
+    <GuidToElementIDReferences />
+    <IsFileBased>false</IsFileBased>
+    <Name>ProjectInfo_5</Name>
+    <RefreshRefScopeMode>Automatic</RefreshRefScopeMode>
+    <ScopeAnalyticsReferences>
+      <DictionaryItem>
+        <Key>
+          <guid>00581667-6214-484f-addf-667eb4abadaa</guid>
+        </Key>
+        <Value>
+          <ArrayOfGuid>
+            <guid>ad605424-6549-4694-9c94-3274cef94b1e</guid>
+            <guid>a69eeeb0-f68c-4f7a-9dd1-0146d1302c79</guid>
+          </ArrayOfGuid>
+        </Value>
+      </DictionaryItem>
+    </ScopeAnalyticsReferences>
+    <ScopeGenerationType>ChartPerNetwork</ScopeGenerationType>
+    <ScopeProjectGuid>00000000-0000-0000-0000-000000000000</ScopeProjectGuid>
+    <SortPriority>100</SortPriority>
+    <Suffix></Suffix>
+    <Title>ProjectInfo_5</Title>
+    <UseScopeRecording>true</UseScopeRecording>
+  </ProjectInfo>
+  <VariableSerializable AssemblyName="TwinCAT.Analytics.Workbench">
+    <Comment />
+    <DisplayColor>Black</DisplayColor>
+    <ElementID>
+      <ElementID>
+        <OID>16842768</OID>
+        <PID>33816578</PID>
+        <GUID>00000000-0000-0000-0000-000000000000</GUID>
+        <DynamicIdx>-1</DynamicIdx>
+      </ElementID>
+    </ElementID>
+    <Guid>db974992-dea4-4d78-b057-0d109b988b17</Guid>
+    <IncludeInReferencedScope>false</IncludeInReferencedScope>
+    <IsFileBased>false</IsFileBased>
+    <Name>VariableSerializable_33</Name>
+    <SortPriority>100</SortPriority>
+    <Suffix></Suffix>
+    <Title>VariableSerializable_33</Title>
+  </VariableSerializable>
+  <VariableSerializable AssemblyName="TwinCAT.Analytics.Workbench">
+    <Comment />
+    <DisplayColor>Black</DisplayColor>
+    <ElementID>
+      <ElementID>
+        <OID>16842768</OID>
+        <PID>33816849</PID>
+        <GUID>00000000-0000-0000-0000-000000000000</GUID>
+        <DynamicIdx>-1</DynamicIdx>
+      </ElementID>
+    </ElementID>
+    <Guid>f16c0552-880e-4c6a-bf6a-1e89a51b07ba</Guid>
+    <IncludeInReferencedScope>false</IncludeInReferencedScope>
+    <IsFileBased>false</IsFileBased>
+    <Name>VariableSerializable_35</Name>
+    <SortPriority>100</SortPriority>
+    <Suffix></Suffix>
+    <Title>VariableSerializable_35</Title>
+  </VariableSerializable>
+  <VariableSerializable AssemblyName="TwinCAT.Analytics.Workbench">
+    <Comment />
+    <DisplayColor>Black</DisplayColor>
+    <ElementID>
+      <ElementID>
+        <OID>16842768</OID>
+        <PID>33816865</PID>
+        <GUID>00000000-0000-0000-0000-000000000000</GUID>
+        <DynamicIdx>-1</DynamicIdx>
+      </ElementID>
+    </ElementID>
+    <Guid>f1fd11ea-4664-4ac5-92fc-550a60395396</Guid>
+    <IncludeInReferencedScope>false</IncludeInReferencedScope>
+    <IsFileBased>false</IsFileBased>
+    <Name>VariableSerializable_37</Name>
+    <SortPriority>100</SortPriority>
+    <Suffix></Suffix>
+    <Title>VariableSerializable_37</Title>
+  </VariableSerializable>
+  <VariableSerializable AssemblyName="TwinCAT.Analytics.Workbench">
+    <Comment />
+    <DisplayColor>Black</DisplayColor>
+    <ElementID>
+      <ElementID>
+        <OID>16842768</OID>
+        <PID>33816914</PID>
+        <GUID>00000000-0000-0000-0000-000000000000</GUID>
+        <DynamicIdx>-1</DynamicIdx>
+      </ElementID>
+    </ElementID>
+    <Guid>9c914021-fee9-46d5-ae70-8540e737c156</Guid>
+    <IncludeInReferencedScope>false</IncludeInReferencedScope>
+    <IsFileBased>false</IsFileBased>
+    <Name>VariableSerializable_39</Name>
+    <SortPriority>100</SortPriority>
+    <Suffix></Suffix>
+    <Title>VariableSerializable_39</Title>
+  </VariableSerializable>
+  <VariableSerializable AssemblyName="TwinCAT.Analytics.Workbench">
+    <Comment />
+    <DisplayColor>Black</DisplayColor>
+    <ElementID>
+      <ElementID>
+        <OID>16842768</OID>
+        <PID>33816837</PID>
+        <GUID>00000000-0000-0000-0000-000000000000</GUID>
+        <DynamicIdx>-1</DynamicIdx>
+      </ElementID>
+    </ElementID>
+    <Guid>4e60bba3-ae28-4d73-a0c0-254ec53931c5</Guid>
+    <IncludeInReferencedScope>false</IncludeInReferencedScope>
+    <IsFileBased>false</IsFileBased>
+    <Name>VariableSerializable_41</Name>
+    <SortPriority>100</SortPriority>
+    <Suffix></Suffix>
+    <Title>VariableSerializable_41</Title>
+  </VariableSerializable>
+  <VariableSerializable AssemblyName="TwinCAT.Analytics.Workbench">
+    <Comment />
+    <DisplayColor>Black</DisplayColor>
+    <ElementID>
+      <ElementID>
+        <OID>16842768</OID>
+        <PID>33816594</PID>
+        <GUID>00000000-0000-0000-0000-000000000000</GUID>
+        <DynamicIdx>-1</DynamicIdx>
+      </ElementID>
+    </ElementID>
+    <Guid>1df20a5a-6ea0-4dee-a992-a03629de7a76</Guid>
+    <IncludeInReferencedScope>false</IncludeInReferencedScope>
+    <IsFileBased>false</IsFileBased>
+    <Name>VariableSerializable_43</Name>
+    <SortPriority>100</SortPriority>
+    <Suffix></Suffix>
+    <Title>VariableSerializable_43</Title>
+  </VariableSerializable>
+  <VariableSerializable AssemblyName="TwinCAT.Analytics.Workbench">
+    <Comment />
+    <DisplayColor>Black</DisplayColor>
+    <ElementID>
+      <ElementID>
+        <OID>16842768</OID>
+        <PID>33816595</PID>
+        <GUID>00000000-0000-0000-0000-000000000000</GUID>
+        <DynamicIdx>-1</DynamicIdx>
+      </ElementID>
+    </ElementID>
+    <Guid>fe41b94e-804a-4bbc-868b-407e4c5050d1</Guid>
+    <IncludeInReferencedScope>false</IncludeInReferencedScope>
+    <IsFileBased>false</IsFileBased>
+    <Name>VariableSerializable_45</Name>
+    <SortPriority>100</SortPriority>
+    <Suffix></Suffix>
+    <Title>VariableSerializable_45</Title>
+  </VariableSerializable>
+  <VariableSerializable AssemblyName="TwinCAT.Analytics.Workbench">
+    <Comment />
+    <DisplayColor>Black</DisplayColor>
+    <ElementID>
+      <ElementID>
+        <OID>16842768</OID>
+        <PID>2147483648</PID>
+        <GUID>00000000-0000-0000-0000-000000000000</GUID>
+        <DynamicIdx>-1</DynamicIdx>
+      </ElementID>
+    </ElementID>
+    <Guid>e9d7604f-ff0a-4255-ba9d-c6ab2eb16d73</Guid>
+    <IncludeInReferencedScope>false</IncludeInReferencedScope>
+    <IsFileBased>false</IsFileBased>
+    <Name>VariableSerializable_47</Name>
+    <SortPriority>100</SortPriority>
+    <Suffix></Suffix>
+    <Title>VariableSerializable_47</Title>
+  </VariableSerializable>
+  <VariableSerializable AssemblyName="TwinCAT.Analytics.Workbench">
+    <Comment />
+    <DisplayColor>Black</DisplayColor>
+    <ElementID>
+      <ElementID>
+        <OID>16842768</OID>
+        <PID>2147483664</PID>
+        <GUID>00000000-0000-0000-0000-000000000000</GUID>
+        <DynamicIdx>-1</DynamicIdx>
+      </ElementID>
+    </ElementID>
+    <Guid>d0d3a105-44c2-4011-8e36-853c7ab40b73</Guid>
+    <IncludeInReferencedScope>false</IncludeInReferencedScope>
+    <IsFileBased>false</IsFileBased>
+    <Name>VariableSerializable_49</Name>
+    <SortPriority>100</SortPriority>
+    <Suffix></Suffix>
+    <Title>VariableSerializable_49</Title>
+  </VariableSerializable>
+  <VariableSerializable AssemblyName="TwinCAT.Analytics.Workbench">
+    <Comment />
+    <DisplayColor>Black</DisplayColor>
+    <ElementID>
+      <ElementID>
+        <OID>16842768</OID>
+        <PID>2147483665</PID>
+        <GUID>00000000-0000-0000-0000-000000000000</GUID>
+        <DynamicIdx>-1</DynamicIdx>
+      </ElementID>
+    </ElementID>
+    <Guid>e56b3a26-3df8-494e-b7e5-c2472711891d</Guid>
+    <IncludeInReferencedScope>false</IncludeInReferencedScope>
+    <IsFileBased>false</IsFileBased>
+    <Name>VariableSerializable_51</Name>
+    <SortPriority>100</SortPriority>
+    <Suffix></Suffix>
+    <Title>VariableSerializable_51</Title>
+  </VariableSerializable>
+  <VariableSerializable AssemblyName="TwinCAT.Analytics.Workbench">
+    <Comment />
+    <DisplayColor>Black</DisplayColor>
+    <ElementID>
+      <ElementID>
+        <OID>16842768</OID>
+        <PID>2164260864</PID>
+        <GUID>00000000-0000-0000-0000-000000000000</GUID>
+        <DynamicIdx>-1</DynamicIdx>
+      </ElementID>
+    </ElementID>
+    <Guid>e6f3c151-c41d-41e6-b17b-33312b23e233</Guid>
+    <IncludeInReferencedScope>false</IncludeInReferencedScope>
+    <IsFileBased>false</IsFileBased>
+    <Name>VariableSerializable_53</Name>
+    <SortPriority>100</SortPriority>
+    <Suffix></Suffix>
+    <Title>VariableSerializable_53</Title>
+  </VariableSerializable>
+  <VariableSerializable AssemblyName="TwinCAT.Analytics.Workbench">
+    <Comment />
+    <DisplayColor>Black</DisplayColor>
+    <ElementID>
+      <ElementID>
+        <OID>16842768</OID>
+        <PID>2164260865</PID>
+        <GUID>00000000-0000-0000-0000-000000000000</GUID>
+        <DynamicIdx>-1</DynamicIdx>
+      </ElementID>
+    </ElementID>
+    <Guid>fd2d9f65-6f00-42b3-a23d-bae8f96ed7ff</Guid>
+    <IncludeInReferencedScope>false</IncludeInReferencedScope>
+    <IsFileBased>false</IsFileBased>
+    <Name>VariableSerializable_55</Name>
+    <SortPriority>100</SortPriority>
+    <Suffix></Suffix>
+    <Title>VariableSerializable_55</Title>
+  </VariableSerializable>
+  <VariableSerializable AssemblyName="TwinCAT.Analytics.Workbench">
+    <Comment />
+    <DisplayColor>Black</DisplayColor>
+    <ElementID>
+      <ElementID>
+        <OID>16842768</OID>
+        <PID>2164260872</PID>
+        <GUID>00000000-0000-0000-0000-000000000000</GUID>
+        <DynamicIdx>-1</DynamicIdx>
+      </ElementID>
+    </ElementID>
+    <Guid>27e45745-d003-4def-bc95-00945b161cb0</Guid>
+    <IncludeInReferencedScope>false</IncludeInReferencedScope>
+    <IsFileBased>false</IsFileBased>
+    <Name>VariableSerializable_57</Name>
+    <SortPriority>100</SortPriority>
+    <Suffix></Suffix>
+    <Title>VariableSerializable_57</Title>
+  </VariableSerializable>
+  <VariableSerializable AssemblyName="TwinCAT.Analytics.Workbench">
+    <Comment />
+    <DisplayColor>Black</DisplayColor>
+    <ElementID>
+      <ElementID>
+        <OID>16842768</OID>
+        <PID>2164260880</PID>
+        <GUID>00000000-0000-0000-0000-000000000000</GUID>
+        <DynamicIdx>-1</DynamicIdx>
+      </ElementID>
+    </ElementID>
+    <Guid>2542758b-3d98-4cd6-9296-f3cd3369b711</Guid>
+    <IncludeInReferencedScope>false</IncludeInReferencedScope>
+    <IsFileBased>false</IsFileBased>
+    <Name>VariableSerializable_59</Name>
+    <SortPriority>100</SortPriority>
+    <Suffix></Suffix>
+    <Title>VariableSerializable_59</Title>
+  </VariableSerializable>
+  <VariableSerializable AssemblyName="TwinCAT.Analytics.Workbench">
+    <Comment />
+    <DisplayColor>Black</DisplayColor>
+    <ElementID>
+      <ElementID>
+        <OID>16842784</OID>
+        <PID>33816865</PID>
+        <GUID>00000000-0000-0000-0000-000000000000</GUID>
+        <DynamicIdx>-1</DynamicIdx>
+      </ElementID>
+    </ElementID>
+    <Guid>ca334218-572b-4c3a-855e-b825243f3ee0</Guid>
+    <IncludeInReferencedScope>false</IncludeInReferencedScope>
+    <IsFileBased>false</IsFileBased>
+    <Name>VariableSerializable_87</Name>
+    <SortPriority>100</SortPriority>
+    <Suffix></Suffix>
+    <Title>VariableSerializable_87</Title>
+  </VariableSerializable>
+  <VariableSerializable AssemblyName="TwinCAT.Analytics.Workbench">
+    <Comment />
+    <DisplayColor>Black</DisplayColor>
+    <ElementID>
+      <ElementID>
+        <OID>16842784</OID>
+        <PID>33816866</PID>
+        <GUID>00000000-0000-0000-0000-000000000000</GUID>
+        <DynamicIdx>-1</DynamicIdx>
+      </ElementID>
+    </ElementID>
+    <Guid>08e8beea-1a06-4ef6-8588-a74dbf98d187</Guid>
+    <IncludeInReferencedScope>false</IncludeInReferencedScope>
+    <IsFileBased>false</IsFileBased>
+    <Name>VariableSerializable_89</Name>
+    <SortPriority>100</SortPriority>
+    <Suffix></Suffix>
+    <Title>VariableSerializable_89</Title>
+  </VariableSerializable>
+  <VariableSerializable AssemblyName="TwinCAT.Analytics.Workbench">
+    <Comment />
+    <DisplayColor>Black</DisplayColor>
+    <ElementID>
+      <ElementID>
+        <OID>16842784</OID>
+        <PID>33816897</PID>
+        <GUID>00000000-0000-0000-0000-000000000000</GUID>
+        <DynamicIdx>-1</DynamicIdx>
+      </ElementID>
+    </ElementID>
+    <Guid>752ca97b-4117-4eeb-815b-a3c42512d360</Guid>
+    <IncludeInReferencedScope>false</IncludeInReferencedScope>
+    <IsFileBased>false</IsFileBased>
+    <Name>VariableSerializable_91</Name>
+    <SortPriority>100</SortPriority>
+    <Suffix></Suffix>
+    <Title>VariableSerializable_91</Title>
+  </VariableSerializable>
+  <VariableSerializable AssemblyName="TwinCAT.Analytics.Workbench">
+    <Comment />
+    <DisplayColor>Black</DisplayColor>
+    <ElementID>
+      <ElementID>
+        <OID>16842784</OID>
+        <PID>33816898</PID>
+        <GUID>00000000-0000-0000-0000-000000000000</GUID>
+        <DynamicIdx>-1</DynamicIdx>
+      </ElementID>
+    </ElementID>
+    <Guid>456468cc-f0ee-434c-9420-80f96e04107f</Guid>
+    <IncludeInReferencedScope>false</IncludeInReferencedScope>
+    <IsFileBased>false</IsFileBased>
+    <Name>VariableSerializable_93</Name>
+    <SortPriority>100</SortPriority>
+    <Suffix></Suffix>
+    <Title>VariableSerializable_93</Title>
+  </VariableSerializable>
+  <VariableSerializable AssemblyName="TwinCAT.Analytics.Workbench">
+    <Comment />
+    <DisplayColor>Black</DisplayColor>
+    <ElementID>
+      <ElementID>
+        <OID>16842784</OID>
+        <PID>33816899</PID>
+        <GUID>00000000-0000-0000-0000-000000000000</GUID>
+        <DynamicIdx>-1</DynamicIdx>
+      </ElementID>
+    </ElementID>
+    <Guid>13f88442-e61a-4f9f-924c-85e358491afb</Guid>
+    <IncludeInReferencedScope>false</IncludeInReferencedScope>
+    <IsFileBased>false</IsFileBased>
+    <Name>VariableSerializable_95</Name>
+    <SortPriority>100</SortPriority>
+    <Suffix></Suffix>
+    <Title>VariableSerializable_95</Title>
+  </VariableSerializable>
+  <VariableSerializable AssemblyName="TwinCAT.Analytics.Workbench">
+    <Comment />
+    <DisplayColor>Black</DisplayColor>
+    <ElementID>
+      <ElementID>
+        <OID>16842784</OID>
+        <PID>33816837</PID>
+        <GUID>00000000-0000-0000-0000-000000000000</GUID>
+        <DynamicIdx>-1</DynamicIdx>
+      </ElementID>
+    </ElementID>
+    <Guid>9c749b71-8dcf-41d7-9925-f1f9f1eee327</Guid>
+    <IncludeInReferencedScope>false</IncludeInReferencedScope>
+    <IsFileBased>false</IsFileBased>
+    <Name>VariableSerializable_97</Name>
+    <SortPriority>100</SortPriority>
+    <Suffix></Suffix>
+    <Title>VariableSerializable_97</Title>
+  </VariableSerializable>
+  <VariableSerializable AssemblyName="TwinCAT.Analytics.Workbench">
+    <Comment />
+    <DisplayColor>Black</DisplayColor>
+    <ElementID>
+      <ElementID>
+        <OID>16842784</OID>
+        <PID>33816594</PID>
+        <GUID>00000000-0000-0000-0000-000000000000</GUID>
+        <DynamicIdx>-1</DynamicIdx>
+      </ElementID>
+    </ElementID>
+    <Guid>b354412e-dc1e-442a-9763-db149125ddde</Guid>
+    <IncludeInReferencedScope>false</IncludeInReferencedScope>
+    <IsFileBased>false</IsFileBased>
+    <Name>VariableSerializable_99</Name>
+    <SortPriority>100</SortPriority>
+    <Suffix></Suffix>
+    <Title>VariableSerializable_99</Title>
+  </VariableSerializable>
+  <VariableSerializable AssemblyName="TwinCAT.Analytics.Workbench">
+    <Comment />
+    <DisplayColor>Black</DisplayColor>
+    <ElementID>
+      <ElementID>
+        <OID>16842784</OID>
+        <PID>33816595</PID>
+        <GUID>00000000-0000-0000-0000-000000000000</GUID>
+        <DynamicIdx>-1</DynamicIdx>
+      </ElementID>
+    </ElementID>
+    <Guid>16642306-9ea1-4d21-b099-f18dc9a4e485</Guid>
+    <IncludeInReferencedScope>false</IncludeInReferencedScope>
+    <IsFileBased>false</IsFileBased>
+    <Name>VariableSerializable_101</Name>
+    <SortPriority>100</SortPriority>
+    <Suffix></Suffix>
+    <Title>VariableSerializable_101</Title>
+  </VariableSerializable>
+  <VariableSerializable AssemblyName="TwinCAT.Analytics.Workbench">
+    <Comment />
+    <DisplayColor>Black</DisplayColor>
+    <ElementID>
+      <ElementID>
+        <OID>16842784</OID>
+        <PID>2147483648</PID>
+        <GUID>00000000-0000-0000-0000-000000000000</GUID>
+        <DynamicIdx>-1</DynamicIdx>
+      </ElementID>
+    </ElementID>
+    <Guid>af63e1b4-dbf7-484e-bf8f-0b01a7487b30</Guid>
+    <IncludeInReferencedScope>false</IncludeInReferencedScope>
+    <IsFileBased>false</IsFileBased>
+    <Name>VariableSerializable_103</Name>
+    <SortPriority>100</SortPriority>
+    <Suffix></Suffix>
+    <Title>VariableSerializable_103</Title>
+  </VariableSerializable>
+  <VariableSerializable AssemblyName="TwinCAT.Analytics.Workbench">
+    <Comment />
+    <DisplayColor>Black</DisplayColor>
+    <ElementID>
+      <ElementID>
+        <OID>16842784</OID>
+        <PID>2147483664</PID>
+        <GUID>00000000-0000-0000-0000-000000000000</GUID>
+        <DynamicIdx>-1</DynamicIdx>
+      </ElementID>
+    </ElementID>
+    <Guid>5df3dde5-d55e-4add-b6e7-abeba28a164b</Guid>
+    <IncludeInReferencedScope>false</IncludeInReferencedScope>
+    <IsFileBased>false</IsFileBased>
+    <Name>VariableSerializable_105</Name>
+    <SortPriority>100</SortPriority>
+    <Suffix></Suffix>
+    <Title>VariableSerializable_105</Title>
+  </VariableSerializable>
+  <VariableSerializable AssemblyName="TwinCAT.Analytics.Workbench">
+    <Comment />
+    <DisplayColor>Black</DisplayColor>
+    <ElementID>
+      <ElementID>
+        <OID>16842784</OID>
+        <PID>2147483665</PID>
+        <GUID>00000000-0000-0000-0000-000000000000</GUID>
+        <DynamicIdx>-1</DynamicIdx>
+      </ElementID>
+    </ElementID>
+    <Guid>73b362d6-0038-46c2-a681-2256f71aea4f</Guid>
+    <IncludeInReferencedScope>false</IncludeInReferencedScope>
+    <IsFileBased>false</IsFileBased>
+    <Name>VariableSerializable_107</Name>
+    <SortPriority>100</SortPriority>
+    <Suffix></Suffix>
+    <Title>VariableSerializable_107</Title>
+  </VariableSerializable>
+  <VariableSerializable AssemblyName="TwinCAT.Analytics.Workbench">
+    <Comment />
+    <DisplayColor>Black</DisplayColor>
+    <ElementID>
+      <ElementID>
+        <OID>16842784</OID>
+        <PID>2164260864</PID>
+        <GUID>00000000-0000-0000-0000-000000000000</GUID>
+        <DynamicIdx>-1</DynamicIdx>
+      </ElementID>
+    </ElementID>
+    <Guid>6e3d9be0-8575-4b46-a1ca-2d88fefd9b54</Guid>
+    <IncludeInReferencedScope>false</IncludeInReferencedScope>
+    <IsFileBased>false</IsFileBased>
+    <Name>VariableSerializable_109</Name>
+    <SortPriority>100</SortPriority>
+    <Suffix></Suffix>
+    <Title>VariableSerializable_109</Title>
+  </VariableSerializable>
+  <VariableSerializable AssemblyName="TwinCAT.Analytics.Workbench">
+    <Comment />
+    <DisplayColor>Black</DisplayColor>
+    <ElementID>
+      <ElementID>
+        <OID>16842784</OID>
+        <PID>2164260865</PID>
+        <GUID>00000000-0000-0000-0000-000000000000</GUID>
+        <DynamicIdx>-1</DynamicIdx>
+      </ElementID>
+    </ElementID>
+    <Guid>cc18098f-9a8f-426e-8672-2ccda3f0fbed</Guid>
+    <IncludeInReferencedScope>false</IncludeInReferencedScope>
+    <IsFileBased>false</IsFileBased>
+    <Name>VariableSerializable_111</Name>
+    <SortPriority>100</SortPriority>
+    <Suffix></Suffix>
+    <Title>VariableSerializable_111</Title>
+  </VariableSerializable>
+  <VariableSerializable AssemblyName="TwinCAT.Analytics.Workbench">
+    <Comment />
+    <DisplayColor>Black</DisplayColor>
+    <ElementID>
+      <ElementID>
+        <OID>16842784</OID>
+        <PID>2164261128</PID>
+        <GUID>00000000-0000-0000-0000-000000000000</GUID>
+        <DynamicIdx>-1</DynamicIdx>
+      </ElementID>
+    </ElementID>
+    <Guid>0e36c0fa-b4ab-4471-8653-7c557f8f5f1c</Guid>
+    <IncludeInReferencedScope>false</IncludeInReferencedScope>
+    <IsFileBased>false</IsFileBased>
+    <Name>VariableSerializable_113</Name>
+    <SortPriority>100</SortPriority>
+    <Suffix></Suffix>
+    <Title>VariableSerializable_113</Title>
+  </VariableSerializable>
+  <VariableSerializable AssemblyName="TwinCAT.Analytics.Workbench">
+    <Comment />
+    <DisplayColor>Black</DisplayColor>
+    <ElementID>
+      <ElementID>
+        <OID>16842880</OID>
+        <PID>33816578</PID>
+        <GUID>00000000-0000-0000-0000-000000000000</GUID>
+        <DynamicIdx>-1</DynamicIdx>
+      </ElementID>
+    </ElementID>
+    <Guid>ba2a4c3a-561e-498f-9fbd-14f3c0b08393</Guid>
+    <IncludeInReferencedScope>false</IncludeInReferencedScope>
+    <IsFileBased>false</IsFileBased>
+    <Name>VariableSerializable_836</Name>
+    <SortPriority>100</SortPriority>
+    <Suffix></Suffix>
+    <Title>VariableSerializable_836</Title>
+  </VariableSerializable>
+  <VariableSerializable AssemblyName="TwinCAT.Analytics.Workbench">
+    <Comment />
+    <DisplayColor>Black</DisplayColor>
+    <ElementID>
+      <ElementID>
+        <OID>16842880</OID>
+        <PID>33816582</PID>
+        <GUID>00000000-0000-0000-0000-000000000000</GUID>
+        <DynamicIdx>-1</DynamicIdx>
+      </ElementID>
+    </ElementID>
+    <Guid>5d564101-686c-4fe9-ab2d-0f919cd679ff</Guid>
+    <IncludeInReferencedScope>false</IncludeInReferencedScope>
+    <IsFileBased>false</IsFileBased>
+    <Name>VariableSerializable_838</Name>
+    <SortPriority>100</SortPriority>
+    <Suffix></Suffix>
+    <Title>VariableSerializable_838</Title>
+  </VariableSerializable>
+  <VariableSerializable AssemblyName="TwinCAT.Analytics.Workbench">
+    <Comment />
+    <DisplayColor>Black</DisplayColor>
+    <ElementID>
+      <ElementID>
+        <OID>16842880</OID>
+        <PID>33816897</PID>
+        <GUID>00000000-0000-0000-0000-000000000000</GUID>
+        <DynamicIdx>0</DynamicIdx>
+      </ElementID>
+    </ElementID>
+    <Guid>0edbcab0-2519-4bde-9a43-7c4f83f18b19</Guid>
+    <IncludeInReferencedScope>false</IncludeInReferencedScope>
+    <IsFileBased>false</IsFileBased>
+    <Name>VariableSerializable_840</Name>
+    <SortPriority>100</SortPriority>
+    <Suffix></Suffix>
+    <Title>VariableSerializable_840</Title>
+  </VariableSerializable>
+  <VariableSerializable AssemblyName="TwinCAT.Analytics.Workbench">
+    <Comment />
+    <DisplayColor>Black</DisplayColor>
+    <ElementID>
+      <ElementID>
+        <OID>16842880</OID>
+        <PID>33816837</PID>
+        <GUID>00000000-0000-0000-0000-000000000000</GUID>
+        <DynamicIdx>0</DynamicIdx>
+      </ElementID>
+    </ElementID>
+    <Guid>04466fb4-74e3-442b-bf80-260cfbac60fa</Guid>
+    <IncludeInReferencedScope>false</IncludeInReferencedScope>
+    <IsFileBased>false</IsFileBased>
+    <Name>VariableSerializable_842</Name>
+    <SortPriority>100</SortPriority>
+    <Suffix></Suffix>
+    <Title>VariableSerializable_842</Title>
+  </VariableSerializable>
+  <VariableSerializable AssemblyName="TwinCAT.Analytics.Workbench">
+    <Comment />
+    <DisplayColor>Black</DisplayColor>
+    <ElementID>
+      <ElementID>
+        <OID>16842880</OID>
+        <PID>33816594</PID>
+        <GUID>00000000-0000-0000-0000-000000000000</GUID>
+        <DynamicIdx>-1</DynamicIdx>
+      </ElementID>
+    </ElementID>
+    <Guid>6014c526-f7e5-4370-88eb-4af76ec0dd73</Guid>
+    <IncludeInReferencedScope>false</IncludeInReferencedScope>
+    <IsFileBased>false</IsFileBased>
+    <Name>VariableSerializable_844</Name>
+    <SortPriority>100</SortPriority>
+    <Suffix></Suffix>
+    <Title>VariableSerializable_844</Title>
+  </VariableSerializable>
+  <VariableSerializable AssemblyName="TwinCAT.Analytics.Workbench">
+    <Comment />
+    <DisplayColor>Black</DisplayColor>
+    <ElementID>
+      <ElementID>
+        <OID>16842880</OID>
+        <PID>33816595</PID>
+        <GUID>00000000-0000-0000-0000-000000000000</GUID>
+        <DynamicIdx>-1</DynamicIdx>
+      </ElementID>
+    </ElementID>
+    <Guid>38031ada-4018-4a73-8019-3f44eedba4cc</Guid>
+    <IncludeInReferencedScope>false</IncludeInReferencedScope>
+    <IsFileBased>false</IsFileBased>
+    <Name>VariableSerializable_846</Name>
+    <SortPriority>100</SortPriority>
+    <Suffix></Suffix>
+    <Title>VariableSerializable_846</Title>
+  </VariableSerializable>
+  <VariableSerializable AssemblyName="TwinCAT.Analytics.Workbench">
+    <Comment />
+    <DisplayColor>Black</DisplayColor>
+    <ElementID>
+      <ElementID>
+        <OID>16842880</OID>
+        <PID>2147483656</PID>
+        <GUID>00000000-0000-0000-0000-000000000000</GUID>
+        <DynamicIdx>-1</DynamicIdx>
+      </ElementID>
+    </ElementID>
+    <Guid>0260af7e-6f95-449e-b8cd-d7aa9ff18725</Guid>
+    <IncludeInReferencedScope>false</IncludeInReferencedScope>
+    <IsFileBased>false</IsFileBased>
+    <Name>VariableSerializable_848</Name>
+    <SortPriority>100</SortPriority>
+    <Suffix></Suffix>
+    <Title>VariableSerializable_848</Title>
+  </VariableSerializable>
+  <VariableSerializable AssemblyName="TwinCAT.Analytics.Workbench">
+    <Comment />
+    <DisplayColor>Black</DisplayColor>
+    <ElementID>
+      <ElementID>
+        <OID>16842880</OID>
+        <PID>2147483657</PID>
+        <GUID>00000000-0000-0000-0000-000000000000</GUID>
+        <DynamicIdx>-1</DynamicIdx>
+      </ElementID>
+    </ElementID>
+    <Guid>9607e722-8d52-438e-bf56-54018d875810</Guid>
+    <IncludeInReferencedScope>false</IncludeInReferencedScope>
+    <IsFileBased>false</IsFileBased>
+    <Name>VariableSerializable_850</Name>
+    <SortPriority>100</SortPriority>
+    <Suffix></Suffix>
+    <Title>VariableSerializable_850</Title>
+  </VariableSerializable>
+  <VariableSerializable AssemblyName="TwinCAT.Analytics.Workbench">
+    <Comment />
+    <DisplayColor>Black</DisplayColor>
+    <ElementID>
+      <ElementID>
+        <OID>16842880</OID>
+        <PID>2164260876</PID>
+        <GUID>00000000-0000-0000-0000-000000000000</GUID>
+        <DynamicIdx>-1</DynamicIdx>
+      </ElementID>
+    </ElementID>
+    <Guid>c5ae3b0a-af0b-4913-ac27-5f9fd51470c7</Guid>
+    <IncludeInReferencedScope>false</IncludeInReferencedScope>
+    <IsFileBased>false</IsFileBased>
+    <Name>VariableSerializable_852</Name>
+    <SortPriority>100</SortPriority>
+    <Suffix></Suffix>
+    <Title>VariableSerializable_852</Title>
+  </VariableSerializable>
+  <VariableSerializable AssemblyName="TwinCAT.Analytics.Workbench">
+    <Comment />
+    <DisplayColor>Black</DisplayColor>
+    <ElementID>
+      <ElementID>
+        <OID>16842880</OID>
+        <PID>2181038080</PID>
+        <GUID>00000000-0000-0000-0000-000000000000</GUID>
+        <DynamicIdx>0</DynamicIdx>
+      </ElementID>
+    </ElementID>
+    <Guid>259e4b9d-caf2-4b85-90dc-3275f01f3722</Guid>
+    <IncludeInReferencedScope>false</IncludeInReferencedScope>
+    <IsFileBased>false</IsFileBased>
+    <Name>VariableSerializable_866</Name>
+    <SortPriority>100</SortPriority>
+    <Suffix></Suffix>
+    <Title>VariableSerializable_866</Title>
+  </VariableSerializable>
+  <VirtualMappings AssemblyName="TwinCAT.Analytics.Workbench">
+    <AutoGeneration>false</AutoGeneration>
+    <Comment />
+    <DisplayColor>Black</DisplayColor>
+    <Guid>2ba593d6-ae89-45d1-af3d-576d0bd9a763</Guid>
+    <IsFileBased>false</IsFileBased>
+    <Name>VirtualMappings_60</Name>
+    <SortPriority>100</SortPriority>
+    <SubMember>
+      <VirtualInputSource AssemblyName="TwinCAT.Analytics.Workbench">
+        <AutoGeneration>true</AutoGeneration>
+        <Comment />
+        <Configurations>
+          <Pair>
+            <Key>
+              <Name>Configuration</Name>
+              <Source>1f438417-d9f3-4ca8-9c43-9a7032a8fe3b</Source>
+            </Key>
+            <Value>
+              <Pair>
+                <Key>a5bd8604-7ae9-41ed-bc00-2eccada5dfde</Key>
+                <Value>Term 1 (EK1200).Term 3 (EL2014).DIG Outputs.Channel 1.Output</Value>
+              </Pair>
+              <Pair>
+                <Key>368d2790-55f2-44c2-a126-d726902b1274</Key>
+                <Value>Term 1 (EK1200).Term 6 (EL3102).AI Standard Channel 1.Value</Value>
+              </Pair>
+              <Pair>
+                <Key>3d010674-1af1-49d4-81fd-bc274d37e87a</Key>
+                <Value>Term 1 (EK1200).Term 6 (EL3102).AI Standard Channel 2.Value</Value>
+              </Pair>
+            </Value>
+          </Pair>
+        </Configurations>
+        <CurrentConfig>Configuration</CurrentConfig>
+        <DisplayColor>Black</DisplayColor>
+        <Guid>dea0b96f-fc9f-46fe-965f-6de6aea2de17</Guid>
+        <IsFileBased>false</IsFileBased>
+        <Name>VirtualInputSource_508</Name>
+        <SortPriority>100</SortPriority>
+        <SourceGuid>1f438417-d9f3-4ca8-9c43-9a7032a8fe3b</SourceGuid>
+        <SubMember>
+          <FunctionAppearance AssemblyName="TwinCAT.Analytics.Workbench">
+            <Comment />
+            <DisplayColor>Black</DisplayColor>
+            <Guid>c6285eee-ac12-4f43-8292-11048009f973</Guid>
+            <IncludeInReferencedScope>true</IncludeInReferencedScope>
+            <IsFileBased>false</IsFileBased>
+            <Name>FunctionAppearance_509</Name>
+            <ReferencedModule />
+            <ShowOptionalInputs>false</ShowOptionalInputs>
+            <SortPriority>100</SortPriority>
+            <Suffix></Suffix>
+            <Title>FunctionAppearance_509</Title>
+          </FunctionAppearance>
+          <VirtualInput AssemblyName="TwinCAT.Analytics.Workbench">
+            <Comment />
+            <ConnectedVariablesIds>
+              <VariableID>
+                <FunctionID>16842768</FunctionID>
+                <InVariableGUID>00000000-0000-0000-0000-000000000000</InVariableGUID>
+                <InVariableID>2147483648</InVariableID>
+              </VariableID>
+            </ConnectedVariablesIds>
+            <DisplayColor>Black</DisplayColor>
+            <Guid>a5bd8604-7ae9-41ed-bc00-2eccada5dfde</Guid>
+            <IsFileBased>false</IsFileBased>
+            <Name>VirtualInput_515</Name>
+            <SortPriority>1</SortPriority>
+            <SourceId>Term 1 (EK1200).Term 3 (EL2014).DIG Outputs.Channel 1.Output</SourceId>
+            <Suffix></Suffix>
+            <Title>Virtual Input</Title>
+          </VirtualInput>
+          <VirtualInput AssemblyName="TwinCAT.Analytics.Workbench">
+            <Comment />
+            <ConnectedVariablesIds>
+              <VariableID>
+                <FunctionID>16842784</FunctionID>
+                <InVariableGUID>00000000-0000-0000-0000-000000000000</InVariableGUID>
+                <InVariableID>2147483648</InVariableID>
+              </VariableID>
+            </ConnectedVariablesIds>
+            <DisplayColor>Black</DisplayColor>
+            <Guid>368d2790-55f2-44c2-a126-d726902b1274</Guid>
+            <IsFileBased>false</IsFileBased>
+            <Name>VirtualInput_543</Name>
+            <SortPriority>2</SortPriority>
+            <SourceId>Term 1 (EK1200).Term 6 (EL3102).AI Standard Channel 1.Value</SourceId>
+            <Suffix></Suffix>
+            <Title>Virtual Input (1)</Title>
+          </VirtualInput>
+          <VirtualInput AssemblyName="TwinCAT.Analytics.Workbench">
+            <Comment />
+            <ConnectedVariablesIds>
+              <VariableID>
+                <FunctionID>16842880</FunctionID>
+                <InVariableGUID>00000000-0000-0000-0000-000000000000</InVariableGUID>
+                <InVariableID>2181038080</InVariableID>
+              </VariableID>
+            </ConnectedVariablesIds>
+            <DisplayColor>Black</DisplayColor>
+            <Guid>3d010674-1af1-49d4-81fd-bc274d37e87a</Guid>
+            <IsFileBased>false</IsFileBased>
+            <Name>VirtualInput_563</Name>
+            <SortPriority>3</SortPriority>
+            <SourceId>Term 1 (EK1200).Term 6 (EL3102).AI Standard Channel 2.Value</SourceId>
+            <Suffix></Suffix>
+            <Title>Virtual Input (2)</Title>
+          </VirtualInput>
+        </SubMember>
+        <Suffix></Suffix>
+        <Title>Virtual Input Source</Title>
+      </VirtualInputSource>
+    </SubMember>
+    <Suffix></Suffix>
+    <Title>Virtual Mappings</Title>
+  </VirtualMappings>
+</AnalyticsProjectAdditionalElements>

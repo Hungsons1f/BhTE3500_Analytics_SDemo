@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" Productversion="">
+  <POU Name="F_DCTimestructToFileTime" Id="95a182e1-d4b9-46dd-bbec-7c24f3f1c136" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION F_DCTimestructToFileTime : ULINT
+VAR_INPUT
+	dtTimestamp: DCTIMESTRUCT;
+END_VAR
+VAR
+	dcTime: T_DCTIME64;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[dcTime:= DCTIMESTRUCT_TO_DCTIME64(dtTimestamp);
+F_DCTimestructToFileTime:= F_AlyTimestampToFileTime(dcTime);]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

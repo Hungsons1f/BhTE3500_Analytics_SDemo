@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" Productversion="">
+  <POU Name="F_FileTimeToDCTimestruct" Id="0e38ad65-4308-4a1c-b49d-fbc04ef1b6c3" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION F_FileTimeToDCTimestruct : DCTIMESTRUCT
+VAR_INPUT
+	tTimestamp: ULINT;
+END_VAR
+VAR
+	tULarge: T_ULARGE_INTEGER;
+	tFileTime: T_FILETIME;
+	newDCTime: T_DCTIME64;
+	
+	fbToLocal: FB_FileTimeToTzSpecificLocalTime;
+	//(UTC+07:00) Bangkok, Hanoi, Jakarta
+	tzInfo: ST_TimeZoneInformation;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[tULarge:= ULINT_TO_ULARGE(tTimestamp);
+tFileTime.dwLowDateTime:= tULarge.dwLowPart;
+tFileTime.dwHighDateTime:= tULarge.dwHighPart;
+
+fbToLocal(in:= tFileTime, tzInfo:= tzInfo);
+newDCTime:= FILETIME_TO_DCTIME64(fbToLocal.out);
+
+F_FileTimeToDCTimestruct:= DCTIME64_TO_DCTIMESTRUCT(newDCTime);]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

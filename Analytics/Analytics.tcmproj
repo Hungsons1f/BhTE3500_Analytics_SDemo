@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{859f0a5c-8cc8-43a8-a443-252d19f2b396}</ProjectGuid>
+    <AssemblyName>Analytics</AssemblyName>
+    <Name>Analytics</Name>
+    <RootNamespace>Analytics</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Analytics Project.tcAlyProj">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+</Project>

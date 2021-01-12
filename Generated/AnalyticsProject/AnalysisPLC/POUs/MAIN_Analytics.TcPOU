@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" Productversion="">
+  <POU Name="MAIN_Analytics" Id="df9694d6-e15b-4eaa-80a0-3d325ff4a711" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN_Analytics
+VAR
+	sCurrentStreamSystemID: GUID;
+	stHistStreamInfo: REFERENCE TO ST_HMI_DataSourceHist;
+	stHistRecordInfo: REFERENCE TO ST_HMI_DataSourceHistRecordInfo;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[
+
+//Call DataSource FBs
+IF MAIN_Analytics_V1_C1.nLastDataHandle = Analytics.fbT1_DataSource.nDataHandle THEN
+	Analytics.fbT1_DataSource.Call();
+END_IF
+
+
+
+//Map to HMI
+CASE AnalyticsHMI.stHMI_DataSourceCtrl.nActiveMachineIdx OF
+	0:
+		MAIN_Analytics_V1_C1.A_MapToHMI();
+END_CASE]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

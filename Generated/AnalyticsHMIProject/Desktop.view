@@ -1,0 +1,4098 @@
+﻿<div id="Desktop" data-tchmi-view="" data-tchmi-type="TcHmi.Controls.System.TcHmiView" data-tchmi-background-image-horizontal-alignment="Center" data-tchmi-is-enabled="true" data-tchmi-visibility="Inherited" data-tchmi-bottom-unit="px" data-tchmi-right-unit="px" data-tchmi-top-unit="px" data-tchmi-left-unit="px" data-tchmi-height-unit="px" data-tchmi-width-unit="px" data-tchmi-background-image-height-unit="%" data-tchmi-background-image-width-unit="%" data-tchmi-background-image-height="100" data-tchmi-background-image-width="100" data-tchmi-position="Absolute" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-creator-viewport-width="1920" data-tchmi-creator-viewport-height="864" data-tchmi-width-mode="Content" data-tchmi-height-mode="Content" data-tchmi-min-width="100" data-tchmi-min-width-unit="%" data-tchmi-min-height="100" data-tchmi-min-height-unit="%" data-tchmi-zindex="0">
+	<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "Desktop.onAttached",
+    "actions": [
+      {
+        "objectType": "Condition",
+        "active": true,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "FunctionExpression",
+                  "functionExpression": "GetTheme()"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/ThemeName",
+                  "value": "ShinyRound"
+                },
+                "compareOperator": "==",
+                "logic": null
+              },
+              {
+                "compare1": {
+                  "objectType": "FunctionExpression",
+                  "functionExpression": "GetTheme()"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/ThemeName",
+                  "value": "ShinyFlat"
+                },
+                "compareOperator": "==",
+                "logic": "OR"
+              }
+            ],
+            "then": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%i%DashboardThemeName%/i%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "Shiny"
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "elseif": [
+              {
+                "compare1": {
+                  "objectType": "FunctionExpression",
+                  "functionExpression": "GetTheme()"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "LightRound"
+                },
+                "compareOperator": "==",
+                "logic": null
+              },
+              {
+                "compare1": {
+                  "objectType": "FunctionExpression",
+                  "functionExpression": "GetTheme()"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "LightFlat"
+                },
+                "compareOperator": "==",
+                "logic": "OR"
+              }
+            ],
+            "then": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%i%DashboardThemeName%/i%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "Light"
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%i%DashboardThemeName%/i%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "Dark"
+                },
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+    <div id="TcHmiDesktopGrid" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-grid="" data-tchmi-height="100.0" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="100.0" data-tchmi-width-unit="%" data-tchmi-grid-row-index="0" data-tchmi-zindex="0">
+
+        <script data-tchmi-target-attribute="data-tchmi-column-options" type="application/json">
+            [
+            {
+            "width": 1.0,
+            "widthUnit": "factor",
+            "widthMode": "Value",
+            "maxWidthUnit": "px",
+            "minWidthUnit": "px",
+            "overflow": true
+            }
+            ]
+        </script>
+
+        <script data-tchmi-target-attribute="data-tchmi-row-options" type="application/json">
+            [
+            {
+            "height": 90.0,
+            "heightUnit": "px",
+            "heightMode": "Value",
+            "maxHeightUnit": "px",
+            "minHeight": 90.0,
+            "minHeightUnit": "px",
+            "overflow": true
+            },
+            {
+            "height": 50.0,
+            "heightUnit": "px",
+            "heightMode": "Value",
+            "maxHeightUnit": "px",
+            "minHeight": 50.0,
+            "minHeightUnit": "px",
+            "overflow": true
+            },
+            {
+            "height": 1.0,
+            "heightUnit": "factor",
+            "heightMode": "Value",
+            "maxHeightUnit": "px",
+            "minHeightUnit": "px",
+            "overflow": true
+            }
+            ]
+        </script>
+
+        <div id="TcHmiHeaderGrid" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-grid="" data-tchmi-height="100" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="%" data-tchmi-cell-wrap="False">
+            <script data-tchmi-target-attribute="data-tchmi-column-options" type="application/json">
+                [
+                {
+                "width": 280.0,
+                "widthUnit": "px",
+                "widthMode": "Value",
+                "maxWidthUnit": "px",
+                "minWidthUnit": "px",
+                "overflow": false
+                },
+                {
+                "width": 1.0,
+                "widthUnit": "factor",
+                "widthMode": "Value",
+                "maxWidthUnit": "px",
+                "minWidthUnit": "px",
+                "overflow": false
+                }
+                ]
+            </script>
+
+            <script data-tchmi-target-attribute="data-tchmi-row-options" type="application/json">
+                [
+                {
+                "height": 1,
+                "heightUnit": "factor",
+                "heightMode": "Value",
+                "maxHeightUnit": "px",
+                "minHeightUnit": "px"
+                }
+                ]
+            </script>
+
+            
+
+            <div id="TcHmiLogo" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiImage" data-tchmi-image="" data-tchmi-height="34" data-tchmi-height-unit="px" data-tchmi-left="40" data-tchmi-left-unit="px" data-tchmi-src="Images/Logos/Beckhoff_white.png" data-tchmi-top="28" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-grid-column-index="0" data-tchmi-height-mode="Value" data-tchmi-width-mode="Content">
+            <script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">[
+  {
+    "event": "TcHmiLogo.onPressed",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%ctrl%TcHmiHostRegion::TargetContent%/ctrl%",
+        "valueType": "tchmi:framework#/definitions/ContentPath",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:framework#/definitions/ContentPath",
+          "value": "Content/StartPage.content"
+        },
+        "asyncWait": true
+      },
+      {
+        "objectType": "ControlApiFunction",
+        "active": true,
+        "control": "TcHmiBreadCrumbControl",
+        "fn": "clearDisplay",
+        "asyncWait": true
+      },
+      {
+        "objectType": "ControlApiFunction",
+        "active": true,
+        "control": "TcHmiNavBarMenu",
+        "fn": "closeMenu",
+        "asyncWait": true
+      }
+    ]
+  }
+]</script></div>
+
+            <div id="TcHmiTitle" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-grid-column-index="1" data-tchmi-grid-row-index="0" data-tchmi-height="100" data-tchmi-height-unit="%" data-tchmi-left="120" data-tchmi-left-unit="px" data-tchmi-text="%l%LHMITitle%/l%" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-text-font-size="35" data-tchmi-text-horizontal-alignment="Center" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-family="Arial" data-tchmi-text-font-weight="Bold" data-tchmi-is-enabled="True" data-tchmi-visibility="Visible" data-tchmi-width-mode="Value" data-tchmi-zindex="0" data-tchmi-right="370">
+
+
+                <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                    {
+                    "color": "rgba(255, 255, 255, 1)"
+                    }
+                </script>
+
+                <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                    {
+                    "left": 0,
+                    "right": 0,
+                    "top": 0,
+                    "bottom": 0,
+                    "leftUnit": "px",
+                    "rightUnit": "px",
+                    "topUnit": "px",
+                    "bottomUnit": "px"
+                    }
+                </script>
+
+
+            </div>
+
+            <div id="TcHmiData" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiImage" data-tchmi-grid-column-index="1" data-tchmi-grid-row-index="0" data-tchmi-height="100" data-tchmi-height-unit="%" data-tchmi-left-unit="px" data-tchmi-src="%i%imgData%/i%" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="70" data-tchmi-width-unit="px" data-tchmi-tooltip="" data-tchmi-right="300" data-tchmi-zindex="1" data-tchmi-visibility="Hidden">
+
+
+                <script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "TcHmiData.onPressed",
+    "actions": [
+      {
+        "objectType": "Condition",
+        "active": true,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:framework#/definitions/Visibility",
+                  "symbolExpression": "%ctrl%TcHmiDatasourceOverview::Visibility%/ctrl%"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Visibility",
+                  "value": "Collapsed"
+                },
+                "compareOperator": "==",
+                "logic": null
+              }
+            ],
+            "then": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiDatasourceOverview::Visibility%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Visibility",
+                  "value": "Visible"
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%i%imgData%/i%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Path",
+                  "value": "Images/Icons/Data_hover.svg"
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiDatasourceOverview::Visibility%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Visibility",
+                  "value": "Collapsed"
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%i%imgData%/i%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Path",
+                  "value": "Images/Icons/Data.svg"
+                },
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  },
+  {
+    "event": "TcHmiData.onMouseOut",
+    "actions": [
+      {
+        "objectType": "Condition",
+        "active": true,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:framework#/definitions/Visibility",
+                  "symbolExpression": "%ctrl%TcHmiDatasourceOverview::Visibility%/ctrl%"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Visibility",
+                  "value": "Visible"
+                },
+                "compareOperator": "==",
+                "logic": null
+              }
+            ],
+            "then": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%i%imgData%/i%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Path",
+                  "value": "Images/Icons/Data_hover.svg"
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%i%imgData%/i%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Path",
+                  "value": "Images/Icons/Data.svg"
+                },
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  },
+  {
+    "event": "TcHmiData.onAttached",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%i%imgData%/i%",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:framework#/definitions/Path",
+          "value": "Images/Icons/Data.svg"
+        },
+        "asyncWait": true
+      }
+    ]
+  },
+  {
+    "event": "TcHmiData.onMouseOver",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%i%imgData%/i%",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:framework#/definitions/Path",
+          "value": "Images/Icons/Data_hover.svg"
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+            </div>
+
+            <div id="TcHmiOptions" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiImage" data-tchmi-grid-column-index="1" data-tchmi-grid-row-index="0" data-tchmi-height="100" data-tchmi-height-unit="%" data-tchmi-left-unit="px" data-tchmi-src="%i%imgOptions%/i%" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="70" data-tchmi-width-unit="px" data-tchmi-tooltip="Options" data-tchmi-right="230" data-tchmi-zindex="1">
+
+
+                <script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "TcHmiOptions.onPressed",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%ctrl%TcHmiHostRegion::TargetContent%/ctrl%",
+        "valueType": "tchmi:framework#/definitions/ContentPath",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:framework#/definitions/ContentPath",
+          "value": "Content/Options.content"
+        },
+        "asyncWait": true
+      }
+    ]
+  },
+  {
+    "event": "TcHmiOptions.onMouseOver",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%i%imgOptions%/i%",
+        "valueType": "tchmi:framework#/definitions/Path",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:framework#/definitions/Path",
+          "value": "Images/Icons/Options_hover.svg"
+        },
+        "asyncWait": true
+      }
+    ]
+  },
+  {
+    "event": "TcHmiOptions.onMouseOut",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%i%imgOptions%/i%",
+        "valueType": "tchmi:framework#/definitions/Path",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:framework#/definitions/Path",
+          "value": "Images/Icons/Options.svg"
+        },
+        "asyncWait": true
+      }
+    ]
+  },
+  {
+    "event": "TcHmiOptions.onAttached",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%i%imgOptions%/i%",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:framework#/definitions/Path",
+          "value": "Images/Icons/Options.svg"
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+            </div>
+
+            <div id="TcHmiInformation" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiImage" data-tchmi-grid-column-index="1" data-tchmi-grid-row-index="0" data-tchmi-height="100" data-tchmi-height-unit="%" data-tchmi-left-unit="px" data-tchmi-src="%i%imgAdditionalInformation%/i%" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="70" data-tchmi-width-unit="px" data-tchmi-tooltip="%l%NaviAddInfos%/l%" data-tchmi-right="160" data-tchmi-zindex="1">
+
+
+                <script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "TcHmiInformation.onPressed",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%ctrl%TcHmiHostRegion::TargetContent%/ctrl%",
+        "valueType": "tchmi:framework#/definitions/ContentPath",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:framework#/definitions/ContentPath",
+          "value": "Content/AdditionalInformation.content"
+        },
+        "asyncWait": true
+      }
+    ]
+  },
+  {
+    "event": "TcHmiInformation.onMouseOver",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%i%imgAdditionalInformation%/i%",
+        "valueType": "tchmi:framework#/definitions/Path",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:framework#/definitions/Path",
+          "value": "Images/Icons/AdditionalInformation_hover.svg"
+        },
+        "asyncWait": true
+      }
+    ]
+  },
+  {
+    "event": "TcHmiInformation.onMouseOut",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%i%imgAdditionalInformation%/i%",
+        "valueType": "tchmi:framework#/definitions/Path",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:framework#/definitions/Path",
+          "value": "Images/Icons/AdditionalInformation.svg"
+        },
+        "asyncWait": true
+      }
+    ]
+  },
+  {
+    "event": "TcHmiInformation.onAttached",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%i%imgAdditionalInformation%/i%",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:framework#/definitions/Path",
+          "value": "Images/Icons/AdditionalInformation.svg"
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+            </div>
+
+            <div id="TcHmiNavBarLanguage" data-tchmi-type="TcHmi.Controls.ResponsiveNavigation.TcHmiNavigationBar" data-tchmi-alignment-bottom="False" data-tchmi-alignment-top="True" data-tchmi-enable-mobile-switch="False" data-tchmi-grid-column-index="1" data-tchmi-grid-row-index="0" data-tchmi-height-unit="%" data-tchmi-left-unit="px" data-tchmi-top-unit="px" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-nav-content-control="%ctrl%TcHmiNavContentLanguage%/ctrl%" data-tchmi-right-unit="px" data-tchmi-right="0" data-tchmi-top="0" data-tchmi-bottom="0" data-tchmi-font-size="170" data-tchmi-listen-window-resize="True" data-tchmi-padding-left-right="0" data-tchmi-mouse-over-show="True" data-tchmi-switch-breakpoint="500">
+                <script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "TcHmiNavBarLanguage.onMouseLeave",
+    "actions": [
+      {
+        "objectType": "Comment",
+        "comment": "Wait 0.2 seconds before setting langBarHover to false"
+      },
+      {
+        "objectType": "JavaScript",
+        "active": true,
+        "sourceLines": [
+          "setTimeout(function() {\n\tTcHmi.Symbol.write ('langBarHover', TcHmi.SymbolType.Internal, false, function (data) {\n\t    if (!data.error === TcHmi.Errors.NONE) {\n\t        console.log(\"Unexpected error on setting langBarHover.\");\n\t    }\n\t});\n}, 200);"
+        ],
+        "injectContextObject": true,
+        "asyncWait": true,
+        "waitMode": "Asynchronous"
+      }
+    ]
+  },
+  {
+    "event": "TcHmiNavBarLanguage.onPageCalled",
+    "actions": [
+      {
+        "objectType": "Condition",
+        "active": true,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "symbolExpression": "%ctrl%TcHmiNavBarLanguage::LastEventParameter%/ctrl%"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "PARAMETER_NOT_SET"
+                },
+                "compareOperator": "!=",
+                "logic": null
+              }
+            ],
+            "then": [
+              {
+                "objectType": "Function",
+                "active": true,
+                "fn": "SetLocale",
+                "fnParams": [
+                  {
+                    "objectType": "Symbol",
+                    "valueType": "tchmi:general#/definitions/ProjectLocale",
+                    "symbolExpression": "%ctrl%TcHmiNavBarLanguage::LastEventParameter%/ctrl%"
+                  }
+                ],
+                "asyncWait": true
+              },
+              {
+                "objectType": "Function",
+                "active": true,
+                "fn": "UpdateLanguageIcon",
+                "fnParams": [
+                  {
+                    "objectType": "Symbol",
+                    "valueType": "tchmi:framework#/definitions/Control",
+                    "symbolExpression": "%ctrl%TcHmiNavBarLanguage%/ctrl%"
+                  },
+                  {
+                    "objectType": "Symbol",
+                    "valueType": "tchmi:general#/definitions/String",
+                    "symbolExpression": "%ctrl%TcHmiNavBarLanguage::LastEventParameter%/ctrl%"
+                  }
+                ],
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": []
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  },
+  {
+    "event": "TcHmiNavBarLanguage.onAttached",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%i%langBarHover%/i%",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:general#/definitions/BOOL",
+          "value": false
+        },
+        "asyncWait": true
+      },
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%i%langContentHover%/i%",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:general#/definitions/BOOL",
+          "value": false
+        },
+        "asyncWait": true
+      },
+      {
+        "objectType": "Function",
+        "active": true,
+        "fn": "UpdateLanguageIcon",
+        "fnParams": [
+          {
+            "objectType": "Symbol",
+            "valueType": "tchmi:general#/definitions/String",
+            "symbolExpression": "%ctrl%TcHmiNavBarLanguage%/ctrl%"
+          },
+          {
+            "objectType": "FunctionExpression",
+            "functionExpression": "GetLocale()"
+          }
+        ],
+        "asyncWait": true
+      },
+      {
+        "objectType": "Condition",
+        "active": true,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "symbolExpression": "%ctrl%Desktop::RenderedWidth%/ctrl%"
+                },
+                "compare2": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "symbolExpression": "%ctrl%TcHmiNavBarLanguage::SwitchBreakpoint%/ctrl%"
+                },
+                "compareOperator": ">=",
+                "logic": null
+              }
+            ],
+            "then": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiLogo::Visibility%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Visibility",
+                  "value": "Visible"
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%CurrentTime::GridColumnIndex%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/UDINT",
+                  "value": 1
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%CurrentTime::Left%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/MeasurementValue",
+                  "value": 0.0
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiLogo::Visibility%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Visibility",
+                  "value": "Collapsed"
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%CurrentTime::GridColumnIndex%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/UDINT",
+                  "value": 0
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%CurrentTime::Left%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/MeasurementValue",
+                  "value": 70.0
+                },
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  },
+  {
+    "event": "TcHmiNavBarLanguage.onMenuOpened",
+    "actions": [
+      {
+        "objectType": "ControlApiFunction",
+        "active": true,
+        "control": "TcHmiNavBarMenu",
+        "fn": "closeMenu",
+        "asyncWait": true
+      }
+    ]
+  },
+  {
+    "event": "TcHmiNavBarLanguage.onViewSwitched",
+    "actions": [
+      {
+        "objectType": "Condition",
+        "active": true,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "symbolExpression": "%ctrl%Desktop::RenderedWidth%/ctrl%"
+                },
+                "compare2": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "symbolExpression": "%ctrl%TcHmiNavBarLanguage::SwitchBreakpoint%/ctrl%"
+                },
+                "compareOperator": ">=",
+                "logic": null
+              }
+            ],
+            "then": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiLogo::Visibility%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Visibility",
+                  "value": "Visible"
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%CurrentTime::GridColumnIndex%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/UDINT",
+                  "value": 1
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%CurrentTime::Left%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/MeasurementValue",
+                  "value": 0.0
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiHeaderGrid::ColumnOptions%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/TcHmi.Controls.System.TcHmiGrid.ColumnOptions",
+                  "value": [
+                    {
+                      "width": 255.0,
+                      "widthUnit": "px",
+                      "widthMode": "Value",
+                      "maxWidthUnit": "px",
+                      "minWidthUnit": "px",
+                      "overflow": false
+                    },
+                    {
+                      "width": 1.0,
+                      "widthUnit": "factor",
+                      "widthMode": "Value",
+                      "maxWidthUnit": "px",
+                      "minWidthUnit": "px",
+                      "overflow": false
+                    }
+                  ]
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiLogo::Visibility%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Visibility",
+                  "value": "Collapsed"
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%CurrentTime::GridColumnIndex%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/UDINT",
+                  "value": 0
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%CurrentTime::Left%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/MeasurementValue",
+                  "value": 70.0
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiHeaderGrid::ColumnOptions%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/TcHmi.Controls.System.TcHmiGrid.ColumnOptions",
+                  "value": [
+                    {
+                      "width": 175.0,
+                      "widthUnit": "px",
+                      "widthMode": "Value",
+                      "maxWidth": null,
+                      "maxWidthUnit": "px",
+                      "minWidth": null,
+                      "minWidthUnit": "px",
+                      "overflow": false
+                    },
+                    {
+                      "width": 1.0,
+                      "widthUnit": "factor",
+                      "widthMode": "Value",
+                      "maxWidth": null,
+                      "maxWidthUnit": "px",
+                      "minWidth": null,
+                      "minWidthUnit": "px",
+                      "overflow": false
+                    }
+                  ]
+                },
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  },
+  {
+    "event": "TcHmiNavBarLanguage.onMouseMove",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%i%langBarHover%/i%",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:general#/definitions/BOOL",
+          "value": true
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+
+                
+
+                <script data-tchmi-target-attribute="data-tchmi-highlight-color" type="application/json">
+                    {
+                    "color": "rgba(255, 255, 255, 1)"
+                    }
+                </script>
+
+                <script data-tchmi-target-attribute="data-tchmi-bar-font-color" type="application/json">
+                    {
+                    "color": "rgba(255, 255, 255, 1)"
+                    }
+                </script>
+
+                <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                    {
+                    "color": "None"
+                    }
+                </script>
+
+                <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                    {
+                    "color": "None"
+                    }
+                </script>
+            
+<script data-tchmi-target-attribute="data-tchmi-triangle-color" type="application/json">
+{
+  "color": "None"
+}
+</script>
+<script data-tchmi-target-attribute="data-tchmi-menu-source-data" type="application/json">[
+  {
+    "name": "%l%KeyL_Language%/l%",
+    "subtitle": "%l%KeyL_LanguageSelection%/l%",
+    "image": "Images/Icons/Flags/de.png",
+    "imageWidthUnit": "px",
+    "imageHeightUnit": "px",
+    "page": "",
+    "parameter": "",
+    "children": [
+      {
+        "name": "",
+        "showColumnName": true,
+        "children": [
+          {
+            "name": "%l%KeyL_German%/l%",
+            "page": "",
+            "parameter": "de-DE",
+            "image": "Images/Icons/Flags/de.png",
+            "imageWidthUnit": "px",
+            "imageHeightUnit": "px"
+          }
+        ]
+      },
+      {
+        "name": "",
+        "showColumnName": true,
+        "children": [
+          {
+            "name": "%l%KeyL_EnglishUS%/l%",
+            "page": "",
+            "parameter": "en-US",
+            "image": "Images/Icons/Flags/en_us.png",
+            "imageWidthUnit": "px",
+            "imageHeightUnit": "px"
+          }
+        ]
+      }
+    ]
+  }
+]</script></div>
+
+        <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">{
+  "angle": 90.0,
+  "stopPoints": [
+    {
+      "color": "rgba(162,0,0,1)",
+      "stop": "10%"
+    },
+    {
+      "color": "rgba(239,0,0,1)",
+      "stop": "40%"
+    },
+    {
+      "color": "rgba(162,0,0,1)",
+      "stop": "100%"
+    }
+  ]
+}</script><div id="CurrentTime" data-tchmi-type="TcHmi.Controls.Analytics.Timer" data-tchmi-show-title="False" data-tchmi-name-alias="Timer" data-tchmi-color-gradient="0" data-tchmi-font-size-title="16" data-tchmi-show-reset="False" data-tchmi-time-type="Datetime" data-tchmi-output="True" data-tchmi-show-clock="False" data-tchmi-show-time="True" data-tchmi-show-milli-seconds="False" data-tchmi-show-am-pm="False" data-tchmi-day-alias="%l%Day%/l%" data-tchmi-month-alias="%l%Months%/l%" data-tchmi-width="100" data-tchmi-height="65" data-tchmi-left="0" data-tchmi-top="25" data-tchmi-grid-column-index="1">
+
+<script data-tchmi-target-attribute="data-tchmi-time-span" type="application/json">
+{
+  "bIsNegative": 0,
+  "wDays": 0,
+  "wHours": 0,
+  "wMinutes": 10,
+  "wSeconds": 0,
+  "wMilliseconds": 0,
+  "wMicroseconds": 0,
+  "wNanoseconds": 0
+}
+</script>
+<script data-tchmi-target-attribute="data-tchmi-date-time" type="application/json">
+{
+  "wYear": 2018,
+  "wMonth": 1,
+  "wDayOfWeek": 1,
+  "wDay": 1,
+  "wHour": 12,
+  "wMinute": 0,
+  "wSecond": 0,
+  "wMilliseconds": 0,
+  "wMicroseconds": 0,
+  "wNanoseconds": 0
+}
+</script><script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">[]</script><script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">{"color": "None"}</script><script data-tchmi-target-attribute="data-tchmi-font-color" type="application/json">{"color": "rgba(235, 235, 235, 1)"}</script><script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">[
+  {
+    "event": "CurrentTime.onAttached",
+    "actions": [
+      {
+        "objectType": "Function",
+        "active": true,
+        "fn": "UpdateTime",
+        "fnParams": [
+          {
+            "objectType": "Symbol",
+            "valueType": "tchmi:general#/definitions/String",
+            "symbolExpression": "%ctrl%CurrentTime%/ctrl%"
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  },
+  {
+    "event": "CurrentTime.onPressed",
+    "actions": [
+      {
+        "objectType": "Condition",
+        "active": true,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "symbolExpression": "%ctrl%CurrentTime::showClock%/ctrl%"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/Boolean",
+                  "value": true
+                },
+                "compareOperator": "==",
+                "logic": null
+              }
+            ],
+            "then": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%CurrentTime::showClock%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/Boolean",
+                  "value": false
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%CurrentTime::Width%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/MeasurementValue",
+                  "value": 120.0
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%CurrentTime::Height%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/MeasurementValue",
+                  "value": 65.0
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%CurrentTime::Top%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/MeasurementValue",
+                  "value": 25.0
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%CurrentTime::showTime%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/Boolean",
+                  "value": true
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%CurrentTime::showClock%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/Boolean",
+                  "value": true
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%CurrentTime::Width%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/MeasurementValue",
+                  "value": 90.0
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%CurrentTime::Height%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/MeasurementValue",
+                  "value": 90.0
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%CurrentTime::Top%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/MeasurementValue",
+                  "value": 0.0
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%CurrentTime::showTime%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/Boolean",
+                  "value": false
+                },
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  }
+]</script></div></div>
+<div id="TcHmiBackgroundImage" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiImage" data-tchmi-grid-column-index="0" data-tchmi-grid-row-index="2" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="%" data-tchmi-background-image-height="100" data-tchmi-background-image-height-unit="%" data-tchmi-background-image-width-unit="%" data-tchmi-width="100" data-tchmi-background-image="Images/Backgrounds/HmiBackgroundShiny.png" data-tchmi-background-image-width="100" data-tchmi-height-unit="%" data-tchmi-height="100">
+
+    </div>
+<div id="TcHmiDynamicContainer" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-grid-column-index="0" data-tchmi-grid-row-index="2" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-width-unit="px" data-tchmi-height-unit="px" data-tchmi-zindex="1">
+
+
+<script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+{
+  "color": "rgba(0, 0, 0, 0)"
+}
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+{
+  "color": "rgba(0, 0, 0, 0)"
+}
+</script>
+<div data-tchmi-grid-row-index="1" data-tchmi-grid-column-index="0" id="btnResetNetwork" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiRectangle" data-tchmi-tooltip="Reset current Network" data-tchmi-top="60" data-tchmi-right="25" data-tchmi-width="30" data-tchmi-height="40" data-tchmi-zindex="6" data-tchmi-background-image="%i%imgReset%/i%" data-tchmi-stroke-thickness="0" data-tchmi-background-image-width="100" data-tchmi-background-image-height="100" data-tchmi-background-image-width-unit="%" data-tchmi-background-image-height-unit="%" data-tchmi-creator-locked="False">
+                        <script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "btnResetNetwork.onMouseDown",
+    "actions": [
+      {
+        "objectType": "Function",
+        "active": true,
+        "fn": "ResetNetwork",
+        "fnParams": [
+          {
+            "objectType": "Symbol",
+            "symbolExpression": "%i%currentResetVariable%/i%"
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  },
+  {
+    "event": "btnResetNetwork.onMouseOver",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%ctrl%btnResetNetwork::BackgroundImage%/ctrl%",
+        "valueType": "tchmi:framework#/definitions/Path",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:framework#/definitions/Path",
+          "value": "Images/Icons/reset_hover.svg"
+        },
+        "asyncWait": true
+      }
+    ]
+  },
+  {
+    "event": "btnResetNetwork.onMouseOut",
+    "actions": [
+      {
+        "objectType": "Condition",
+        "active": true,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "FunctionExpression",
+                  "functionExpression": "GetTheme()"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/ThemeName",
+                  "value": "DarkFlat"
+                },
+                "compareOperator": "==",
+                "logic": null
+              },
+              {
+                "compare1": {
+                  "objectType": "FunctionExpression",
+                  "functionExpression": "GetTheme()"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "DarkRound"
+                },
+                "compareOperator": "==",
+                "logic": "OR"
+              }
+            ],
+            "then": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%btnResetNetwork::BackgroundImage%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Path",
+                  "value": "Images/Icons/reset_white.svg"
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%btnResetNetwork::BackgroundImage%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Path",
+                  "value": "Images/Icons/reset.svg"
+                },
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  },
+  {
+    "event": "btnResetNetwork.onAttached",
+    "actions": [
+      {
+        "objectType": "Condition",
+        "active": true,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "FunctionExpression",
+                  "functionExpression": "GetTheme()"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/ThemeName",
+                  "value": "DarkRound"
+                },
+                "compareOperator": "==",
+                "logic": null
+              },
+              {
+                "compare1": {
+                  "objectType": "FunctionExpression",
+                  "functionExpression": "GetTheme()"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "DarkFlat"
+                },
+                "compareOperator": "==",
+                "logic": "OR"
+              }
+            ],
+            "then": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%btnResetNetwork::BackgroundImage%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Path",
+                  "value": "Images/Icons/reset_white.svg"
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%btnResetNetwork::BackgroundImage%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Path",
+                  "value": "Images/Icons/reset.svg"
+                },
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      },
+      {
+        "objectType": "Condition",
+        "active": true,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "symbolExpression": "%i%resetNtwsEnable%/i%"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/BOOL",
+                  "value": false
+                },
+                "compareOperator": "==",
+                "logic": null
+              }
+            ],
+            "then": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%btnResetNetwork::Visibility%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Visibility",
+                  "value": "Hidden"
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%btnResetNetwork::Visibility%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Visibility",
+                  "value": "Visible"
+                },
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  },
+  {
+    "event": "btnResetNetwork.onInitialized",
+    "actions": [
+      {
+        "objectType": "Condition",
+        "active": true,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "FunctionExpression",
+                  "functionExpression": "GetTheme()"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/ThemeName",
+                  "value": "DarkRound"
+                },
+                "compareOperator": "==",
+                "logic": null
+              },
+              {
+                "compare1": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "GetTheme()"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "DarkFlat"
+                },
+                "compareOperator": "==",
+                "logic": "OR"
+              }
+            ],
+            "then": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%btnResetNetwork::BackgroundImage%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Path",
+                  "value": "Images/Icons/reset_white.svg"
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%btnResetNetwork::BackgroundImage%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Path",
+                  "value": "Images/Icons/reset.svg"
+                },
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+[
+  {
+    "event": "btnResetNetwork.onMouseDown",
+    "actions": [
+      {
+        "objectType": "Function",
+        "active": true,
+        "fn": "ResetNetwork",
+        "fnParams": [
+          {
+            "objectType": "Symbol",
+            "symbolExpression": "%i%currentResetVariable%/i%"
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  },
+  {
+    "event": "btnResetNetwork.onMouseOver",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%ctrl%btnResetNetwork::BackgroundImage%/ctrl%",
+        "valueType": "tchmi:framework#/definitions/Path",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:framework#/definitions/Path",
+          "value": "Images/Icons/reset_hover.svg"
+        },
+        "asyncWait": true
+      }
+    ]
+  },
+  {
+    "event": "btnResetNetwork.onMouseOut",
+    "actions": [
+      {
+        "objectType": "Condition",
+        "active": true,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "FunctionExpression",
+                  "functionExpression": "GetTheme()"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/ThemeName",
+                  "value": "DarkFlat"
+                },
+                "compareOperator": "==",
+                "logic": null
+              },
+              {
+                "compare1": {
+                  "objectType": "FunctionExpression",
+                  "functionExpression": "GetTheme()"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "DarkRound"
+                },
+                "compareOperator": "==",
+                "logic": "OR"
+              }
+            ],
+            "then": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%btnResetNetwork::BackgroundImage%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Path",
+                  "value": "Images/Icons/reset_white.svg"
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%btnResetNetwork::BackgroundImage%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Path",
+                  "value": "Images/Icons/reset.svg"
+                },
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  },
+  {
+    "event": "btnResetNetwork.onAttached",
+    "actions": [
+      {
+        "objectType": "Condition",
+        "active": true,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "FunctionExpression",
+                  "functionExpression": "GetTheme()"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/ThemeName",
+                  "value": "DarkRound"
+                },
+                "compareOperator": "==",
+                "logic": null
+              },
+              {
+                "compare1": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "GetTheme()"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "DarkFlat"
+                },
+                "compareOperator": "==",
+                "logic": "OR"
+              }
+            ],
+            "then": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%btnResetNetwork::BackgroundImage%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Path",
+                  "value": "Images/Icons/reset_white.svg"
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%btnResetNetwork::BackgroundImage%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Path",
+                  "value": "Images/Icons/reset.svg"
+                },
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      },
+      {
+        "objectType": "Condition",
+        "active": true,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "symbolExpression": "%i%resetNtwsEnable%/i%"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/BOOL",
+                  "value": false
+                },
+                "compareOperator": "==",
+                "logic": null
+              }
+            ],
+            "then": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%btnResetNetwork::Visibility%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Visibility",
+                  "value": "Hidden"
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%btnResetNetwork::Visibility%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Visibility",
+                  "value": "Visible"
+                },
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  },
+  {
+    "event": "btnResetNetwork.onInitialized",
+    "actions": [
+      {
+        "objectType": "Condition",
+        "active": true,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "FunctionExpression",
+                  "functionExpression": "GetTheme()"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/ThemeName",
+                  "value": "DarkRound"
+                },
+                "compareOperator": "==",
+                "logic": null
+              },
+              {
+                "compare1": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "GetTheme()"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "DarkFlat"
+                },
+                "compareOperator": "==",
+                "logic": "OR"
+              }
+            ],
+            "then": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%btnResetNetwork::BackgroundImage%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Path",
+                  "value": "Images/Icons/reset_white.svg"
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%btnResetNetwork::BackgroundImage%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Path",
+                  "value": "Images/Icons/reset.svg"
+                },
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  }
+]
+
+[
+  {
+    "event": "btnResetNetwork.onMouseDown",
+    "actions": [
+      {
+        "objectType": "Function",
+        "active": true,
+        "fn": "ResetNetwork",
+        "fnParams": [
+          {
+            "objectType": "Symbol",
+            "symbolExpression": "%i%currentResetVariable%/i%"
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  },
+  {
+    "event": "btnResetNetwork.onMouseOver",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%ctrl%btnResetNetwork::BackgroundImage%/ctrl%",
+        "valueType": "tchmi:framework#/definitions/Path",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:framework#/definitions/Path",
+          "value": "Images/Icons/reset_hover.svg"
+        },
+        "asyncWait": true
+      }
+    ]
+  },
+  {
+    "event": "btnResetNetwork.onMouseOut",
+    "actions": [
+      {
+        "objectType": "Condition",
+        "active": true,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "FunctionExpression",
+                  "functionExpression": "GetTheme()"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/ThemeName",
+                  "value": "DarkFlat"
+                },
+                "compareOperator": "==",
+                "logic": null
+              },
+              {
+                "compare1": {
+                  "objectType": "FunctionExpression",
+                  "functionExpression": "GetTheme()"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "DarkRound"
+                },
+                "compareOperator": "==",
+                "logic": "OR"
+              }
+            ],
+            "then": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%btnResetNetwork::BackgroundImage%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Path",
+                  "value": "Images/Icons/reset_white.svg"
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%btnResetNetwork::BackgroundImage%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Path",
+                  "value": "Images/Icons/reset.svg"
+                },
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  },
+  {
+    "event": "btnResetNetwork.onAttached",
+    "actions": [
+      {
+        "objectType": "Condition",
+        "active": true,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/BOOL",
+                  "symbolExpression": "%i%resetNtwsEnable%/i%"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/BOOL",
+                  "value": false
+                },
+                "compareOperator": "==",
+                "logic": null
+              }
+            ],
+            "then": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%btnResetNetwork::Visibility%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Visibility",
+                  "value": "Hidden"
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%btnResetNetwork::Visibility%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Visibility",
+                  "value": "Visible"
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "Condition",
+                "active": true,
+                "parts": [
+                  {
+                    "if": [
+                      {
+                        "compare1": {
+                          "objectType": "FunctionExpression",
+                          "functionExpression": "GetTheme()"
+                        },
+                        "compare2": {
+                          "objectType": "StaticValue",
+                          "valueType": "tchmi:framework#/definitions/ThemeName",
+                          "value": "DarkRound"
+                        },
+                        "compareOperator": "==",
+                        "logic": null
+                      },
+                      {
+                        "compare1": {
+                          "objectType": "StaticValue",
+                          "valueType": "tchmi:general#/definitions/String",
+                          "value": "GetTheme()"
+                        },
+                        "compare2": {
+                          "objectType": "StaticValue",
+                          "valueType": "tchmi:general#/definitions/String",
+                          "value": "DarkFlat"
+                        },
+                        "compareOperator": "==",
+                        "logic": "OR"
+                      }
+                    ],
+                    "then": [
+                      {
+                        "objectType": "WriteToSymbol",
+                        "active": true,
+                        "symbolExpression": "%ctrl%btnResetNetwork::BackgroundImage%/ctrl%",
+                        "value": {
+                          "objectType": "StaticValue",
+                          "valueType": "tchmi:framework#/definitions/Path",
+                          "value": "Images/Icons/reset_white.svg"
+                        },
+                        "asyncWait": true
+                      }
+                    ]
+                  },
+                  {
+                    "else": [
+                      {
+                        "objectType": "WriteToSymbol",
+                        "active": true,
+                        "symbolExpression": "%ctrl%btnResetNetwork::BackgroundImage%/ctrl%",
+                        "value": {
+                          "objectType": "StaticValue",
+                          "valueType": "tchmi:framework#/definitions/Path",
+                          "value": "Images/Icons/reset.svg"
+                        },
+                        "asyncWait": true
+                      }
+                    ]
+                  }
+                ],
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  },
+  {
+    "event": "btnResetNetwork.onInitialized",
+    "actions": [
+      {
+        "objectType": "Condition",
+        "active": true,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "FunctionExpression",
+                  "functionExpression": "GetTheme()"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/ThemeName",
+                  "value": "DarkRound"
+                },
+                "compareOperator": "==",
+                "logic": null
+              },
+              {
+                "compare1": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "GetTheme()"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "DarkFlat"
+                },
+                "compareOperator": "==",
+                "logic": "OR"
+              }
+            ],
+            "then": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%btnResetNetwork::BackgroundImage%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Path",
+                  "value": "Images/Icons/reset_white.svg"
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%btnResetNetwork::BackgroundImage%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Path",
+                  "value": "Images/Icons/reset.svg"
+                },
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  }
+]
+
+                [
+                {
+                "event": "btnResetNetwork.onMouseDown",
+                "actions": [
+                {
+                "objectType": "Function",
+                "active": true,
+                "fn": "ResetNetwork",
+                "fnParams": [
+                {
+                "objectType": "Symbol",
+                "symbolExpression": "%i%currentResetVariable%/i%"
+                }
+                ],
+                "asyncWait": true
+                }
+                ]
+                },
+                {
+                "event": "btnResetNetwork.onMouseOver",
+                "actions": [
+                {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%btnResetNetwork::BackgroundImage%/ctrl%",
+                "valueType": "tchmi:framework#/definitions/Path",
+                "value": {
+                "objectType": "StaticValue",
+                "valueType": "tchmi:framework#/definitions/Path",
+                "value": "Images/Icons/reset_hover.svg"
+                },
+                "asyncWait": true
+                }
+                ]
+                },
+                {
+                "event": "btnResetNetwork.onMouseOut",
+                "actions": [
+                {
+                "objectType": "Condition",
+                "active": true,
+                "parts": [
+                {
+                "if": [
+                {
+                "compare1": {
+                "objectType": "FunctionExpression",
+                "functionExpression": "GetTheme()"
+                },
+                "compare2": {
+                "objectType": "StaticValue",
+                "valueType": "tchmi:framework#/definitions/ThemeName",
+                "value": "Darktheme"
+                },
+                "compareOperator": "==",
+                "logic": null
+                }
+                ],
+                "then": [
+                {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%btnResetNetwork::BackgroundImage%/ctrl%",
+                "valueType": "tchmi:framework#/definitions/Path",
+                "value": {
+                "objectType": "StaticValue",
+                "valueType": "tchmi:framework#/definitions/Path",
+                "value": "Images/Icons/reset_white.svg"
+                },
+                "asyncWait": true
+                }
+                ]
+                },
+                {
+                "else": [
+                {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%btnResetNetwork::BackgroundImage%/ctrl%",
+                "valueType": "tchmi:framework#/definitions/Path",
+                "value": {
+                "objectType": "StaticValue",
+                "valueType": "tchmi:framework#/definitions/Path",
+                "value": "Images/Icons/reset.svg"
+                },
+                "asyncWait": true
+                }
+                ]
+                }
+                ],
+                "asyncWait": true
+                }
+                ]
+                },
+                {
+                "event": "btnResetNetwork.onAttached",
+                "actions": [
+                {
+                "objectType": "Condition",
+                "active": true,
+                "parts": [
+                {
+                "if": [
+                {
+                "compare1": {
+                "objectType": "Symbol",
+                "valueType": "tchmi:general#/definitions/BOOL",
+                "symbolExpression": "%i%resetNtwsEnable%/i%"
+                },
+                "compare2": {
+                "objectType": "StaticValue",
+                "valueType": "tchmi:general#/definitions/BOOL",
+                "value": false
+                },
+                "compareOperator": "==",
+                "logic": null
+                }
+                ],
+                "then": [
+                {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%btnResetNetwork::Visibility%/ctrl%",
+                "value": {
+                "objectType": "StaticValue",
+                "valueType": "tchmi:framework#/definitions/Visibility",
+                "value": "Hidden"
+                },
+                "asyncWait": true
+                }
+                ]
+                },
+                {
+                "else": [
+                {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%btnResetNetwork::Visibility%/ctrl%",
+                "value": {
+                "objectType": "StaticValue",
+                "valueType": "tchmi:framework#/definitions/Visibility",
+                "value": "Visible"
+                },
+                "asyncWait": true
+                },
+                {
+                "objectType": "Condition",
+                "active": true,
+                "parts": [
+                {
+                "if": [
+                {
+                "compare1": {
+                "objectType": "FunctionExpression",
+                "functionExpression": "GetTheme()"
+                },
+                "compare2": {
+                "objectType": "StaticValue",
+                "valueType": "tchmi:framework#/definitions/ThemeName",
+                "value": "DarkRound"
+                },
+                "compareOperator": "==",
+                "logic": null
+                },
+                {
+                "compare1": {
+                "objectType": "StaticValue",
+                "valueType": "tchmi:general#/definitions/String",
+                "value": "GetTheme()"
+                },
+                "compare2": {
+                "objectType": "StaticValue",
+                "valueType": "tchmi:general#/definitions/String",
+                "value": "DarkFlat"
+                },
+                "compareOperator": "==",
+                "logic": "OR"
+                }
+                ],
+                "then": [
+                {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%btnResetNetwork::BackgroundImage%/ctrl%",
+                "value": {
+                "objectType": "StaticValue",
+                "valueType": "tchmi:framework#/definitions/Path",
+                "value": "Images/Icons/reset_white.svg"
+                },
+                "asyncWait": true
+                }
+                ]
+                },
+                {
+                "else": [
+                {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%btnResetNetwork::BackgroundImage%/ctrl%",
+                "value": {
+                "objectType": "StaticValue",
+                "valueType": "tchmi:framework#/definitions/Path",
+                "value": "Images/Icons/reset.svg"
+                },
+                "asyncWait": true
+                }
+                ]
+                }
+                ],
+                "asyncWait": true
+                }
+                ]
+                }
+                ],
+                "asyncWait": true
+                }
+                ]
+                },
+                {
+                "event": "btnResetNetwork.onInitialized",
+                "actions": [
+                {
+                "objectType": "Condition",
+                "active": true,
+                "parts": [
+                {
+                "if": [
+                {
+                "compare1": {
+                "objectType": "FunctionExpression",
+                "functionExpression": "GetTheme()"
+                },
+                "compare2": {
+                "objectType": "StaticValue",
+                "valueType": "tchmi:framework#/definitions/ThemeName",
+                "value": "DarkRound"
+                },
+                "compareOperator": "==",
+                "logic": null
+                },
+                {
+                "compare1": {
+                "objectType": "StaticValue",
+                "valueType": "tchmi:general#/definitions/String",
+                "value": "GetTheme()"
+                },
+                "compare2": {
+                "objectType": "StaticValue",
+                "valueType": "tchmi:general#/definitions/String",
+                "value": "DarkFlat"
+                },
+                "compareOperator": "==",
+                "logic": "OR"
+                }
+                ],
+                "then": [
+                {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%btnResetNetwork::BackgroundImage%/ctrl%",
+                "value": {
+                "objectType": "StaticValue",
+                "valueType": "tchmi:framework#/definitions/Path",
+                "value": "Images/Icons/reset_white.svg"
+                },
+                "asyncWait": true
+                }
+                ]
+                },
+                {
+                "else": [
+                {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%btnResetNetwork::BackgroundImage%/ctrl%",
+                "value": {
+                "objectType": "StaticValue",
+                "valueType": "tchmi:framework#/definitions/Path",
+                "value": "Images/Icons/reset.svg"
+                },
+                "asyncWait": true
+                }
+                ]
+                }
+                ],
+                "asyncWait": true
+                }
+                ]
+                }
+                ]
+            
+
+        </div>
+
+<div id="TcHmiBreadCrumbControl" data-tchmi-type="TcHmi.Controls.ResponsiveNavigation.TcHmiBreadcrumb" data-tchmi-font-size="140" data-tchmi-font-size-unit="%" data-tchmi-grid-column-index="0" data-tchmi-grid-row-index="2" data-tchmi-height="40" data-tchmi-height-unit="px" data-tchmi-left="40" data-tchmi-left-unit="px" data-tchmi-start-page-visible="True" data-tchmi-top="5" data-tchmi-top-unit="px" data-tchmi-right="40" data-tchmi-width-unit="px" data-tchmi-zindex="1" data-tchmi-text-vertical-alignment="Top" data-tchmi-start-page="Content/StartPage.content" data-tchmi-last-page-clickable="True" data-tchmi-show-start-page-on-start-page="False">
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "TcHmiBreadCrumbControl.onAttached",
+    "actions": [
+      {
+        "objectType": "Condition",
+        "active": true,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "FunctionExpression",
+                  "functionExpression": "GetTheme()"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "DarkFlat"
+                },
+                "compareOperator": "==",
+                "logic": null
+              },
+              {
+                "compare1": {
+                  "objectType": "FunctionExpression",
+                  "functionExpression": "GetTheme()"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "DarkRound"
+                },
+                "compareOperator": "==",
+                "logic": "OR"
+              }
+            ],
+            "then": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiBreadCrumbControl::StartPageImage%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Path",
+                  "value": "Imports/Images/startpage_active.svg"
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiBreadCrumbControl::SpacerImage%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Path",
+                  "value": "Imports/Images/icons_next_active.svg"
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiBreadCrumbControl::StartPageImage%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Path",
+                  "value": "Imports/Images/startpage_pressed.svg"
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiBreadCrumbControl::SpacerImage%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Path",
+                  "value": "Imports/Images/icons_next_pressed.svg"
+                },
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+
+        </div>
+
+<div id="TcHmiHostRegion" data-tchmi-type="TcHmi.Controls.System.TcHmiRegion" data-tchmi-grid-column-index="0" data-tchmi-grid-row-index="2" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-scrolling="Auto" data-tchmi-top="0" data-tchmi-right="0" data-tchmi-target-content="Content/StartPage.content" data-tchmi-bottom="0" data-tchmi-visibility="Visible" data-tchmi-right-unit="px" data-tchmi-zindex="1">
+            
+
+        
+<script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+{
+  "color": "None"
+}
+</script>
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">[
+  {
+    "event": "TcHmiHostRegion.onTargetContentReplaced",
+    "actions": [
+      {
+        "objectType": "Condition",
+        "active": true,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:framework#/definitions/ContentPath",
+                  "symbolExpression": "%ctrl%TcHmiHostRegion::TargetContent%/ctrl%"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/ContentPath",
+                  "value": "Content/AdditionalInformation.content"
+                },
+                "compareOperator": "==",
+                "logic": null
+              },
+              {
+                "compare1": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:framework#/definitions/ContentPath",
+                  "symbolExpression": "%ctrl%TcHmiHostRegion::TargetContent%/ctrl%"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/ContentPath",
+                  "value": "Content/Options.content"
+                },
+                "compareOperator": "==",
+                "logic": "OR"
+              },
+              {
+                "compare1": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "symbolExpression": "%ctrl%TcHmiHostRegion::TargetContent%/ctrl%"
+                },
+                "compare2": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "symbolExpression": "%ctrl%TcHmiBreadCrumbControl::StartPage%/ctrl%"
+                },
+                "compareOperator": "==",
+                "logic": "OR"
+              }
+            ],
+            "then": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%btnResetNetwork::Visibility%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Visibility",
+                  "value": "Collapsed"
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": [
+              {
+                "objectType": "Condition",
+                "active": true,
+                "parts": [
+                  {
+                    "if": [
+                      {
+                        "compare1": {
+                          "objectType": "Symbol",
+                          "valueType": "tchmi:general#/definitions/BOOL",
+                          "symbolExpression": "%i%resetNtwsEnable%/i%"
+                        },
+                        "compare2": {
+                          "objectType": "StaticValue",
+                          "valueType": "tchmi:general#/definitions/BOOL",
+                          "value": true
+                        },
+                        "compareOperator": "==",
+                        "logic": null
+                      }
+                    ],
+                    "then": [
+                      {
+                        "objectType": "WriteToSymbol",
+                        "active": true,
+                        "symbolExpression": "%ctrl%btnResetNetwork::Visibility%/ctrl%",
+                        "value": {
+                          "objectType": "StaticValue",
+                          "valueType": "tchmi:framework#/definitions/Visibility",
+                          "value": "Visible"
+                        },
+                        "asyncWait": true
+                      }
+                    ]
+                  },
+                  {
+                    "else": [
+                      {
+                        "objectType": "WriteToSymbol",
+                        "active": true,
+                        "symbolExpression": "%ctrl%btnResetNetwork::Visibility%/ctrl%",
+                        "value": {
+                          "objectType": "StaticValue",
+                          "valueType": "tchmi:framework#/definitions/Visibility",
+                          "value": "Collapsed"
+                        },
+                        "asyncWait": true
+                      }
+                    ]
+                  }
+                ],
+                "asyncWait": true
+              },
+              {
+                "objectType": "Condition",
+                "active": true,
+                "parts": [
+                  {
+                    "if": [
+                      {
+                        "compare1": {
+                          "objectType": "Symbol",
+                          "valueType": "tchmi:framework#/definitions/ContentPath",
+                          "symbolExpression": "%ctrl%TcHmiHostRegion::TargetContent%/ctrl%"
+                        },
+                        "compare2": {
+                          "objectType": "StaticValue",
+                          "valueType": "tchmi:framework#/definitions/ContentPath",
+                          "value": "Content/StartPage.content"
+                        },
+                        "compareOperator": "==",
+                        "logic": null
+                      }
+                    ],
+                    "then": [
+                      {
+                        "objectType": "WriteToSymbol",
+                        "active": true,
+                        "symbolExpression": "%ctrl%btnResetNetwork::Visibility%/ctrl%",
+                        "value": {
+                          "objectType": "StaticValue",
+                          "valueType": "tchmi:framework#/definitions/Visibility",
+                          "value": "Collapsed"
+                        },
+                        "asyncWait": true
+                      }
+                    ]
+                  },
+                  {
+                    "else": []
+                  }
+                ],
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      },
+      {
+        "objectType": "Condition",
+        "active": true,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "symbolExpression": "%ctrl%TcHmiHostRegion::TargetContent%/ctrl%"
+                },
+                "compare2": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "symbolExpression": "%ctrl%TcHmiBreadCrumbControl::StartPage%/ctrl%"
+                },
+                "compareOperator": "==",
+                "logic": null
+              }
+            ],
+            "then": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiHostRegion::Top%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/MeasurementValue",
+                  "value": 0.0
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiHostRegion::Top%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/MeasurementValue",
+                  "value": 50.0
+                },
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  }
+]</script></div>
+
+
+</div>
+
+                <div id="TcHmiNavBarMenu" data-tchmi-type="TcHmi.Controls.ResponsiveNavigation.TcHmiNavigationBar" data-tchmi-height="100" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top-unit="px" data-tchmi-value="False" data-tchmi-width="100" data-tchmi-width-unit="%" data-tchmi-grid-row-index="1" data-tchmi-enable-mobile-switch="True" data-tchmi-alignment-top="False" data-tchmi-alignment-bottom="True" data-tchmi-bottom="0" data-tchmi-alignment="Top" data-tchmi-mobile-icon-width="38" data-tchmi-mobile-icon-height="38" data-tchmi-switch-breakpoint="1000" data-tchmi-listen-window-resize="False" data-tchmi-mouse-over-show="True" data-tchmi-font-size="140" data-tchmi-padding-left-right="40" data-tchmi-right-unit="px" data-tchmi-nav-content-control-symbol="%ctrl%TcHmiNavContentMenu%/ctrl%" data-tchmi-bread-crumb-control-symbol="%ctrl%TcHmiBreadCrumbControl%/ctrl%" data-tchmi-nav-target-region-control-symbol="%ctrl%TcHmiHostRegion%/ctrl%" data-tchmi-bottom-unit="px" data-tchmi-padding-left-right-unit="px" data-tchmi-zindex="1">
+            
+
+            
+
+            
+
+            <script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+                [
+                {
+                "accessright": "operate",
+                "group": "Test",
+                "permission": "Allow"
+                },
+                {
+                "accessright": "observe",
+                "group": "Test",
+                "permission": "Allow"
+                },
+                {
+                "accessright": "observe",
+                "group": "Admins",
+                "permission": "Allow"
+                },
+                {
+                "accessright": "operate",
+                "group": "Admins",
+                "permission": "Allow"
+                }
+                ]
+            </script>
+<script data-tchmi-target-attribute="data-tchmi-menu-source-data" type="application/json">[
+  {
+    "name": "%l%Network%/l%",
+    "page": "Content/Network.content",
+    "parameter": "",
+    "subtitle": "",
+    "image": "",
+    "imageWidth": null,
+    "imageWidthUnit": "px",
+    "imageHeight": null,
+    "imageHeightUnit": "px",
+    "children": [],
+    "accessRight": ""
+  }
+]</script><script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">[
+  {
+    "event": "TcHmiNavBarMenu.onViewSwitched",
+    "actions": [
+      {
+        "objectType": "Condition",
+        "active": true,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:framework#/definitions/MeasurementValue",
+                  "symbolExpression": "%ctrl%Desktop::RenderedWidth%/ctrl%"
+                },
+                "compare2": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/Number",
+                  "symbolExpression": "%ctrl%TcHmiNavBarMenu::SwitchBreakpoint%/ctrl%"
+                },
+                "compareOperator": ">=",
+                "logic": null
+              }
+            ],
+            "then": [
+              {
+                "objectType": "Comment",
+                "comment": "Custom for no Dock + Startpage"
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiBreadCrumbControl::Top%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/MeasurementValue",
+                  "value": 5.0
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiBreadCrumbControl::FontSize%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/MeasurementValue",
+                  "value": 140.0
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "Comment",
+                "comment": "End"
+              },
+              {
+                "objectType": "Comment",
+                "comment": "desktopview"
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiBackgroundImage::Visibility%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Visibility",
+                  "value": "Visible"
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiTitle::Visibility%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Visibility",
+                  "value": "Visible"
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiData::Width%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/MeasurementValue",
+                  "value": 70.0
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiData::Right%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/MeasurementValue",
+                  "value": 320.0
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiNavContentMenu::Height%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/MeasurementValue",
+                  "value": 350.0
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiNavContentMenu::HeightUnit%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/MeasurementUnit",
+                  "value": "px"
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiNavContentMenu::Width%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/MeasurementValue",
+                  "value": 100.0
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiNavBarMenu::BackgroundColor%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Color",
+                  "value": null
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiDesktopGrid::RowOptions%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/TcHmi.Controls.System.TcHmiGrid.RowOptions",
+                  "value": [
+                    {
+                      "height": 90.0,
+                      "heightUnit": "px",
+                      "heightMode": "Value",
+                      "maxHeight": null,
+                      "maxHeightUnit": "px",
+                      "minHeight": 90.0,
+                      "minHeightUnit": "px",
+                      "overflow": true
+                    },
+                    {
+                      "height": 50.0,
+                      "heightUnit": "px",
+                      "heightMode": "Value",
+                      "maxHeight": null,
+                      "maxHeightUnit": "px",
+                      "minHeight": 50.0,
+                      "minHeightUnit": "px",
+                      "overflow": true
+                    },
+                    {
+                      "height": 1.0,
+                      "heightUnit": "factor",
+                      "heightMode": "Value",
+                      "maxHeight": null,
+                      "maxHeightUnit": "px",
+                      "minHeight": null,
+                      "minHeightUnit": "px",
+                      "overflow": true
+                    }
+                  ]
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiNavBarMenu::GridRowIndex%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/UDINT",
+                  "value": 1
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiHostRegion::Top%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/MeasurementValue",
+                  "value": 50.0
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiInformation::Width%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/MeasurementValue",
+                  "value": 70.0
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiInformation::Right%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/MeasurementValue",
+                  "value": 180.0
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiOptions::Right%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/MeasurementValue",
+                  "value": 250.0
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiOptions::Width%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/MeasurementValue",
+                  "value": 70.0
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiNavBarMenu::Top%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/MeasurementValue",
+                  "value": 0.0
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%btnResetNetwork::Top%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/MeasurementValue",
+                  "value": 60.0
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiLogo::Left%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/MeasurementValue",
+                  "value": 40.0
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiNavBarLanguage::Width%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/MeasurementValue",
+                  "value": 150.0
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiNavContentLanguage::Height%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/MeasurementValue",
+                  "value": 250.0
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": [
+              {
+                "objectType": "Comment",
+                "comment": "mobileview"
+              },
+              {
+                "objectType": "Comment",
+                "comment": "Custom for no Dock + Startpage"
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiBreadCrumbControl::Top%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/MeasurementValue",
+                  "value": 0.0
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiBreadCrumbControl::FontSize%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/MeasurementValue",
+                  "value": 100.0
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "Comment",
+                "comment": "End"
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiTitle::Visibility%/ctrl%",
+                "valueType": "tchmi:framework#/definitions/Visibility",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Visibility",
+                  "value": "Hidden"
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiBackgroundImage::Visibility%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Visibility",
+                  "value": "Collapsed"
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiData::Width%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/MeasurementValue",
+                  "value": 50.0
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiData::Right%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/MeasurementValue",
+                  "value": 110.0
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiNavContentMenu::Height%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/MeasurementValue",
+                  "value": 100.0
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiNavContentMenu::HeightUnit%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/MeasurementUnit",
+                  "value": "%"
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiNavContentMenu::Width%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/MeasurementValue",
+                  "value": 75.0
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiNavBarMenu::BackgroundColor%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Color",
+                  "value": {
+                    "color": "None"
+                  }
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiDesktopGrid::RowOptions%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/TcHmi.Controls.System.TcHmiGrid.RowOptions",
+                  "value": [
+                    {
+                      "height": 90.0,
+                      "heightUnit": "px",
+                      "heightMode": "Value",
+                      "maxHeight": null,
+                      "maxHeightUnit": "px",
+                      "minHeight": 90.0,
+                      "minHeightUnit": "px",
+                      "overflow": true
+                    },
+                    {
+                      "height": 0.0,
+                      "heightUnit": "px",
+                      "heightMode": "Value",
+                      "maxHeight": null,
+                      "maxHeightUnit": "px",
+                      "minHeight": 0.0,
+                      "minHeightUnit": "px",
+                      "overflow": true
+                    },
+                    {
+                      "height": 1.0,
+                      "heightUnit": "factor",
+                      "heightMode": "Value",
+                      "maxHeight": null,
+                      "maxHeightUnit": "px",
+                      "minHeight": null,
+                      "minHeightUnit": "px",
+                      "overflow": true
+                    }
+                  ]
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiNavBarMenu::GridRowIndex%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/UDINT",
+                  "value": 0
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiInformation::Width%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/MeasurementValue",
+                  "value": 50.0
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiInformation::Right%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/MeasurementValue",
+                  "value": 30.0
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiOptions::Right%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/MeasurementValue",
+                  "value": 70.0
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiOptions::Width%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/MeasurementValue",
+                  "value": 50.0
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiNavBarMenu::Top%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/MeasurementValue",
+                  "value": 0.0
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%btnResetNetwork::Top%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/MeasurementValue",
+                  "value": 10.0
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiHostRegion::Top%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/MeasurementValue",
+                  "value": 45.0
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiNavBarLanguage::Width%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/MeasurementValue",
+                  "value": 25.0
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiLogo::Left%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/MeasurementValue",
+                  "value": 70.0
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiNavContentLanguage::Height%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/MeasurementValue",
+                  "value": 350.0
+                },
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  },
+  {
+    "event": "TcHmiNavBarMenu.onMouseEnter",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%i%navBarHover%/i%",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:general#/definitions/BOOL",
+          "value": true
+        },
+        "asyncWait": true
+      },
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%i%navBarHovering%/i%",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:general#/definitions/BOOL",
+          "value": true
+        },
+        "asyncWait": true
+      }
+    ]
+  },
+  {
+    "event": "TcHmiNavBarMenu.onMouseLeave",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%i%navBarHovering%/i%",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:general#/definitions/BOOL",
+          "value": false
+        },
+        "asyncWait": true
+      },
+      {
+        "objectType": "Comment",
+        "comment": "Wait 0.2 seconds before setting navBarHover to false"
+      },
+      {
+        "objectType": "JavaScript",
+        "active": true,
+        "sourceLines": [
+          "setTimeout(function(){\n\tlet isHovering=TcHmi.Symbol.read('navBarHovering',TcHmi.SymbolType.Internal);\n\tif(!isHovering)\n\t{\n\t\tTcHmi.Symbol.write('navBarHover',TcHmi.SymbolType.Internal,false,function(data){\n\t\tif(!data.error===TcHmi.Errors.NONE){\n\t\t\tconsole.log(\"UnexpectederroronsettingnavBarHover.\");\n\t\t\t}\n\t\t});\n\t}\n},200);"
+        ],
+        "injectContextObject": true,
+        "asyncWait": true,
+        "waitMode": "Asynchronous"
+      }
+    ]
+  }
+]</script></div>
+
+        <div data-tchmi-grid-column-index="0" id="TcHmiNavContentLanguage" data-tchmi-type="TcHmi.Controls.ResponsiveNavigation.TcHmiNavigationContent" data-tchmi-nav-content="" data-tchmi-height="250" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-show-icons-mobile="True" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="%" data-tchmi-zindex="20" data-tchmi-grid-row-index="1" data-tchmi-close-test="%l%KeyL_CloseText%/l%" data-tchmi-column-element-font-size="130" data-tchmi-column-title-font-size="130" data-tchmi-subtitle-font-size="140" data-tchmi-close-text="%l%KeyL_CloseText%/l%">
+            <script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+                [
+                {
+                "event": "TcHmiNavContentLanguage.onMouseEnter",
+                "actions": [
+                {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%i%langContentHover%/i%",
+                "value": {
+                "objectType": "StaticValue",
+                "valueType": "tchmi:general#/definitions/BOOL",
+                "value": true
+                },
+                "asyncWait": true
+                },
+                {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%i%langContentOpened%/i%",
+                "value": {
+                "objectType": "StaticValue",
+                "valueType": "tchmi:general#/definitions/BOOL",
+                "value": true
+                },
+                "asyncWait": true
+                }
+                ]
+                },
+                {
+                "event": "TcHmiNavContentLanguage.onMouseLeave",
+                "actions": [
+                {
+                "objectType": "Comment",
+                "comment": "Wait 0.05 seconds before setting langContentHover to false"
+                },
+                {
+                "objectType": "JavaScript",
+                "active": true,
+                "sourceLines": [
+                "setTimeout(function() {\n\tTcHmi.Symbol.write ('langContentHover', TcHmi.SymbolType.Internal, false, function (data) {\n\t    if (!data.error === TcHmi.Errors.NONE) {\n\t        console.log(\"Unexpected error on setting langContentHover.\");\n\t    }\n\t});\n}, 50);"
+                ],
+                "injectContextObject": true,
+                "asyncWait": true,
+                "waitMode": "Asynchronous"
+                }
+                ]
+                },
+                {
+                "event": "%i%langBarHover%/i%",
+                "actions": [
+                {
+                "objectType": "Condition",
+                "active": true,
+                "parts": [
+                {
+                "if": [
+                {
+                "compare1": {
+                "objectType": "Symbol",
+                "valueType": "tchmi:general#/definitions/String",
+                "symbolExpression": "%i%langBarHover%/i%"
+                },
+                "compare2": {
+                "objectType": "StaticValue",
+                "valueType": "tchmi:general#/definitions/BOOL",
+                "value": false
+                },
+                "compareOperator": "==",
+                "logic": null
+                },
+                {
+                "compare1": {
+                "objectType": "Symbol",
+                "valueType": "tchmi:general#/definitions/String",
+                "symbolExpression": "%i%langContentHover%/i%"
+                },
+                "compare2": {
+                "objectType": "StaticValue",
+                "valueType": "tchmi:general#/definitions/BOOL",
+                "value": false
+                },
+                "compareOperator": "==",
+                "logic": "AND"
+                }
+                ],
+                "then": [
+                {
+                "objectType": "ControlApiFunction",
+                "active": true,
+                "control": "TcHmiNavBarLanguage",
+                "fn": "closeMenu",
+                "asyncWait": true
+                }
+                ]
+                },
+                {
+                "else": []
+                }
+                ],
+                "asyncWait": true
+                }
+                ]
+                },
+                {
+                "event": "%i%langContentHover%/i%",
+                "actions": [
+                {
+                "objectType": "Condition",
+                "active": true,
+                "parts": [
+                {
+                "if": [
+                {
+                "compare1": {
+                "objectType": "Symbol",
+                "valueType": "tchmi:general#/definitions/String",
+                "symbolExpression": "%i%langBarHover%/i%"
+                },
+                "compare2": {
+                "objectType": "StaticValue",
+                "valueType": "tchmi:general#/definitions/BOOL",
+                "value": false
+                },
+                "compareOperator": "==",
+                "logic": null
+                },
+                {
+                "compare1": {
+                "objectType": "Symbol",
+                "valueType": "tchmi:general#/definitions/String",
+                "symbolExpression": "%i%langContentHover%/i%"
+                },
+                "compare2": {
+                "objectType": "StaticValue",
+                "valueType": "tchmi:general#/definitions/BOOL",
+                "value": false
+                },
+                "compareOperator": "==",
+                "logic": "AND"
+                }
+                ],
+                "then": [
+                {
+                "objectType": "ControlApiFunction",
+                "active": true,
+                "control": "TcHmiNavBarLanguage",
+                "fn": "closeMenu",
+                "asyncWait": true
+                }
+                ]
+                },
+                {
+                "else": []
+                }
+                ],
+                "asyncWait": true
+                }
+                ]
+                }
+                ]
+            </script>
+        </div>
+
+        <div data-tchmi-grid-column-index="0" id="TcHmiNavContentMenu" data-tchmi-type="TcHmi.Controls.ResponsiveNavigation.TcHmiNavigationContent" data-tchmi-enable-mobile-switch="True" data-tchmi-height="350" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-show-icons-mobile="True" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="%" data-tchmi-zindex="20" data-tchmi-grid-row-index="2" data-tchmi-top="0" data-tchmi-close-test="%l%KeyL_CloseText%/l%" data-tchmi-subtitle-font-size="130" data-tchmi-column-title-font-size="130" data-tchmi-column-element-font-size="120" data-tchmi-close-font-size="130" data-tchmi-padding-left-right="40" data-tchmi-column-element-margin-top="5" data-tchmi-mobile-element-margin-top="5" data-tchmi-auto-collapse-elements="False" data-tchmi-close-text="%l%KeyL_CloseText%/l%">
+
+            <script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+                [
+                {
+                "event": "TcHmiNavContentMenu.onMouseEnter",
+                "actions": [
+                {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%i%navContentHover%/i%",
+                "value": {
+                "objectType": "StaticValue",
+                "valueType": "tchmi:general#/definitions/BOOL",
+                "value": true
+                },
+                "asyncWait": true
+                }
+                ]
+                },
+                {
+                "event": "TcHmiNavContentMenu.onMouseLeave",
+                "actions": [
+                {
+                "objectType": "Comment",
+                "comment": "Wait 0.05 seconds before setting navContentHover to false"
+                },
+                {
+                "objectType": "JavaScript",
+                "active": true,
+                "sourceLines": [
+                "setTimeout(function() {\n\tTcHmi.Symbol.write ('navContentHover', TcHmi.SymbolType.Internal, false, function (data) {\n\t    if (!data.error === TcHmi.Errors.NONE) {\n\t        console.log(\"Unexpected error on setting navContentHover.\");\n\t    }\n\t});\n}, 50);"
+                ],
+                "injectContextObject": true,
+                "asyncWait": true,
+                "waitMode": "Asynchronous"
+                }
+                ]
+                },
+                {
+                "event": "%i%navBarHovering%/i%",
+                "actions": [
+                {
+                "objectType": "Condition",
+                "active": true,
+                "parts": [
+                {
+                "if": [
+                {
+                "compare1": {
+                "objectType": "Symbol",
+                "valueType": "tchmi:general#/definitions/BOOL",
+                "symbolExpression": "%i%navBarHovering%/i%"
+                },
+                "compare2": {
+                "objectType": "StaticValue",
+                "valueType": "tchmi:general#/definitions/BOOL",
+                "value": false
+                },
+                "compareOperator": "==",
+                "logic": null
+                },
+                {
+                "compare1": {
+                "objectType": "Symbol",
+                "valueType": "tchmi:general#/definitions/BOOL",
+                "symbolExpression": "%i%navBarHover%/i%"
+                },
+                "compare2": {
+                "objectType": "StaticValue",
+                "valueType": "tchmi:general#/definitions/BOOL",
+                "value": false
+                },
+                "compareOperator": "==",
+                "logic": "AND"
+                },
+                {
+                "compare1": {
+                "objectType": "Symbol",
+                "valueType": "tchmi:general#/definitions/String",
+                "symbolExpression": "%i%navContentHover%/i%"
+                },
+                "compare2": {
+                "objectType": "StaticValue",
+                "valueType": "tchmi:general#/definitions/BOOL",
+                "value": false
+                },
+                "compareOperator": "==",
+                "logic": "AND"
+                }
+                ],
+                "then": [
+                {
+                "objectType": "ControlApiFunction",
+                "active": true,
+                "control": "TcHmiNavBarMenu",
+                "fn": "closeMenu",
+                "asyncWait": true
+                }
+                ]
+                },
+                {
+                "else": []
+                }
+                ],
+                "asyncWait": true
+                }
+                ]
+                },
+                {
+                "event": "%i%navBarHover%/i%",
+                "actions": [
+                {
+                "objectType": "Condition",
+                "active": true,
+                "parts": [
+                {
+                "if": [
+                {
+                "compare1": {
+                "objectType": "Symbol",
+                "valueType": "tchmi:general#/definitions/BOOL",
+                "symbolExpression": "%i%navBarHovering%/i%"
+                },
+                "compare2": {
+                "objectType": "StaticValue",
+                "valueType": "tchmi:general#/definitions/BOOL",
+                "value": false
+                },
+                "compareOperator": "==",
+                "logic": null
+                },
+                {
+                "compare1": {
+                "objectType": "Symbol",
+                "valueType": "tchmi:general#/definitions/BOOL",
+                "symbolExpression": "%i%navBarHover%/i%"
+                },
+                "compare2": {
+                "objectType": "StaticValue",
+                "valueType": "tchmi:general#/definitions/BOOL",
+                "value": false
+                },
+                "compareOperator": "==",
+                "logic": "AND"
+                },
+                {
+                "compare1": {
+                "objectType": "Symbol",
+                "valueType": "tchmi:general#/definitions/String",
+                "symbolExpression": "%i%navContentHover%/i%"
+                },
+                "compare2": {
+                "objectType": "StaticValue",
+                "valueType": "tchmi:general#/definitions/BOOL",
+                "value": false
+                },
+                "compareOperator": "==",
+                "logic": "AND"
+                }
+                ],
+                "then": [
+                {
+                "objectType": "ControlApiFunction",
+                "active": true,
+                "control": "TcHmiNavBarMenu",
+                "fn": "closeMenu",
+                "asyncWait": true
+                }
+                ]
+                },
+                {
+                "else": []
+                }
+                ],
+                "asyncWait": true
+                }
+                ]
+                },
+                {
+                "event": "%i%navContentHover%/i%",
+                "actions": [
+                {
+                "objectType": "Condition",
+                "active": true,
+                "parts": [
+                {
+                "if": [
+                {
+                "compare1": {
+                "objectType": "Symbol",
+                "valueType": "tchmi:general#/definitions/BOOL",
+                "symbolExpression": "%i%navBarHovering%/i%"
+                },
+                "compare2": {
+                "objectType": "StaticValue",
+                "valueType": "tchmi:general#/definitions/BOOL",
+                "value": false
+                },
+                "compareOperator": "==",
+                "logic": null
+                },
+                {
+                "compare1": {
+                "objectType": "Symbol",
+                "valueType": "tchmi:general#/definitions/BOOL",
+                "symbolExpression": "%i%navBarHover%/i%"
+                },
+                "compare2": {
+                "objectType": "StaticValue",
+                "valueType": "tchmi:general#/definitions/BOOL",
+                "value": false
+                },
+                "compareOperator": "==",
+                "logic": "AND"
+                },
+                {
+                "compare1": {
+                "objectType": "Symbol",
+                "valueType": "tchmi:general#/definitions/String",
+                "symbolExpression": "%i%navContentHover%/i%"
+                },
+                "compare2": {
+                "objectType": "StaticValue",
+                "valueType": "tchmi:general#/definitions/BOOL",
+                "value": false
+                },
+                "compareOperator": "==",
+                "logic": "AND"
+                }
+                ],
+                "then": [
+                {
+                "objectType": "ControlApiFunction",
+                "active": true,
+                "control": "TcHmiNavBarMenu",
+                "fn": "closeMenu",
+                "asyncWait": true
+                }
+                ]
+                },
+                {
+                "else": []
+                }
+                ],
+                "asyncWait": true
+                }
+                ]
+                },
+                {
+                "event": "%i%navBarHovering%/i%",
+                "actions": []
+                }
+                ]
+            </script>
+
+
+
+
+
+        </div>        
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "Desktop.onAttached",
+    "actions": [
+      {
+        "objectType": "Condition",
+        "active": true,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/Boolean",
+                  "symbolExpression": "%i%backgroundSymbol%/i%"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/Boolean",
+                  "value": true
+                },
+                "compareOperator": "==",
+                "logic": null
+              }
+            ],
+            "then": [
+              {
+                "objectType": "Condition",
+                "active": true,
+                "parts": [
+                  {
+                    "if": [
+                      {
+                        "compare1": {
+                          "objectType": "Symbol",
+                          "valueType": "tchmi:general#/definitions/UDINT",
+                          "symbolExpression": "%ctrl%TcHmiDashboardThemeSelection::SelectedIndex%/ctrl%"
+                        },
+                        "compare2": {
+                          "objectType": "StaticValue",
+                          "valueType": "tchmi:general#/definitions/UDINT",
+                          "value": 0
+                        },
+                        "compareOperator": "==",
+                        "logic": null
+                      }
+                    ],
+                    "then": [
+                      {
+                        "objectType": "WriteToSymbol",
+                        "active": true,
+                        "symbolExpression": "%ctrl%TcHmiBackgroundImage::BackgroundImage%/ctrl%",
+                        "value": {
+                          "objectType": "StaticValue",
+                          "valueType": "tchmi:framework#/definitions/Path",
+                          "value": "Images/Backgrounds/HmiBackgroundShiny.png"
+                        },
+                        "asyncWait": true
+                      }
+                    ]
+                  },
+                  {
+                    "else": [
+                      {
+                        "objectType": "WriteToSymbol",
+                        "active": true,
+                        "symbolExpression": "%ctrl%TcHmiBackgroundImage::BackgroundImage%/ctrl%",
+                        "value": {
+                          "objectType": "StaticValue",
+                          "valueType": "tchmi:framework#/definitions/Path",
+                          "value": "Images/Backgrounds/HmiBackgroundStandard.png"
+                        },
+                        "asyncWait": true
+                      }
+                    ]
+                  }
+                ],
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiBackgroundImage::BackgroundImage%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Path",
+                  "value": null
+                },
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+
+</div>
+</div>

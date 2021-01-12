@@ -1,0 +1,123 @@
+﻿<div id="Network" data-tchmi-type="TcHmi.Controls.System.TcHmiContent" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-height="100" data-tchmi-height-mode="Value" data-tchmi-width-mode="Value" data-tchmi-width-unit="%" data-tchmi-height-unit="%" data-tchmi-creator-viewport-width="1900" data-tchmi-creator-viewport-height="669">
+
+<div id="Network_ContentGrid" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-width="1120" data-tchmi-height="669" data-tchmi-left="20" data-tchmi-top="0" data-tchmi-width-unit="px" data-tchmi-height-unit="px" data-tchmi-height-mode="Content" data-tchmi-width-mode="Parent" data-tchmi-left-unit="%">
+
+<script data-tchmi-target-attribute="data-tchmi-column-options" type="application/json">[{ "width": 640,"widthUnit":"px","widthMode":"Value","maxWidthUnit":"px", "minWidthUnit":"px", "overflow":false},{ "width": 160,"widthUnit":"px","widthMode":"Value","maxWidthUnit":"px", "minWidthUnit":"px", "overflow":false},{ "width": 320,"widthUnit":"px","widthMode":"Value","maxWidthUnit":"px", "minWidthUnit":"px", "overflow":false}]</script><script data-tchmi-target-attribute="data-tchmi-row-options" type="application/json">[{ "height": 480,"heightUnit":"px","heightMode":"Value","maxHeightUnit":"px", "minHeightUnit":"px", "overflow":false}]</script><script data-tchmi-target-attribute="data-tchmi-cell-options" type="application/json">[{ "columnIndex": 0, "rowIndex": 0, "padding": null,"backgroundColor":{"color": "None"}, "borderColor": {"color": "None"},"borderWidth": {"left": 0,"right":0,"top": 0,"bottom": 0,"leftUnit": "px","rightUnit": "px","topUnit": "px","bottomUnit": "px"},"borderStyle": {"left": "Solid","right": "Solid","top": "Solid","bottom": "Solid"}, "backgroundImage": null,"backgroundImageWidth": null,"backgroundImageWidthUnit": "px","backgroundImageHeight": null,"backgroundImageHeightUnit": "px","backgroundImageHorizontalAlignment": "Left","backgroundImageVerticalAlignment": "Top","backgroundImagePadding": null},{ "columnIndex": 1, "rowIndex": 0, "padding": null,"backgroundColor":{"color": "None"}, "borderColor": {"color": "None"},"borderWidth": {"left": 0,"right":0,"top": 0,"bottom": 0,"leftUnit": "px","rightUnit": "px","topUnit": "px","bottomUnit": "px"},"borderStyle": {"left": "Solid","right": "Solid","top": "Solid","bottom": "Solid"}, "backgroundImage": null,"backgroundImageWidth": null,"backgroundImageWidthUnit": "px","backgroundImageHeight": null,"backgroundImageHeightUnit": "px","backgroundImageHorizontalAlignment": "Left","backgroundImageVerticalAlignment": "Top","backgroundImagePadding": null},{ "columnIndex": 2, "rowIndex": 0, "padding": null,"backgroundColor":{"color": "None"}, "borderColor": {"color": "None"},"borderWidth": {"left": 0,"right":0,"top": 0,"bottom": 0,"leftUnit": "px","rightUnit": "px","topUnit": "px","bottomUnit": "px"},"borderStyle": {"left": "Solid","right": "Solid","top": "Solid","bottom": "Solid"}, "backgroundImage": null,"backgroundImageWidth": null,"backgroundImageWidthUnit": "px","backgroundImageHeight": null,"backgroundImageHeightUnit": "px","backgroundImageHorizontalAlignment": "Left","backgroundImageVerticalAlignment": "Top","backgroundImagePadding": null}]</script><div id="TrendLine" data-tchmi-type="TcHmi.Controls.Analytics.TrendLineChart" data-tchmi-show-title="%i%showTitleEnable%/i%" data-tchmi-name-alias="%l%TrendLine%/l%" data-tchmi-color-gradient="%i%ColorGradientControls%/i%" data-tchmi-font-size-title="16" data-tchmi-show-reset="False" data-tchmi-count-values="%s%PLC1.AnalyticsHMI.stHMI_N1_Network.nM3_nCountValues%/s%" data-tchmi-month-alias="Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec" data-tchmi-day-alias="Day" data-tchmi-hour-alias="Hour" data-tchmi-width="630" data-tchmi-height="470" data-tchmi-left="5" data-tchmi-top="5" class="TcHmi_Controls_AlyHMI_AnalyticsControl" data-tchmi-raw-data="%s%PLC1.AnalyticsHMI.stHMI_N1_Network.aM3_aTrendData%/s%" data-tchmi-last-value-timestamp="%s%PLC1.AnalyticsHMI.stHMI_N1_Network.dtM3_fbLastValue%/s%" data-tchmi-display-names="%s%PLC1.AnalyticsHMI.stHMI_N1_Network.aM3_aChannelNames%/s%" data-tchmi-grid-column-index="0" data-tchmi-grid-row-index="0">
+
+<script data-tchmi-target-attribute="data-tchmi-last-value-timestamp" type="application/json">
+{
+  "wYear": 2018,
+  "wMonth": 1,
+  "wDayOfWeek": 1,
+  "wDay": 1,
+  "wHour": 12,
+  "wMinute": 0,
+  "wSecond": 0,
+  "wMilliseconds": 0,
+  "wMicroseconds": 0,
+  "wNanoseconds": 0
+}
+</script>
+<script data-tchmi-target-attribute="data-tchmi-line-colors" type="application/json">
+[
+  "rgba(0,255,255,1)",
+  "rgba(255,0,255,1)",
+  "rgba(255,255,0,1)",
+  "rgba(220,20,60,1)",
+  "rgba(128,128,0,1)",
+  "rgba(70,130,180,1)",
+  "rgba(205,92,92,1)",
+  "rgba(0,128,0,1)",
+  "rgba(0,128,128,1)",
+  "rgba(255,127,80,1)",
+  "rgba(127,255,0,1)",
+  "rgba(30,144,255,1)",
+  "rgba(255,0,0,1)",
+  "rgba(127,255,212,1)",
+  "rgba(255,0,0,1)",
+  "rgba(210,105,30)"
+]
+</script>
+<script data-tchmi-target-attribute="data-tchmi-display-names" type="application/json">
+[
+  "Value 1",
+  "Value 2",
+  "Value 3",
+  "Value 4",
+  "Value 5",
+  "Value 6"
+]
+</script><script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">["Default"]</script></div><div id="ThresholdStringClassifier1Ch" data-tchmi-type="TcHmi.Controls.Analytics.TrafficLight" data-tchmi-show-title="%i%showTitleEnable%/i%" data-tchmi-name-alias="%l%ThresholdStringClassifier1Ch%/l%" data-tchmi-color-gradient="%i%ColorGradientControls%/i%" data-tchmi-font-size-title="16" data-tchmi-show-reset="False" data-tchmi-classification="0" data-tchmi-string-classification="%s%PLC1.AnalyticsHMI.stHMI_N1_Network.sM2_sResult%/s%" data-tchmi-config-level-1="%s%PLC1.AnalyticsHMI.stHMI_N1_Network.sM2_sStringLevel1%/s%" data-tchmi-config-level-2="%s%PLC1.AnalyticsHMI.stHMI_N1_Network.sM2_sStringLevel2%/s%" data-tchmi-config-level-3="%s%PLC1.AnalyticsHMI.stHMI_N1_Network.sM2_sStringLevel3%/s%" data-tchmi-show-values="True" data-tchmi-actual-value-alias="%l%Value%/l%" data-tchmi-value="%s%PLC1.AnalyticsHMI.stHMI_N1_Network.fM2_nDataIn%/s%" data-tchmi-show-decimal="True" data-tchmi-show-last-warning="False" data-tchmi-show-last-alarm="False" data-tchmi-last-warning-alias="%l%LastWarning%/l%" data-tchmi-last-alarm-alias="%l%LastAlarm%/l%" data-tchmi-show-milli-seconds="False" data-tchmi-message-alias="%l%MessageTrafficLight%/l%" data-tchmi-month-alias="%l%Months%/l%" data-tchmi-width="150" data-tchmi-height="310" data-tchmi-left="5" data-tchmi-top="5" class="TcHmi_Controls_AlyHMI_AnalyticsControl" data-tchmi-grid-column-index="1" data-tchmi-grid-row-index="0">
+
+<script data-tchmi-target-attribute="data-tchmi-traffic-light-colors" type="application/json">
+[
+  {
+    "TrafficLightColor": {
+      "color": "rgba(8, 138,8,1)"
+    }
+  },
+  {
+    "TrafficLightColor": {
+      "color": "rgba(255,244,0,1)"
+    }
+  },
+  {
+    "TrafficLightColor": {
+      "color": "rgba(239,0,0,1)"
+    }
+  }
+]
+</script>
+<script data-tchmi-target-attribute="data-tchmi-last-alarm" type="application/json">
+{
+  "wYear": 2018,
+  "wMonth": 1,
+  "wDayOfWeek": 1,
+  "wDay": 1,
+  "wHour": 12,
+  "wMinute": 0,
+  "wSecond": 0,
+  "wMilliseconds": 0,
+  "wMicroseconds": 0,
+  "wNanoseconds": 0
+}
+</script>
+<script data-tchmi-target-attribute="data-tchmi-lastwarning" type="application/json">
+{
+  "wYear": 2018,
+  "wMonth": 1,
+  "wDayOfWeek": 1,
+  "wDay": 1,
+  "wHour": 12,
+  "wMinute": 0,
+  "wSecond": 0,
+  "wMilliseconds": 0,
+  "wMicroseconds": 0,
+  "wNanoseconds": 0
+}
+</script><script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">["Default"]</script></div><div id="LifetimeAnalysis1Ch" data-tchmi-type="TcHmi.Controls.Analytics.Process" data-tchmi-show-title="%i%showTitleEnable%/i%" data-tchmi-name-alias="%l%LifetimeAnalysis1Ch%/l%" data-tchmi-color-gradient="%i%ColorGradientControls%/i%" data-tchmi-font-size-title="16" data-tchmi-show-reset="False" data-tchmi-actual-value-alias="%l%Elapsed%/l%" data-tchmi-set-value-alias="%l%Remaining%/l%" data-tchmi-actual-value="5" data-tchmi-set-value="10" data-tchmi-value-type="Times" data-tchmi-show-milli-seconds="False" data-tchmi-show-text="True" data-tchmi-day-alias="%l%Day%/l%" data-tchmi-width="310" data-tchmi-height="150" data-tchmi-left="5" data-tchmi-top="5" class="TcHmi_Controls_AlyHMI_AnalyticsControl" data-tchmi-elapsed-time="%s%PLC1.AnalyticsHMI.stHMI_N1_Network.tM1_fbLifetimeElapsed%/s%" data-tchmi-remaining-time="%s%PLC1.AnalyticsHMI.stHMI_N1_Network.tM1_fbLifetimeRemaining%/s%" data-tchmi-grid-column-index="2" data-tchmi-grid-row-index="0">
+
+<script data-tchmi-target-attribute="data-tchmi-elapsed-time" type="application/json">
+{
+  "bIsNegative": 0,
+  "wDays": 0,
+  "wHours": 2,
+  "wMinutes": 2,
+  "wSeconds": 2,
+  "wMilliseconds": 0,
+  "wMicroseconds": 0,
+  "wNanoseconds": 0
+}
+</script>
+<script data-tchmi-target-attribute="data-tchmi-remaining-time" type="application/json">
+{
+  "bIsNegative": 0,
+  "wDays": 0,
+  "wHours": 1,
+  "wMinutes": 1,
+  "wSeconds": 1,
+  "wMilliseconds": 0,
+  "wMicroseconds": 0,
+  "wNanoseconds": 0
+}
+</script><script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">["Default"]</script></div></div></div>

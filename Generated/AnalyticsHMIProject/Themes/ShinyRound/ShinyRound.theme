@@ -1,0 +1,145 @@
+﻿{
+  "controlTypeValues": {
+    "TcHmi.Controls.Beckhoff.TcHmiButton": {
+      "attributes": {
+        "TextColor": {
+          "color": "rgba(0, 0, 0, 1)"
+        },
+        "BorderColor": {
+          "color": "rgba(166, 166, 166, 1)"
+        },
+        "BackgroundColor": {
+          "color": "rgba(229, 233, 236, 1)"
+        },
+        "BoxShadow": [
+          {
+            "color": {
+              "color": "rgba(0, 0, 0, 0.5882352)"
+            },
+            "offsetX": 0.0,
+            "offsetXUnit": "px",
+            "offsetY": 0.0,
+            "offsetYUnit": "px",
+            "inset": false,
+            "blur": 5.0,
+            "blurUnit": "px",
+            "spread": 0.0,
+            "spreadUnit": "px"
+          }
+        ]
+      },
+      "themedResources": {}
+    },
+	  "TcHmi.Controls.Analytics.MapControl": {
+      "attributes": {
+        "FontColor": {
+          "color": "rgba(0, 0, 0, 1)"
+        }
+      },
+      "themedResources": {}
+    },
+    "TcHmi.Controls.System.TcHmiContainer": {
+      "attributes": {
+        "BorderColor": {
+          "color": "None"
+        },
+        "BackgroundColor": {
+          "angle": 180.0,
+          "stopPoints": [
+            {
+              "color": "rgba(100, 100, 100, 0.3921568)",
+              "stop": "0%"
+            },
+            {
+              "color": "rgba(200, 200, 200, 0.3921568)",
+              "stop": "100%"
+            }
+          ]
+        }
+      },
+      "themedResources": {}
+    },
+    "TcHmi.Controls.System.TcHmiView": {
+      "attributes": {
+        "BorderColor": null
+      },
+      "themedResources": {}
+    },
+    "TcHmi.Controls.ResponsiveNavigation.TcHmiNavigationBar": {
+      "attributes": {
+        "HighLightColor": "{\r\n  \"color\": \"#FF0000\"\r\n}",
+        "FontColor": "{\r\n  \"color\": \"#000000\"\r\n}",
+        "TriangleColor": {
+          "color": "rgba(255, 255, 255, 1)"
+        },
+        "BackgroundColor": {
+          "color": "rgba(227, 227, 227, 1)"
+        }
+      },
+      "themedResources": {}
+    },
+    "TcHmi.Controls.ResponsiveNavigation.TcHmiNavigationContent": {
+      "attributes": {
+        "FontColor": "{\r\n  \"color\": \"#000000\"\r\n}",
+        "MenuBackgroundColor": "{\r\n  \"color\": \"#FFFFFF\"\r\n}"
+      },
+      "themedResources": {}
+    },
+    "TcHmi.Controls.ResponsiveNavigation.TcHmiBreadcrumb": {
+      "attributes": {
+        "FontColor": "{\r\n  \"color\": \"#000000\"\r\n}"
+      },
+      "themedResources": {}
+    }
+  },
+  "controlClassValues": {
+    "Default": {
+      "attributes": {
+        "BackgroundColor": {
+          "angle": 135.0,
+          "stopPoints": [
+            {
+              "color": "rgba(239, 241, 243, 1)",
+              "stop": "0%"
+            },
+            {
+              "color": "rgba(174, 185, 194, 1)",
+              "stop": "100%"
+            }
+          ]
+        },
+        "BorderColor": {
+          "color": "rgba(166, 166, 166, 1)"
+        },
+        "BorderWidth": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0,
+          "leftUnit": "px",
+          "rightUnit": "px",
+          "topUnit": "px",
+          "bottomUnit": "px"
+        },
+        "BorderStyle": {
+          "left": "Solid",
+          "right": "Solid",
+          "top": "Solid",
+          "bottom": "Solid"
+        },
+        "BorderRadius": {
+          "topLeft": 15.0,
+          "topRight": 15.0,
+          "bottomLeft": 15.0,
+          "bottomRight": 15.0,
+          "topLeftUnit": "px",
+          "topRightUnit": "px",
+          "bottomLeftUnit": "px",
+          "bottomRightUnit": "px"
+        }
+      },
+      "themedResources": {}
+    }
+  },
+  "$schema": "../.hmiframework/Schema/ThemeDescription.Schema.json"
+}

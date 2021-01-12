@@ -1,0 +1,203 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <FileVersion>1.0.0.0</FileVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0f78a1b5-6f60-40cb-b06b-d1dbdaec1b82}</ProjectGuid>
+    <SubObjectsSortedByName>True</SubObjectsSortedByName>
+    <DownloadApplicationInfo>true</DownloadApplicationInfo>
+    <WriteProductVersion>true</WriteProductVersion>
+    <GenerateTpy>false</GenerateTpy>
+    <Name>AnalysisPLC</Name>
+    <ProgramVersion>3.1.4023.0</ProgramVersion>
+    <Application>{b9d3598f-8a90-4c6d-ab89-15562fe9240e}</Application>
+    <TypeSystem>{23b42429-9702-4496-9dfe-e42e4f34f1b7}</TypeSystem>
+    <Implicit_Task_Info>{94c8dd10-d8a5-4724-9085-47d318b99685}</Implicit_Task_Info>
+    <Implicit_KindOfTask>{ef810bf4-6a8c-4bbe-8a98-96de6665419d}</Implicit_KindOfTask>
+    <Implicit_Jitter_Distribution>{3ac80c06-cb90-419f-8b86-34f1a98cdd26}</Implicit_Jitter_Distribution>
+    <LibraryReferences>{886de4bd-77b7-4663-a5ee-66d53647ad6a}</LibraryReferences>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AnalyticsTask.TcTTO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AnalyticsTask_V1_C1.TcTTO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DUTs\Analytics\E_AnalysisComponents.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DUTs\Analytics\E_DataSourceState.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DUTs\Analytics\HMI\DataSourcePage\ST_HMI_DataSourceConfig.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DUTs\Analytics\HMI\DataSourcePage\ST_HMI_DataSourceCtrl.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DUTs\Analytics\HMI\DataSourcePage\ST_HMI_DataSourceHist.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DUTs\Analytics\HMI\DataSourcePage\ST_HMI_DataSourceHistInfo.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DUTs\Analytics\HMI\DataSourcePage\ST_HMI_DataSourceHistRecordInfo.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DUTs\Analytics\HMI\DataSourcePage\ST_HMI_DataSourceLive.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DUTs\Analytics\HMI\DataSourcePage\ST_HMI_DataSourceStream.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DUTs\Analytics\HMI\ST_HMI_MapItem.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DUTs\Analytics\HMI\ST_HMI_N1_Network.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DUTs\Analytics\HMI\ST_KeyValuePair.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DUTs\Analytics\ST_AnalysisReset.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GVLs\Analytics.TcGVL">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GVLs\AnalyticsHMI.TcGVL">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PlcTask.TcTTO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\Analytics\DataSource\Interfaces\I_DataSource.TcIO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\Analytics\DataSource\Interfaces\I_VirtualInputSource.TcIO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\Analytics\DataSource\Interfaces\VirtualInputSources\I_V1_Virtual_Input_Source_1.TcIO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\Analytics\DataSource\T01 DataSource\FB_T1_DataSource.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\Analytics\FB_Analysis.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\Analytics\Networks\N01 Network\FB_N1_Network.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\Analytics\Networks\N01 Network\Modules\FB_N1_M1_LifetimeAnalysis1Ch.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\Analytics\Networks\N01 Network\Modules\FB_N1_M2_ThresholdStringClassifier1Ch.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\Analytics\Networks\N01 Network\Modules\FB_N1_M3_TrendLine.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\Analytics\[Helper]\F_AlyTimestampToDCTimestruct.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\Analytics\[Helper]\F_AlyTimestampToFileTime.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\Analytics\[Helper]\F_DCTimestructToFileTime.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\Analytics\[Helper]\F_FileTimeToDCTimestruct.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\MAIN.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\MAIN_Analytics.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\MAIN_Analytics_V1_C1.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DUTs" />
+    <Folder Include="DUTs\Analytics" />
+    <Folder Include="DUTs\Analytics\HMI" />
+    <Folder Include="DUTs\Analytics\HMI\DataSourcePage" />
+    <Folder Include="GVLs" />
+    <Folder Include="POUs\Analytics" />
+    <Folder Include="POUs\Analytics\DataSource" />
+    <Folder Include="POUs\Analytics\DataSource\Interfaces" />
+    <Folder Include="POUs\Analytics\DataSource\Interfaces\VirtualInputSources" />
+    <Folder Include="POUs\Analytics\DataSource\T01 DataSource" />
+    <Folder Include="POUs\Analytics\Networks" />
+    <Folder Include="POUs\Analytics\Networks\N01 Network" />
+    <Folder Include="POUs\Analytics\Networks\N01 Network\Modules" />
+    <Folder Include="POUs\Analytics\[Helper]" />
+    <Folder Include="VISUs" />
+    <Folder Include="POUs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PlaceholderReference Include="Tc2_EtherCAT">
+      <DefaultResolution>Tc2_EtherCAT, * (Beckhoff Automation GmbH)</DefaultResolution>
+      <Namespace>Tc2_EtherCAT</Namespace>
+    </PlaceholderReference>
+    <PlaceholderReference Include="Tc2_Standard">
+      <DefaultResolution>Tc2_Standard, * (Beckhoff Automation GmbH)</DefaultResolution>
+      <Namespace>Tc2_Standard</Namespace>
+    </PlaceholderReference>
+    <PlaceholderReference Include="Tc2_System">
+      <DefaultResolution>Tc2_System, * (Beckhoff Automation GmbH)</DefaultResolution>
+      <Namespace>Tc2_System</Namespace>
+    </PlaceholderReference>
+    <PlaceholderReference Include="Tc2_Utilities">
+      <DefaultResolution>Tc2_Utilities, * (Beckhoff Automation GmbH)</DefaultResolution>
+      <Namespace>Tc2_Utilities</Namespace>
+    </PlaceholderReference>
+    <PlaceholderReference Include="Tc3_Analytics">
+      <DefaultResolution>Tc3_Analytics, * (Beckhoff Automation GmbH)</DefaultResolution>
+      <Namespace>Tc3_Analytics</Namespace>
+    </PlaceholderReference>
+    <PlaceholderReference Include="Tc3_EventLogger">
+      <DefaultResolution>Tc3_EventLogger, * (Beckhoff Automation GmbH)</DefaultResolution>
+      <Namespace>Tc3_EventLogger</Namespace>
+    </PlaceholderReference>
+    <PlaceholderReference Include="Tc3_Module">
+      <DefaultResolution>Tc3_Module, * (Beckhoff Automation GmbH)</DefaultResolution>
+      <Namespace>Tc3_Module</Namespace>
+    </PlaceholderReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PlaceholderResolution Include="Tc2_EtherCAT">
+      <Resolution>Tc2_EtherCAT, * (Beckhoff Automation GmbH)</Resolution>
+    </PlaceholderResolution>
+    <PlaceholderResolution Include="Tc2_Utilities">
+      <Resolution>Tc2_Utilities, * (Beckhoff Automation GmbH)</Resolution>
+    </PlaceholderResolution>
+    <PlaceholderResolution Include="Tc3_Analytics">
+      <Resolution>Tc3_Analytics, * (Beckhoff Automation GmbH)</Resolution>
+    </PlaceholderResolution>
+    <PlaceholderResolution Include="Tc3_EventLogger">
+      <Resolution>Tc3_EventLogger, * (Beckhoff Automation GmbH)</Resolution>
+    </PlaceholderResolution>
+  </ItemGroup>
+  <ProjectExtensions>
+    <PlcProjectOptions>
+      <XmlArchive>
+  <Data>
+    <o xml:space="preserve" t="OptionKey">
+      <v n="Name">"&lt;ProjectRoot&gt;"</v>
+      <d n="SubKeys" t="Hashtable" />
+      <d n="Values" t="Hashtable" />
+    </o>
+  </Data>
+  <TypeList>
+    <Type n="Hashtable">System.Collections.Hashtable</Type>
+    <Type n="OptionKey">{54dd0eac-a6d8-46f2-8c27-2f43c7e49861}</Type>
+    <Type n="String">System.String</Type>
+  </TypeList>
+</XmlArchive>
+    </PlcProjectOptions>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.4">
+  <POU Name="MAIN" Id="{2df89856-3884-4925-b50c-e9a97d85b294}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+	bDin AT %I*: BOOL;	
+	nAin AT %I*: INT;
+	
+	nSin: LREAL;
+	fbton: TON;
+	nTemp: REAL;
+	{attribute 'TcAnalytics'}
+	bDinx: BOOL;
+	{attribute 'TcAnalytics'}
+	nAinx: INT;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[fbton(IN:= NOT fbton.Q,PT:= T#100MS);
+IF fbton.Q THEN
+	nTemp:= nTemp + 0.1;
+	IF nTemp >= 3.2 THEN
+		nTemp := 0;
+	END_IF
+END_IF
+nSin := 100*SIN(nTemp);
+bDinx:= bDin;
+nAinx:= nAin;]]></ST>
+    </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="12" Count="2" />
+      <LineId Id="17" Count="2" />
+      <LineId Id="15" Count="0" />
+      <LineId Id="2" Count="0" />
+      <LineId Id="25" Count="1" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

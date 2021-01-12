@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.4">
+  <POU Name="FB_Analysis" Id="{d93c12a5-578f-4d41-8219-69f0a021eec3}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_Analysis
+VAR_INPUT
+	fbN1_Network: FB_N1_Network;
+END_VAR
+VAR_OUTPUT
+	bError: BOOL;
+	ipTcResult: I_TcMessage;
+END_VAR
+VAR
+	R_TRIG_Reset: R_TRIG;
+	bResetBusy: BOOL;
+	
+	_tTimestamp: ULINT;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="Call" Id="{a091a77f-210e-4c48-ab32-933221c4844e}">
+      <Declaration><![CDATA[METHOD Call : BOOL
+VAR_INPUT
+	ipVirtual_Input_Source_1: I_V1_Virtual_Input_Source_1;
+END_VAR
+VAR
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[
+IF ipVirtual_Input_Source_1 <> 0 THEN
+
+	_tTimestamp:= ipVirtual_Input_Source_1.tTimestamp;
+
+	//Analytics Network "Network" with ID: 1
+	fbN1_Network.Call(ipVirtual_Input_Source_1);
+
+
+	//Error Handling
+	IF fbN1_Network.bError THEN
+		bError:= TRUE;
+		ipTcResult:= fbN1_Network.ipTcResult;
+	ELSE
+		bError:= FALSE;
+	END_IF
+END_IF]]></ST>
+      </Implementation>
+    </Method>
+    <Property Name="tTimestamp" Id="{99f6e75d-34eb-4892-a791-c10787e69837}">
+      <Declaration><![CDATA[PROPERTY tTimestamp : ULINT]]></Declaration>
+      <Get Name="Get" Id="{f8c274ba-754c-44ee-8851-6e8bd3a05043}">
+        <Declaration><![CDATA[VAR
+END_VAR]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[tTimestamp:= _tTimestamp;]]></ST>
+        </Implementation>
+      </Get>
+    </Property>
+    <LineIds Name="FB_Analysis">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_Analysis.Call">
+      <LineId Id="3" Count="15" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_Analysis.tTimestamp.Get">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
